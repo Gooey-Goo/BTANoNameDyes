@@ -18,6 +18,9 @@
     ],
     "btwaila": [
       "goocraft4evr.nonamedyes.modcontainers.btwaila.BTWailaPlugin"
+    ],
+    "terrain-api": [
+      "goocraft4evr.nonamedyes.modcontainers.terrainapi.TerrainApiPlugin"
     ]
   },
   "mixins": [
