@@ -1,9 +1,13 @@
 [
   {
-    "name": "nonamedyes:bleacher/painted_planks_to_planks",
+    "name": "nonamedyes:bleacher/white_painted_planks_to_planks",
     "type": "nonamedyes:bleaching",
     "input": {
-      "group" : "minecraft:planks"
+      "stack": {
+        "key": "tile.planks.oak.painted",
+        "amount": 1,
+        "meta": 0
+      }
     },
     "output": {
       "key": "tile.planks.oak",
@@ -12,22 +16,94 @@
     }
   },
   {
-    "name": "nonamedyes:bleacher/painted_lamps_to_lamps",
+    "name": "nonamedyes:bleacher/white_painted_fence_to_fence",
     "type": "nonamedyes:bleaching",
     "input": {
-      "group" : "minecraft:lamps"
+      "stack": {
+        "key": "tile.fence.planks.oak.painted",
+        "amount": 1,
+        "meta": 0
+      }
     },
     "output": {
-      "key": "tile.lamp.idle",
+      "key": "tile.fence.planks.oak",
       "amount": 1,
       "meta": 0
     }
   },
   {
-    "name": "nonamedyes:bleacher/painted_wool_to_wool",
+    "name": "nonamedyes:bleacher/white_painted_fencegate_to_fencegate",
     "type": "nonamedyes:bleaching",
     "input": {
-      "group" : "minecraft:wool"
+      "stack": {
+        "key": "tile.fencegate.planks.oak.painted",
+        "amount": 1,
+        "meta": 0
+      }
+    },
+    "output": {
+      "key": "tile.fencegate.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/white_painted_oak_slab_to_oak_slab",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.slab.planks.oak.painted",
+        "amount": 1,
+        "meta": 0
+      }
+    },
+    "output": {
+      "key": "tile.slab.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/white_painted_oak_stairs_to_oak_stairs",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.stairs.planks.oak.painted",
+        "amount": 1,
+        "meta": 0
+      }
+    },
+    "output": {
+      "key": "tile.stairs.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/white_painted_chest_to_chest",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.chest.planks.oak.painted",
+        "amount": 1,
+        "meta": 0
+      }
+    },
+    "output": {
+      "key": "tile.chest.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/white_painted_wool_to_wool",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.wool",
+        "amount": 1,
+        "meta": 0
+      }
     },
     "output": {
       "key": "tile.wool",
@@ -36,10 +112,190 @@
     }
   },
   {
-    "name": "nonamedyes:bleacher/painted_chests_to_chest",
+    "name": "nonamedyes:bleacher/white_painted_lamp_to_lamp",
     "type": "nonamedyes:bleaching",
     "input": {
-      "group" : "minecraft:chests"
+      "stack": {
+        "key": "tile.lamp.idle",
+        "amount": 1,
+        "meta": 0
+      }
+    },
+    "output": {
+      "key": "tile.lamp.idle",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/white_painted_mud_plaster_to_mud_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.mud",
+        "amount": 1,
+        "meta": 0
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.mud",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/white_painted_limestone_plaster_to_limestone_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.limestone",
+        "amount": 1,
+        "meta": 0
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.limestone",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/white_painted_ceramic_block_to_ceramic_block",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.block.ceramic.painted",
+        "amount": 1,
+        "meta": 0
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.block.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/white_painted_ceramic_tile_to_ceramic_tile",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.tile.ceramic.painted",
+        "amount": 1,
+        "meta": 0
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.tile.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/white_painted_plaster_to_wet_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "item.nonamedyes.plaster.painted",
+        "amount": 1,
+        "meta": 0
+      }
+    },
+    "output": {
+      "key": "item.nonamedyes.plaster.wet",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/orange_painted_planks_to_planks",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.planks.oak.painted",
+        "amount": 1,
+        "meta": 1
+      }
+    },
+    "output": {
+      "key": "tile.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/orange_painted_fence_to_fence",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.fence.planks.oak.painted",
+        "amount": 1,
+        "meta": 1
+      }
+    },
+    "output": {
+      "key": "tile.fence.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/orange_painted_fencegate_to_fencegate",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.fencegate.planks.oak.painted",
+        "amount": 1,
+        "meta": 16
+      }
+    },
+    "output": {
+      "key": "tile.fencegate.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/orange_painted_oak_slab_to_oak_slab",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.slab.planks.oak.painted",
+        "amount": 1,
+        "meta": 16
+      }
+    },
+    "output": {
+      "key": "tile.slab.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/orange_painted_oak_stairs_to_oak_stairs",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.stairs.planks.oak.painted",
+        "amount": 1,
+        "meta": 16
+      }
+    },
+    "output": {
+      "key": "tile.stairs.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/orange_painted_chest_to_chest",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.chest.planks.oak.painted",
+        "amount": 1,
+        "meta": 16
+      }
     },
     "output": {
       "key": "tile.chest.planks.oak",
@@ -47,4 +303,5732 @@
       "meta": 0
     }
   },
+  {
+    "name": "nonamedyes:bleacher/orange_painted_wool_to_wool",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.wool",
+        "amount": 1,
+        "meta": 1
+      }
+    },
+    "output": {
+      "key": "tile.wool",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/orange_painted_lamp_to_lamp",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.lamp.idle",
+        "amount": 1,
+        "meta": 1
+      }
+    },
+    "output": {
+      "key": "tile.lamp.idle",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/orange_painted_mud_plaster_to_mud_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.mud",
+        "amount": 1,
+        "meta": 1
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.mud",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/orange_painted_limestone_plaster_to_limestone_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.limestone",
+        "amount": 1,
+        "meta": 1
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.limestone",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/orange_painted_ceramic_block_to_ceramic_block",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.block.ceramic.painted",
+        "amount": 1,
+        "meta": 1
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.block.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/orange_painted_ceramic_tile_to_ceramic_tile",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.tile.ceramic.painted",
+        "amount": 1,
+        "meta": 1
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.tile.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/orange_painted_plaster_to_wet_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "item.nonamedyes.plaster.painted",
+        "amount": 1,
+        "meta": 1
+      }
+    },
+    "output": {
+      "key": "item.nonamedyes.plaster.wet",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/magenta_painted_planks_to_planks",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.planks.oak.painted",
+        "amount": 1,
+        "meta": 2
+      }
+    },
+    "output": {
+      "key": "tile.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/magenta_painted_fence_to_fence",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.fence.planks.oak.painted",
+        "amount": 1,
+        "meta": 2
+      }
+    },
+    "output": {
+      "key": "tile.fence.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/magenta_painted_fencegate_to_fencegate",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.fencegate.planks.oak.painted",
+        "amount": 1,
+        "meta": 32
+      }
+    },
+    "output": {
+      "key": "tile.fencegate.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/magenta_painted_oak_slab_to_oak_slab",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.slab.planks.oak.painted",
+        "amount": 1,
+        "meta": 32
+      }
+    },
+    "output": {
+      "key": "tile.slab.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/magenta_painted_oak_stairs_to_oak_stairs",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.stairs.planks.oak.painted",
+        "amount": 1,
+        "meta": 32
+      }
+    },
+    "output": {
+      "key": "tile.stairs.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/magenta_painted_chest_to_chest",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.chest.planks.oak.painted",
+        "amount": 1,
+        "meta": 32
+      }
+    },
+    "output": {
+      "key": "tile.chest.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/magenta_painted_wool_to_wool",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.wool",
+        "amount": 1,
+        "meta": 2
+      }
+    },
+    "output": {
+      "key": "tile.wool",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/magenta_painted_lamp_to_lamp",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.lamp.idle",
+        "amount": 1,
+        "meta": 2
+      }
+    },
+    "output": {
+      "key": "tile.lamp.idle",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/magenta_painted_mud_plaster_to_mud_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.mud",
+        "amount": 1,
+        "meta": 2
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.mud",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/magenta_painted_limestone_plaster_to_limestone_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.limestone",
+        "amount": 1,
+        "meta": 2
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.limestone",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/magenta_painted_ceramic_block_to_ceramic_block",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.block.ceramic.painted",
+        "amount": 1,
+        "meta": 2
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.block.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/magenta_painted_ceramic_tile_to_ceramic_tile",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.tile.ceramic.painted",
+        "amount": 1,
+        "meta": 2
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.tile.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/magenta_painted_plaster_to_wet_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "item.nonamedyes.plaster.painted",
+        "amount": 1,
+        "meta": 2
+      }
+    },
+    "output": {
+      "key": "item.nonamedyes.plaster.wet",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/lightblue_painted_planks_to_planks",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.planks.oak.painted",
+        "amount": 1,
+        "meta": 3
+      }
+    },
+    "output": {
+      "key": "tile.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/lightblue_painted_fence_to_fence",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.fence.planks.oak.painted",
+        "amount": 1,
+        "meta": 3
+      }
+    },
+    "output": {
+      "key": "tile.fence.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/lightblue_painted_fencegate_to_fencegate",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.fencegate.planks.oak.painted",
+        "amount": 1,
+        "meta": 48
+      }
+    },
+    "output": {
+      "key": "tile.fencegate.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/lightblue_painted_oak_slab_to_oak_slab",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.slab.planks.oak.painted",
+        "amount": 1,
+        "meta": 48
+      }
+    },
+    "output": {
+      "key": "tile.slab.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/lightblue_painted_oak_stairs_to_oak_stairs",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.stairs.planks.oak.painted",
+        "amount": 1,
+        "meta": 48
+      }
+    },
+    "output": {
+      "key": "tile.stairs.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/lightblue_painted_chest_to_chest",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.chest.planks.oak.painted",
+        "amount": 1,
+        "meta": 48
+      }
+    },
+    "output": {
+      "key": "tile.chest.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/lightblue_painted_wool_to_wool",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.wool",
+        "amount": 1,
+        "meta": 3
+      }
+    },
+    "output": {
+      "key": "tile.wool",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/lightblue_painted_lamp_to_lamp",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.lamp.idle",
+        "amount": 1,
+        "meta": 3
+      }
+    },
+    "output": {
+      "key": "tile.lamp.idle",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/lightblue_painted_mud_plaster_to_mud_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.mud",
+        "amount": 1,
+        "meta": 3
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.mud",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/lightblue_painted_limestone_plaster_to_limestone_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.limestone",
+        "amount": 1,
+        "meta": 3
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.limestone",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/lightblue_painted_ceramic_block_to_ceramic_block",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.block.ceramic.painted",
+        "amount": 1,
+        "meta": 3
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.block.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/lightblue_painted_ceramic_tile_to_ceramic_tile",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.tile.ceramic.painted",
+        "amount": 1,
+        "meta": 3
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.tile.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/lightblue_painted_plaster_to_wet_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "item.nonamedyes.plaster.painted",
+        "amount": 1,
+        "meta": 3
+      }
+    },
+    "output": {
+      "key": "item.nonamedyes.plaster.wet",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/yellow_painted_planks_to_planks",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.planks.oak.painted",
+        "amount": 1,
+        "meta": 4
+      }
+    },
+    "output": {
+      "key": "tile.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/yellow_painted_fence_to_fence",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.fence.planks.oak.painted",
+        "amount": 1,
+        "meta": 4
+      }
+    },
+    "output": {
+      "key": "tile.fence.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/yellow_painted_fencegate_to_fencegate",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.fencegate.planks.oak.painted",
+        "amount": 1,
+        "meta": 64
+      }
+    },
+    "output": {
+      "key": "tile.fencegate.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/yellow_painted_oak_slab_to_oak_slab",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.slab.planks.oak.painted",
+        "amount": 1,
+        "meta": 64
+      }
+    },
+    "output": {
+      "key": "tile.slab.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/yellow_painted_oak_stairs_to_oak_stairs",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.stairs.planks.oak.painted",
+        "amount": 1,
+        "meta": 64
+      }
+    },
+    "output": {
+      "key": "tile.stairs.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/yellow_painted_chest_to_chest",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.chest.planks.oak.painted",
+        "amount": 1,
+        "meta": 64
+      }
+    },
+    "output": {
+      "key": "tile.chest.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/yellow_painted_wool_to_wool",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.wool",
+        "amount": 1,
+        "meta": 4
+      }
+    },
+    "output": {
+      "key": "tile.wool",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/yellow_painted_lamp_to_lamp",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.lamp.idle",
+        "amount": 1,
+        "meta": 4
+      }
+    },
+    "output": {
+      "key": "tile.lamp.idle",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/yellow_painted_mud_plaster_to_mud_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.mud",
+        "amount": 1,
+        "meta": 4
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.mud",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/yellow_painted_limestone_plaster_to_limestone_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.limestone",
+        "amount": 1,
+        "meta": 4
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.limestone",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/yellow_painted_ceramic_block_to_ceramic_block",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.block.ceramic.painted",
+        "amount": 1,
+        "meta": 4
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.block.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/yellow_painted_ceramic_tile_to_ceramic_tile",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.tile.ceramic.painted",
+        "amount": 1,
+        "meta": 4
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.tile.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/yellow_painted_plaster_to_wet_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "item.nonamedyes.plaster.painted",
+        "amount": 1,
+        "meta": 4
+      }
+    },
+    "output": {
+      "key": "item.nonamedyes.plaster.wet",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/lime_painted_planks_to_planks",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.planks.oak.painted",
+        "amount": 1,
+        "meta": 5
+      }
+    },
+    "output": {
+      "key": "tile.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/lime_painted_fence_to_fence",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.fence.planks.oak.painted",
+        "amount": 1,
+        "meta": 5
+      }
+    },
+    "output": {
+      "key": "tile.fence.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/lime_painted_fencegate_to_fencegate",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.fencegate.planks.oak.painted",
+        "amount": 1,
+        "meta": 80
+      }
+    },
+    "output": {
+      "key": "tile.fencegate.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/lime_painted_oak_slab_to_oak_slab",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.slab.planks.oak.painted",
+        "amount": 1,
+        "meta": 80
+      }
+    },
+    "output": {
+      "key": "tile.slab.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/lime_painted_oak_stairs_to_oak_stairs",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.stairs.planks.oak.painted",
+        "amount": 1,
+        "meta": 80
+      }
+    },
+    "output": {
+      "key": "tile.stairs.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/lime_painted_chest_to_chest",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.chest.planks.oak.painted",
+        "amount": 1,
+        "meta": 80
+      }
+    },
+    "output": {
+      "key": "tile.chest.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/lime_painted_wool_to_wool",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.wool",
+        "amount": 1,
+        "meta": 5
+      }
+    },
+    "output": {
+      "key": "tile.wool",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/lime_painted_lamp_to_lamp",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.lamp.idle",
+        "amount": 1,
+        "meta": 5
+      }
+    },
+    "output": {
+      "key": "tile.lamp.idle",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/lime_painted_mud_plaster_to_mud_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.mud",
+        "amount": 1,
+        "meta": 5
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.mud",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/lime_painted_limestone_plaster_to_limestone_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.limestone",
+        "amount": 1,
+        "meta": 5
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.limestone",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/lime_painted_ceramic_block_to_ceramic_block",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.block.ceramic.painted",
+        "amount": 1,
+        "meta": 5
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.block.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/lime_painted_ceramic_tile_to_ceramic_tile",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.tile.ceramic.painted",
+        "amount": 1,
+        "meta": 5
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.tile.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/lime_painted_plaster_to_wet_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "item.nonamedyes.plaster.painted",
+        "amount": 1,
+        "meta": 5
+      }
+    },
+    "output": {
+      "key": "item.nonamedyes.plaster.wet",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/pink_painted_planks_to_planks",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.planks.oak.painted",
+        "amount": 1,
+        "meta": 6
+      }
+    },
+    "output": {
+      "key": "tile.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/pink_painted_fence_to_fence",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.fence.planks.oak.painted",
+        "amount": 1,
+        "meta": 6
+      }
+    },
+    "output": {
+      "key": "tile.fence.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/pink_painted_fencegate_to_fencegate",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.fencegate.planks.oak.painted",
+        "amount": 1,
+        "meta": 96
+      }
+    },
+    "output": {
+      "key": "tile.fencegate.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/pink_painted_oak_slab_to_oak_slab",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.slab.planks.oak.painted",
+        "amount": 1,
+        "meta": 96
+      }
+    },
+    "output": {
+      "key": "tile.slab.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/pink_painted_oak_stairs_to_oak_stairs",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.stairs.planks.oak.painted",
+        "amount": 1,
+        "meta": 96
+      }
+    },
+    "output": {
+      "key": "tile.stairs.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/pink_painted_chest_to_chest",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.chest.planks.oak.painted",
+        "amount": 1,
+        "meta": 96
+      }
+    },
+    "output": {
+      "key": "tile.chest.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/pink_painted_wool_to_wool",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.wool",
+        "amount": 1,
+        "meta": 6
+      }
+    },
+    "output": {
+      "key": "tile.wool",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/pink_painted_lamp_to_lamp",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.lamp.idle",
+        "amount": 1,
+        "meta": 6
+      }
+    },
+    "output": {
+      "key": "tile.lamp.idle",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/pink_painted_mud_plaster_to_mud_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.mud",
+        "amount": 1,
+        "meta": 6
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.mud",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/pink_painted_limestone_plaster_to_limestone_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.limestone",
+        "amount": 1,
+        "meta": 6
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.limestone",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/pink_painted_ceramic_block_to_ceramic_block",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.block.ceramic.painted",
+        "amount": 1,
+        "meta": 6
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.block.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/pink_painted_ceramic_tile_to_ceramic_tile",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.tile.ceramic.painted",
+        "amount": 1,
+        "meta": 6
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.tile.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/pink_painted_plaster_to_wet_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "item.nonamedyes.plaster.painted",
+        "amount": 1,
+        "meta": 6
+      }
+    },
+    "output": {
+      "key": "item.nonamedyes.plaster.wet",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/gray_painted_planks_to_planks",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.planks.oak.painted",
+        "amount": 1,
+        "meta": 7
+      }
+    },
+    "output": {
+      "key": "tile.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/gray_painted_fence_to_fence",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.fence.planks.oak.painted",
+        "amount": 1,
+        "meta": 7
+      }
+    },
+    "output": {
+      "key": "tile.fence.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/gray_painted_fencegate_to_fencegate",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.fencegate.planks.oak.painted",
+        "amount": 1,
+        "meta": 112
+      }
+    },
+    "output": {
+      "key": "tile.fencegate.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/gray_painted_oak_slab_to_oak_slab",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.slab.planks.oak.painted",
+        "amount": 1,
+        "meta": 112
+      }
+    },
+    "output": {
+      "key": "tile.slab.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/gray_painted_oak_stairs_to_oak_stairs",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.stairs.planks.oak.painted",
+        "amount": 1,
+        "meta": 112
+      }
+    },
+    "output": {
+      "key": "tile.stairs.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/gray_painted_chest_to_chest",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.chest.planks.oak.painted",
+        "amount": 1,
+        "meta": 112
+      }
+    },
+    "output": {
+      "key": "tile.chest.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/gray_painted_wool_to_wool",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.wool",
+        "amount": 1,
+        "meta": 7
+      }
+    },
+    "output": {
+      "key": "tile.wool",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/gray_painted_lamp_to_lamp",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.lamp.idle",
+        "amount": 1,
+        "meta": 7
+      }
+    },
+    "output": {
+      "key": "tile.lamp.idle",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/gray_painted_mud_plaster_to_mud_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.mud",
+        "amount": 1,
+        "meta": 7
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.mud",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/gray_painted_limestone_plaster_to_limestone_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.limestone",
+        "amount": 1,
+        "meta": 7
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.limestone",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/gray_painted_ceramic_block_to_ceramic_block",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.block.ceramic.painted",
+        "amount": 1,
+        "meta": 7
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.block.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/gray_painted_ceramic_tile_to_ceramic_tile",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.tile.ceramic.painted",
+        "amount": 1,
+        "meta": 7
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.tile.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/gray_painted_plaster_to_wet_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "item.nonamedyes.plaster.painted",
+        "amount": 1,
+        "meta": 7
+      }
+    },
+    "output": {
+      "key": "item.nonamedyes.plaster.wet",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/silver_painted_planks_to_planks",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.planks.oak.painted",
+        "amount": 1,
+        "meta": 8
+      }
+    },
+    "output": {
+      "key": "tile.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/silver_painted_fence_to_fence",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.fence.planks.oak.painted",
+        "amount": 1,
+        "meta": 8
+      }
+    },
+    "output": {
+      "key": "tile.fence.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/silver_painted_fencegate_to_fencegate",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.fencegate.planks.oak.painted",
+        "amount": 1,
+        "meta": 128
+      }
+    },
+    "output": {
+      "key": "tile.fencegate.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/silver_painted_oak_slab_to_oak_slab",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.slab.planks.oak.painted",
+        "amount": 1,
+        "meta": 128
+      }
+    },
+    "output": {
+      "key": "tile.slab.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/silver_painted_oak_stairs_to_oak_stairs",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.stairs.planks.oak.painted",
+        "amount": 1,
+        "meta": 128
+      }
+    },
+    "output": {
+      "key": "tile.stairs.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/silver_painted_chest_to_chest",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.chest.planks.oak.painted",
+        "amount": 1,
+        "meta": 128
+      }
+    },
+    "output": {
+      "key": "tile.chest.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/silver_painted_wool_to_wool",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.wool",
+        "amount": 1,
+        "meta": 8
+      }
+    },
+    "output": {
+      "key": "tile.wool",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/silver_painted_lamp_to_lamp",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.lamp.idle",
+        "amount": 1,
+        "meta": 8
+      }
+    },
+    "output": {
+      "key": "tile.lamp.idle",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/silver_painted_mud_plaster_to_mud_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.mud",
+        "amount": 1,
+        "meta": 8
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.mud",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/silver_painted_limestone_plaster_to_limestone_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.limestone",
+        "amount": 1,
+        "meta": 8
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.limestone",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/silver_painted_ceramic_block_to_ceramic_block",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.block.ceramic.painted",
+        "amount": 1,
+        "meta": 8
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.block.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/silver_painted_ceramic_tile_to_ceramic_tile",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.tile.ceramic.painted",
+        "amount": 1,
+        "meta": 8
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.tile.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/silver_painted_plaster_to_wet_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "item.nonamedyes.plaster.painted",
+        "amount": 1,
+        "meta": 8
+      }
+    },
+    "output": {
+      "key": "item.nonamedyes.plaster.wet",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/cyan_painted_planks_to_planks",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.planks.oak.painted",
+        "amount": 1,
+        "meta": 9
+      }
+    },
+    "output": {
+      "key": "tile.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/cyan_painted_fence_to_fence",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.fence.planks.oak.painted",
+        "amount": 1,
+        "meta": 9
+      }
+    },
+    "output": {
+      "key": "tile.fence.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/cyan_painted_fencegate_to_fencegate",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.fencegate.planks.oak.painted",
+        "amount": 1,
+        "meta": 144
+      }
+    },
+    "output": {
+      "key": "tile.fencegate.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/cyan_painted_oak_slab_to_oak_slab",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.slab.planks.oak.painted",
+        "amount": 1,
+        "meta": 144
+      }
+    },
+    "output": {
+      "key": "tile.slab.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/cyan_painted_oak_stairs_to_oak_stairs",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.stairs.planks.oak.painted",
+        "amount": 1,
+        "meta": 144
+      }
+    },
+    "output": {
+      "key": "tile.stairs.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/cyan_painted_chest_to_chest",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.chest.planks.oak.painted",
+        "amount": 1,
+        "meta": 144
+      }
+    },
+    "output": {
+      "key": "tile.chest.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/cyan_painted_wool_to_wool",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.wool",
+        "amount": 1,
+        "meta": 9
+      }
+    },
+    "output": {
+      "key": "tile.wool",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/cyan_painted_lamp_to_lamp",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.lamp.idle",
+        "amount": 1,
+        "meta": 9
+      }
+    },
+    "output": {
+      "key": "tile.lamp.idle",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/cyan_painted_mud_plaster_to_mud_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.mud",
+        "amount": 1,
+        "meta": 9
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.mud",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/cyan_painted_limestone_plaster_to_limestone_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.limestone",
+        "amount": 1,
+        "meta": 9
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.limestone",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/cyan_painted_ceramic_block_to_ceramic_block",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.block.ceramic.painted",
+        "amount": 1,
+        "meta": 9
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.block.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/cyan_painted_ceramic_tile_to_ceramic_tile",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.tile.ceramic.painted",
+        "amount": 1,
+        "meta": 9
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.tile.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/cyan_painted_plaster_to_wet_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "item.nonamedyes.plaster.painted",
+        "amount": 1,
+        "meta": 9
+      }
+    },
+    "output": {
+      "key": "item.nonamedyes.plaster.wet",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/purple_painted_planks_to_planks",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.planks.oak.painted",
+        "amount": 1,
+        "meta": 10
+      }
+    },
+    "output": {
+      "key": "tile.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/purple_painted_fence_to_fence",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.fence.planks.oak.painted",
+        "amount": 1,
+        "meta": 10
+      }
+    },
+    "output": {
+      "key": "tile.fence.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/purple_painted_fencegate_to_fencegate",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.fencegate.planks.oak.painted",
+        "amount": 1,
+        "meta": 160
+      }
+    },
+    "output": {
+      "key": "tile.fencegate.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/purple_painted_oak_slab_to_oak_slab",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.slab.planks.oak.painted",
+        "amount": 1,
+        "meta": 160
+      }
+    },
+    "output": {
+      "key": "tile.slab.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/purple_painted_oak_stairs_to_oak_stairs",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.stairs.planks.oak.painted",
+        "amount": 1,
+        "meta": 160
+      }
+    },
+    "output": {
+      "key": "tile.stairs.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/purple_painted_chest_to_chest",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.chest.planks.oak.painted",
+        "amount": 1,
+        "meta": 160
+      }
+    },
+    "output": {
+      "key": "tile.chest.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/purple_painted_wool_to_wool",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.wool",
+        "amount": 1,
+        "meta": 10
+      }
+    },
+    "output": {
+      "key": "tile.wool",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/purple_painted_lamp_to_lamp",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.lamp.idle",
+        "amount": 1,
+        "meta": 10
+      }
+    },
+    "output": {
+      "key": "tile.lamp.idle",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/purple_painted_mud_plaster_to_mud_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.mud",
+        "amount": 1,
+        "meta": 10
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.mud",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/purple_painted_limestone_plaster_to_limestone_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.limestone",
+        "amount": 1,
+        "meta": 10
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.limestone",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/purple_painted_ceramic_block_to_ceramic_block",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.block.ceramic.painted",
+        "amount": 1,
+        "meta": 10
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.block.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/purple_painted_ceramic_tile_to_ceramic_tile",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.tile.ceramic.painted",
+        "amount": 1,
+        "meta": 10
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.tile.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/purple_painted_plaster_to_wet_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "item.nonamedyes.plaster.painted",
+        "amount": 1,
+        "meta": 10
+      }
+    },
+    "output": {
+      "key": "item.nonamedyes.plaster.wet",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/blue_painted_planks_to_planks",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.planks.oak.painted",
+        "amount": 1,
+        "meta": 11
+      }
+    },
+    "output": {
+      "key": "tile.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/blue_painted_fence_to_fence",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.fence.planks.oak.painted",
+        "amount": 1,
+        "meta": 11
+      }
+    },
+    "output": {
+      "key": "tile.fence.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/blue_painted_fencegate_to_fencegate",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.fencegate.planks.oak.painted",
+        "amount": 1,
+        "meta": 176
+      }
+    },
+    "output": {
+      "key": "tile.fencegate.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/blue_painted_oak_slab_to_oak_slab",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.slab.planks.oak.painted",
+        "amount": 1,
+        "meta": 176
+      }
+    },
+    "output": {
+      "key": "tile.slab.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/blue_painted_oak_stairs_to_oak_stairs",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.stairs.planks.oak.painted",
+        "amount": 1,
+        "meta": 176
+      }
+    },
+    "output": {
+      "key": "tile.stairs.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/blue_painted_chest_to_chest",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.chest.planks.oak.painted",
+        "amount": 1,
+        "meta": 176
+      }
+    },
+    "output": {
+      "key": "tile.chest.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/blue_painted_wool_to_wool",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.wool",
+        "amount": 1,
+        "meta": 11
+      }
+    },
+    "output": {
+      "key": "tile.wool",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/blue_painted_lamp_to_lamp",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.lamp.idle",
+        "amount": 1,
+        "meta": 11
+      }
+    },
+    "output": {
+      "key": "tile.lamp.idle",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/blue_painted_mud_plaster_to_mud_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.mud",
+        "amount": 1,
+        "meta": 11
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.mud",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/blue_painted_limestone_plaster_to_limestone_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.limestone",
+        "amount": 1,
+        "meta": 11
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.limestone",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/blue_painted_ceramic_block_to_ceramic_block",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.block.ceramic.painted",
+        "amount": 1,
+        "meta": 11
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.block.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/blue_painted_ceramic_tile_to_ceramic_tile",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.tile.ceramic.painted",
+        "amount": 1,
+        "meta": 11
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.tile.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/blue_painted_plaster_to_wet_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "item.nonamedyes.plaster.painted",
+        "amount": 1,
+        "meta": 11
+      }
+    },
+    "output": {
+      "key": "item.nonamedyes.plaster.wet",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/brown_painted_planks_to_planks",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.planks.oak.painted",
+        "amount": 1,
+        "meta": 12
+      }
+    },
+    "output": {
+      "key": "tile.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/brown_painted_fence_to_fence",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.fence.planks.oak.painted",
+        "amount": 1,
+        "meta": 12
+      }
+    },
+    "output": {
+      "key": "tile.fence.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/brown_painted_fencegate_to_fencegate",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.fencegate.planks.oak.painted",
+        "amount": 1,
+        "meta": 192
+      }
+    },
+    "output": {
+      "key": "tile.fencegate.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/brown_painted_oak_slab_to_oak_slab",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.slab.planks.oak.painted",
+        "amount": 1,
+        "meta": 192
+      }
+    },
+    "output": {
+      "key": "tile.slab.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/brown_painted_oak_stairs_to_oak_stairs",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.stairs.planks.oak.painted",
+        "amount": 1,
+        "meta": 192
+      }
+    },
+    "output": {
+      "key": "tile.stairs.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/brown_painted_chest_to_chest",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.chest.planks.oak.painted",
+        "amount": 1,
+        "meta": 192
+      }
+    },
+    "output": {
+      "key": "tile.chest.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/brown_painted_wool_to_wool",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.wool",
+        "amount": 1,
+        "meta": 12
+      }
+    },
+    "output": {
+      "key": "tile.wool",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/brown_painted_lamp_to_lamp",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.lamp.idle",
+        "amount": 1,
+        "meta": 12
+      }
+    },
+    "output": {
+      "key": "tile.lamp.idle",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/brown_painted_mud_plaster_to_mud_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.mud",
+        "amount": 1,
+        "meta": 12
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.mud",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/brown_painted_limestone_plaster_to_limestone_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.limestone",
+        "amount": 1,
+        "meta": 12
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.limestone",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/brown_painted_ceramic_block_to_ceramic_block",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.block.ceramic.painted",
+        "amount": 1,
+        "meta": 12
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.block.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/brown_painted_ceramic_tile_to_ceramic_tile",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.tile.ceramic.painted",
+        "amount": 1,
+        "meta": 12
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.tile.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/brown_painted_plaster_to_wet_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "item.nonamedyes.plaster.painted",
+        "amount": 1,
+        "meta": 12
+      }
+    },
+    "output": {
+      "key": "item.nonamedyes.plaster.wet",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/green_painted_planks_to_planks",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.planks.oak.painted",
+        "amount": 1,
+        "meta": 13
+      }
+    },
+    "output": {
+      "key": "tile.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/green_painted_fence_to_fence",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.fence.planks.oak.painted",
+        "amount": 1,
+        "meta": 13
+      }
+    },
+    "output": {
+      "key": "tile.fence.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/green_painted_fencegate_to_fencegate",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.fencegate.planks.oak.painted",
+        "amount": 1,
+        "meta": 208
+      }
+    },
+    "output": {
+      "key": "tile.fencegate.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/green_painted_oak_slab_to_oak_slab",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.slab.planks.oak.painted",
+        "amount": 1,
+        "meta": 208
+      }
+    },
+    "output": {
+      "key": "tile.slab.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/green_painted_oak_stairs_to_oak_stairs",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.stairs.planks.oak.painted",
+        "amount": 1,
+        "meta": 208
+      }
+    },
+    "output": {
+      "key": "tile.stairs.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/green_painted_chest_to_chest",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.chest.planks.oak.painted",
+        "amount": 1,
+        "meta": 208
+      }
+    },
+    "output": {
+      "key": "tile.chest.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/green_painted_wool_to_wool",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.wool",
+        "amount": 1,
+        "meta": 13
+      }
+    },
+    "output": {
+      "key": "tile.wool",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/green_painted_lamp_to_lamp",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.lamp.idle",
+        "amount": 1,
+        "meta": 13
+      }
+    },
+    "output": {
+      "key": "tile.lamp.idle",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/green_painted_mud_plaster_to_mud_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.mud",
+        "amount": 1,
+        "meta": 13
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.mud",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/green_painted_limestone_plaster_to_limestone_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.limestone",
+        "amount": 1,
+        "meta": 13
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.limestone",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/green_painted_ceramic_block_to_ceramic_block",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.block.ceramic.painted",
+        "amount": 1,
+        "meta": 13
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.block.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/green_painted_ceramic_tile_to_ceramic_tile",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.tile.ceramic.painted",
+        "amount": 1,
+        "meta": 13
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.tile.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/green_painted_plaster_to_wet_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "item.nonamedyes.plaster.painted",
+        "amount": 1,
+        "meta": 13
+      }
+    },
+    "output": {
+      "key": "item.nonamedyes.plaster.wet",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/red_painted_planks_to_planks",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.planks.oak.painted",
+        "amount": 1,
+        "meta": 14
+      }
+    },
+    "output": {
+      "key": "tile.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/red_painted_fence_to_fence",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.fence.planks.oak.painted",
+        "amount": 1,
+        "meta": 14
+      }
+    },
+    "output": {
+      "key": "tile.fence.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/red_painted_fencegate_to_fencegate",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.fencegate.planks.oak.painted",
+        "amount": 1,
+        "meta": 224
+      }
+    },
+    "output": {
+      "key": "tile.fencegate.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/red_painted_oak_slab_to_oak_slab",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.slab.planks.oak.painted",
+        "amount": 1,
+        "meta": 224
+      }
+    },
+    "output": {
+      "key": "tile.slab.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/red_painted_oak_stairs_to_oak_stairs",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.stairs.planks.oak.painted",
+        "amount": 1,
+        "meta": 224
+      }
+    },
+    "output": {
+      "key": "tile.stairs.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/red_painted_chest_to_chest",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.chest.planks.oak.painted",
+        "amount": 1,
+        "meta": 224
+      }
+    },
+    "output": {
+      "key": "tile.chest.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/red_painted_wool_to_wool",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.wool",
+        "amount": 1,
+        "meta": 14
+      }
+    },
+    "output": {
+      "key": "tile.wool",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/red_painted_lamp_to_lamp",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.lamp.idle",
+        "amount": 1,
+        "meta": 14
+      }
+    },
+    "output": {
+      "key": "tile.lamp.idle",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/red_painted_mud_plaster_to_mud_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.mud",
+        "amount": 1,
+        "meta": 14
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.mud",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/red_painted_limestone_plaster_to_limestone_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.limestone",
+        "amount": 1,
+        "meta": 14
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.limestone",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/red_painted_ceramic_block_to_ceramic_block",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.block.ceramic.painted",
+        "amount": 1,
+        "meta": 14
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.block.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/red_painted_ceramic_tile_to_ceramic_tile",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.tile.ceramic.painted",
+        "amount": 1,
+        "meta": 14
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.tile.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/red_painted_plaster_to_wet_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "item.nonamedyes.plaster.painted",
+        "amount": 1,
+        "meta": 14
+      }
+    },
+    "output": {
+      "key": "item.nonamedyes.plaster.wet",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/black_painted_planks_to_planks",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.planks.oak.painted",
+        "amount": 1,
+        "meta": 15
+      }
+    },
+    "output": {
+      "key": "tile.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/black_painted_fence_to_fence",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.fence.planks.oak.painted",
+        "amount": 1,
+        "meta": 15
+      }
+    },
+    "output": {
+      "key": "tile.fence.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/black_painted_fencegate_to_fencegate",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.fencegate.planks.oak.painted",
+        "amount": 1,
+        "meta": 240
+      }
+    },
+    "output": {
+      "key": "tile.fencegate.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/black_painted_oak_slab_to_oak_slab",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.slab.planks.oak.painted",
+        "amount": 1,
+        "meta": 240
+      }
+    },
+    "output": {
+      "key": "tile.slab.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/black_painted_oak_stairs_to_oak_stairs",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.stairs.planks.oak.painted",
+        "amount": 1,
+        "meta": 240
+      }
+    },
+    "output": {
+      "key": "tile.stairs.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/black_painted_chest_to_chest",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.chest.planks.oak.painted",
+        "amount": 1,
+        "meta": 240
+      }
+    },
+    "output": {
+      "key": "tile.chest.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/black_painted_wool_to_wool",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.wool",
+        "amount": 1,
+        "meta": 15
+      }
+    },
+    "output": {
+      "key": "tile.wool",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/black_painted_lamp_to_lamp",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.lamp.idle",
+        "amount": 1,
+        "meta": 15
+      }
+    },
+    "output": {
+      "key": "tile.lamp.idle",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/black_painted_mud_plaster_to_mud_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.mud",
+        "amount": 1,
+        "meta": 15
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.mud",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/black_painted_limestone_plaster_to_limestone_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.limestone",
+        "amount": 1,
+        "meta": 15
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.limestone",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/black_painted_ceramic_block_to_ceramic_block",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.block.ceramic.painted",
+        "amount": 1,
+        "meta": 15
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.block.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/black_painted_ceramic_tile_to_ceramic_tile",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.tile.ceramic.painted",
+        "amount": 1,
+        "meta": 15
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.tile.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/black_painted_plaster_to_wet_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "item.nonamedyes.plaster.painted",
+        "amount": 1,
+        "meta": 15
+      }
+    },
+    "output": {
+      "key": "item.nonamedyes.plaster.wet",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/crimson_painted_planks_to_planks",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.planks.oak.painted",
+        "amount": 1,
+        "meta": 0
+      }
+    },
+    "output": {
+      "key": "tile.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/crimson_painted_fence_to_fence",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.fence.planks.oak.painted",
+        "amount": 1,
+        "meta": 0
+      }
+    },
+    "output": {
+      "key": "tile.fence.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/crimson_painted_fencegate_to_fencegate",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.fencegate.planks.oak.painted",
+        "amount": 1,
+        "meta": 0
+      }
+    },
+    "output": {
+      "key": "tile.fencegate.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/crimson_painted_oak_slab_to_oak_slab",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.slab.planks.oak.painted",
+        "amount": 1,
+        "meta": 0
+      }
+    },
+    "output": {
+      "key": "tile.slab.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/crimson_painted_oak_stairs_to_oak_stairs",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.stairs.planks.oak.painted",
+        "amount": 1,
+        "meta": 0
+      }
+    },
+    "output": {
+      "key": "tile.stairs.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/crimson_painted_chest_to_chest",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.chest.planks.oak.painted",
+        "amount": 1,
+        "meta": 0
+      }
+    },
+    "output": {
+      "key": "tile.chest.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/crimson_painted_wool_to_wool",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.wool",
+        "amount": 1,
+        "meta": 0
+      }
+    },
+    "output": {
+      "key": "tile.wool",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/crimson_painted_lamp_to_lamp",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.lamp.idle",
+        "amount": 1,
+        "meta": 0
+      }
+    },
+    "output": {
+      "key": "tile.lamp.idle",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/crimson_painted_mud_plaster_to_mud_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.mud",
+        "amount": 1,
+        "meta": 16
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.mud",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/crimson_painted_limestone_plaster_to_limestone_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.limestone",
+        "amount": 1,
+        "meta": 16
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.limestone",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/crimson_painted_ceramic_block_to_ceramic_block",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.block.ceramic.painted",
+        "amount": 1,
+        "meta": 16
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.block.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/crimson_painted_ceramic_tile_to_ceramic_tile",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.tile.ceramic.painted",
+        "amount": 1,
+        "meta": 16
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.tile.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/crimson_painted_plaster_to_wet_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "item.nonamedyes.plaster.painted",
+        "amount": 1,
+        "meta": 16
+      }
+    },
+    "output": {
+      "key": "item.nonamedyes.plaster.wet",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/maroon_painted_planks_to_planks",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.planks.oak.painted",
+        "amount": 1,
+        "meta": 16
+      }
+    },
+    "output": {
+      "key": "tile.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/maroon_painted_fence_to_fence",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.fence.planks.oak.painted",
+        "amount": 1,
+        "meta": 1
+      }
+    },
+    "output": {
+      "key": "tile.fence.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/maroon_painted_fencegate_to_fencegate",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.fencegate.planks.oak.painted",
+        "amount": 1,
+        "meta": 16
+      }
+    },
+    "output": {
+      "key": "tile.fencegate.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/maroon_painted_oak_slab_to_oak_slab",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.slab.planks.oak.painted",
+        "amount": 1,
+        "meta": 16
+      }
+    },
+    "output": {
+      "key": "tile.slab.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/maroon_painted_oak_stairs_to_oak_stairs",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.stairs.planks.oak.painted",
+        "amount": 1,
+        "meta": 16
+      }
+    },
+    "output": {
+      "key": "tile.stairs.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/maroon_painted_chest_to_chest",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.chest.planks.oak.painted",
+        "amount": 1,
+        "meta": 16
+      }
+    },
+    "output": {
+      "key": "tile.chest.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/maroon_painted_wool_to_wool",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.wool",
+        "amount": 1,
+        "meta": 1
+      }
+    },
+    "output": {
+      "key": "tile.wool",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/maroon_painted_lamp_to_lamp",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.lamp.idle",
+        "amount": 1,
+        "meta": 1
+      }
+    },
+    "output": {
+      "key": "tile.lamp.idle",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/maroon_painted_mud_plaster_to_mud_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.mud",
+        "amount": 1,
+        "meta": 17
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.mud",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/maroon_painted_limestone_plaster_to_limestone_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.limestone",
+        "amount": 1,
+        "meta": 17
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.limestone",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/maroon_painted_ceramic_block_to_ceramic_block",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.block.ceramic.painted",
+        "amount": 1,
+        "meta": 17
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.block.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/maroon_painted_ceramic_tile_to_ceramic_tile",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.tile.ceramic.painted",
+        "amount": 1,
+        "meta": 17
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.tile.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/maroon_painted_plaster_to_wet_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "item.nonamedyes.plaster.painted",
+        "amount": 1,
+        "meta": 17
+      }
+    },
+    "output": {
+      "key": "item.nonamedyes.plaster.wet",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/ash_gray_painted_planks_to_planks",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.planks.oak.painted",
+        "amount": 1,
+        "meta": 32
+      }
+    },
+    "output": {
+      "key": "tile.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/ash_gray_painted_fence_to_fence",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.fence.planks.oak.painted",
+        "amount": 1,
+        "meta": 2
+      }
+    },
+    "output": {
+      "key": "tile.fence.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/ash_gray_painted_fencegate_to_fencegate",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.fencegate.planks.oak.painted",
+        "amount": 1,
+        "meta": 32
+      }
+    },
+    "output": {
+      "key": "tile.fencegate.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/ash_gray_painted_oak_slab_to_oak_slab",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.slab.planks.oak.painted",
+        "amount": 1,
+        "meta": 32
+      }
+    },
+    "output": {
+      "key": "tile.slab.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/ash_gray_painted_oak_stairs_to_oak_stairs",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.stairs.planks.oak.painted",
+        "amount": 1,
+        "meta": 32
+      }
+    },
+    "output": {
+      "key": "tile.stairs.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/ash_gray_painted_chest_to_chest",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.chest.planks.oak.painted",
+        "amount": 1,
+        "meta": 32
+      }
+    },
+    "output": {
+      "key": "tile.chest.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/ash_gray_painted_wool_to_wool",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.wool",
+        "amount": 1,
+        "meta": 2
+      }
+    },
+    "output": {
+      "key": "tile.wool",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/ash_gray_painted_lamp_to_lamp",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.lamp.idle",
+        "amount": 1,
+        "meta": 2
+      }
+    },
+    "output": {
+      "key": "tile.lamp.idle",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/ash_gray_painted_mud_plaster_to_mud_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.mud",
+        "amount": 1,
+        "meta": 18
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.mud",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/ash_gray_painted_limestone_plaster_to_limestone_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.limestone",
+        "amount": 1,
+        "meta": 18
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.limestone",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/ash_gray_painted_ceramic_block_to_ceramic_block",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.block.ceramic.painted",
+        "amount": 1,
+        "meta": 18
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.block.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/ash_gray_painted_ceramic_tile_to_ceramic_tile",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.tile.ceramic.painted",
+        "amount": 1,
+        "meta": 18
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.tile.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/ash_gray_painted_plaster_to_wet_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "item.nonamedyes.plaster.painted",
+        "amount": 1,
+        "meta": 18
+      }
+    },
+    "output": {
+      "key": "item.nonamedyes.plaster.wet",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/olive_painted_planks_to_planks",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.planks.oak.painted",
+        "amount": 1,
+        "meta": 48
+      }
+    },
+    "output": {
+      "key": "tile.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/olive_painted_fence_to_fence",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.fence.planks.oak.painted",
+        "amount": 1,
+        "meta": 3
+      }
+    },
+    "output": {
+      "key": "tile.fence.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/olive_painted_fencegate_to_fencegate",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.fencegate.planks.oak.painted",
+        "amount": 1,
+        "meta": 48
+      }
+    },
+    "output": {
+      "key": "tile.fencegate.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/olive_painted_oak_slab_to_oak_slab",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.slab.planks.oak.painted",
+        "amount": 1,
+        "meta": 48
+      }
+    },
+    "output": {
+      "key": "tile.slab.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/olive_painted_oak_stairs_to_oak_stairs",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.stairs.planks.oak.painted",
+        "amount": 1,
+        "meta": 48
+      }
+    },
+    "output": {
+      "key": "tile.stairs.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/olive_painted_chest_to_chest",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.chest.planks.oak.painted",
+        "amount": 1,
+        "meta": 48
+      }
+    },
+    "output": {
+      "key": "tile.chest.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/olive_painted_wool_to_wool",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.wool",
+        "amount": 1,
+        "meta": 3
+      }
+    },
+    "output": {
+      "key": "tile.wool",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/olive_painted_lamp_to_lamp",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.lamp.idle",
+        "amount": 1,
+        "meta": 3
+      }
+    },
+    "output": {
+      "key": "tile.lamp.idle",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/olive_painted_mud_plaster_to_mud_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.mud",
+        "amount": 1,
+        "meta": 19
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.mud",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/olive_painted_limestone_plaster_to_limestone_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.limestone",
+        "amount": 1,
+        "meta": 19
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.limestone",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/olive_painted_ceramic_block_to_ceramic_block",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.block.ceramic.painted",
+        "amount": 1,
+        "meta": 19
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.block.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/olive_painted_ceramic_tile_to_ceramic_tile",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.tile.ceramic.painted",
+        "amount": 1,
+        "meta": 19
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.tile.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/olive_painted_plaster_to_wet_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "item.nonamedyes.plaster.painted",
+        "amount": 1,
+        "meta": 19
+      }
+    },
+    "output": {
+      "key": "item.nonamedyes.plaster.wet",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/ochre_painted_planks_to_planks",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.planks.oak.painted",
+        "amount": 1,
+        "meta": 64
+      }
+    },
+    "output": {
+      "key": "tile.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/ochre_painted_fence_to_fence",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.fence.planks.oak.painted",
+        "amount": 1,
+        "meta": 4
+      }
+    },
+    "output": {
+      "key": "tile.fence.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/ochre_painted_fencegate_to_fencegate",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.fencegate.planks.oak.painted",
+        "amount": 1,
+        "meta": 64
+      }
+    },
+    "output": {
+      "key": "tile.fencegate.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/ochre_painted_oak_slab_to_oak_slab",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.slab.planks.oak.painted",
+        "amount": 1,
+        "meta": 64
+      }
+    },
+    "output": {
+      "key": "tile.slab.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/ochre_painted_oak_stairs_to_oak_stairs",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.stairs.planks.oak.painted",
+        "amount": 1,
+        "meta": 64
+      }
+    },
+    "output": {
+      "key": "tile.stairs.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/ochre_painted_chest_to_chest",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.chest.planks.oak.painted",
+        "amount": 1,
+        "meta": 64
+      }
+    },
+    "output": {
+      "key": "tile.chest.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/ochre_painted_wool_to_wool",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.wool",
+        "amount": 1,
+        "meta": 4
+      }
+    },
+    "output": {
+      "key": "tile.wool",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/ochre_painted_lamp_to_lamp",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.lamp.idle",
+        "amount": 1,
+        "meta": 4
+      }
+    },
+    "output": {
+      "key": "tile.lamp.idle",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/ochre_painted_mud_plaster_to_mud_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.mud",
+        "amount": 1,
+        "meta": 20
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.mud",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/ochre_painted_limestone_plaster_to_limestone_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.limestone",
+        "amount": 1,
+        "meta": 20
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.limestone",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/ochre_painted_ceramic_block_to_ceramic_block",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.block.ceramic.painted",
+        "amount": 1,
+        "meta": 20
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.block.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/ochre_painted_ceramic_tile_to_ceramic_tile",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.tile.ceramic.painted",
+        "amount": 1,
+        "meta": 20
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.tile.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/ochre_painted_plaster_to_wet_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "item.nonamedyes.plaster.painted",
+        "amount": 1,
+        "meta": 20
+      }
+    },
+    "output": {
+      "key": "item.nonamedyes.plaster.wet",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/buff_painted_planks_to_planks",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.planks.oak.painted",
+        "amount": 1,
+        "meta": 80
+      }
+    },
+    "output": {
+      "key": "tile.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/buff_painted_fence_to_fence",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.fence.planks.oak.painted",
+        "amount": 1,
+        "meta": 5
+      }
+    },
+    "output": {
+      "key": "tile.fence.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/buff_painted_fencegate_to_fencegate",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.fencegate.planks.oak.painted",
+        "amount": 1,
+        "meta": 80
+      }
+    },
+    "output": {
+      "key": "tile.fencegate.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/buff_painted_oak_slab_to_oak_slab",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.slab.planks.oak.painted",
+        "amount": 1,
+        "meta": 80
+      }
+    },
+    "output": {
+      "key": "tile.slab.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/buff_painted_oak_stairs_to_oak_stairs",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.stairs.planks.oak.painted",
+        "amount": 1,
+        "meta": 80
+      }
+    },
+    "output": {
+      "key": "tile.stairs.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/buff_painted_chest_to_chest",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.chest.planks.oak.painted",
+        "amount": 1,
+        "meta": 80
+      }
+    },
+    "output": {
+      "key": "tile.chest.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/buff_painted_wool_to_wool",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.wool",
+        "amount": 1,
+        "meta": 5
+      }
+    },
+    "output": {
+      "key": "tile.wool",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/buff_painted_lamp_to_lamp",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.lamp.idle",
+        "amount": 1,
+        "meta": 5
+      }
+    },
+    "output": {
+      "key": "tile.lamp.idle",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/buff_painted_mud_plaster_to_mud_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.mud",
+        "amount": 1,
+        "meta": 21
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.mud",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/buff_painted_limestone_plaster_to_limestone_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.limestone",
+        "amount": 1,
+        "meta": 21
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.limestone",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/buff_painted_ceramic_block_to_ceramic_block",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.block.ceramic.painted",
+        "amount": 1,
+        "meta": 21
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.block.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/buff_painted_ceramic_tile_to_ceramic_tile",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.tile.ceramic.painted",
+        "amount": 1,
+        "meta": 21
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.tile.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/buff_painted_plaster_to_wet_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "item.nonamedyes.plaster.painted",
+        "amount": 1,
+        "meta": 21
+      }
+    },
+    "output": {
+      "key": "item.nonamedyes.plaster.wet",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/verdigris_painted_planks_to_planks",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.planks.oak.painted",
+        "amount": 1,
+        "meta": 96
+      }
+    },
+    "output": {
+      "key": "tile.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/verdigris_painted_fence_to_fence",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.fence.planks.oak.painted",
+        "amount": 1,
+        "meta": 6
+      }
+    },
+    "output": {
+      "key": "tile.fence.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/verdigris_painted_fencegate_to_fencegate",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.fencegate.planks.oak.painted",
+        "amount": 1,
+        "meta": 96
+      }
+    },
+    "output": {
+      "key": "tile.fencegate.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/verdigris_painted_oak_slab_to_oak_slab",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.slab.planks.oak.painted",
+        "amount": 1,
+        "meta": 96
+      }
+    },
+    "output": {
+      "key": "tile.slab.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/verdigris_painted_oak_stairs_to_oak_stairs",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.stairs.planks.oak.painted",
+        "amount": 1,
+        "meta": 96
+      }
+    },
+    "output": {
+      "key": "tile.stairs.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/verdigris_painted_chest_to_chest",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.chest.planks.oak.painted",
+        "amount": 1,
+        "meta": 96
+      }
+    },
+    "output": {
+      "key": "tile.chest.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/verdigris_painted_wool_to_wool",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.wool",
+        "amount": 1,
+        "meta": 6
+      }
+    },
+    "output": {
+      "key": "tile.wool",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/verdigris_painted_lamp_to_lamp",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.lamp.idle",
+        "amount": 1,
+        "meta": 6
+      }
+    },
+    "output": {
+      "key": "tile.lamp.idle",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/verdigris_painted_mud_plaster_to_mud_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.mud",
+        "amount": 1,
+        "meta": 22
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.mud",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/verdigris_painted_limestone_plaster_to_limestone_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.limestone",
+        "amount": 1,
+        "meta": 22
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.limestone",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/verdigris_painted_ceramic_block_to_ceramic_block",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.block.ceramic.painted",
+        "amount": 1,
+        "meta": 22
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.block.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/verdigris_painted_ceramic_tile_to_ceramic_tile",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.tile.ceramic.painted",
+        "amount": 1,
+        "meta": 22
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.tile.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/verdigris_painted_plaster_to_wet_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "item.nonamedyes.plaster.painted",
+        "amount": 1,
+        "meta": 22
+      }
+    },
+    "output": {
+      "key": "item.nonamedyes.plaster.wet",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/light_yellow_painted_planks_to_planks",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.planks.oak.painted",
+        "amount": 1,
+        "meta": 112
+      }
+    },
+    "output": {
+      "key": "tile.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/light_yellow_painted_fence_to_fence",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.fence.planks.oak.painted",
+        "amount": 1,
+        "meta": 7
+      }
+    },
+    "output": {
+      "key": "tile.fence.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/light_yellow_painted_fencegate_to_fencegate",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.fencegate.planks.oak.painted",
+        "amount": 1,
+        "meta": 112
+      }
+    },
+    "output": {
+      "key": "tile.fencegate.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/light_yellow_painted_oak_slab_to_oak_slab",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.slab.planks.oak.painted",
+        "amount": 1,
+        "meta": 112
+      }
+    },
+    "output": {
+      "key": "tile.slab.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/light_yellow_painted_oak_stairs_to_oak_stairs",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.stairs.planks.oak.painted",
+        "amount": 1,
+        "meta": 112
+      }
+    },
+    "output": {
+      "key": "tile.stairs.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/light_yellow_painted_chest_to_chest",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.chest.planks.oak.painted",
+        "amount": 1,
+        "meta": 112
+      }
+    },
+    "output": {
+      "key": "tile.chest.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/light_yellow_painted_wool_to_wool",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.wool",
+        "amount": 1,
+        "meta": 7
+      }
+    },
+    "output": {
+      "key": "tile.wool",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/light_yellow_painted_lamp_to_lamp",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.lamp.idle",
+        "amount": 1,
+        "meta": 7
+      }
+    },
+    "output": {
+      "key": "tile.lamp.idle",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/light_yellow_painted_mud_plaster_to_mud_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.mud",
+        "amount": 1,
+        "meta": 23
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.mud",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/light_yellow_painted_limestone_plaster_to_limestone_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.limestone",
+        "amount": 1,
+        "meta": 23
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.limestone",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/light_yellow_painted_ceramic_block_to_ceramic_block",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.block.ceramic.painted",
+        "amount": 1,
+        "meta": 23
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.block.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/light_yellow_painted_ceramic_tile_to_ceramic_tile",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.tile.ceramic.painted",
+        "amount": 1,
+        "meta": 23
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.tile.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/light_yellow_painted_plaster_to_wet_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "item.nonamedyes.plaster.painted",
+        "amount": 1,
+        "meta": 23
+      }
+    },
+    "output": {
+      "key": "item.nonamedyes.plaster.wet",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/indigo_painted_planks_to_planks",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.planks.oak.painted",
+        "amount": 1,
+        "meta": 128
+      }
+    },
+    "output": {
+      "key": "tile.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/indigo_painted_fence_to_fence",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.fence.planks.oak.painted",
+        "amount": 1,
+        "meta": 8
+      }
+    },
+    "output": {
+      "key": "tile.fence.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/indigo_painted_fencegate_to_fencegate",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.fencegate.planks.oak.painted",
+        "amount": 1,
+        "meta": 128
+      }
+    },
+    "output": {
+      "key": "tile.fencegate.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/indigo_painted_oak_slab_to_oak_slab",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.slab.planks.oak.painted",
+        "amount": 1,
+        "meta": 128
+      }
+    },
+    "output": {
+      "key": "tile.slab.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/indigo_painted_oak_stairs_to_oak_stairs",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.stairs.planks.oak.painted",
+        "amount": 1,
+        "meta": 128
+      }
+    },
+    "output": {
+      "key": "tile.stairs.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/indigo_painted_chest_to_chest",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.chest.planks.oak.painted",
+        "amount": 1,
+        "meta": 128
+      }
+    },
+    "output": {
+      "key": "tile.chest.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/indigo_painted_wool_to_wool",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.wool",
+        "amount": 1,
+        "meta": 8
+      }
+    },
+    "output": {
+      "key": "tile.wool",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/indigo_painted_lamp_to_lamp",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.lamp.idle",
+        "amount": 1,
+        "meta": 8
+      }
+    },
+    "output": {
+      "key": "tile.lamp.idle",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/indigo_painted_mud_plaster_to_mud_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.mud",
+        "amount": 1,
+        "meta": 24
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.mud",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/indigo_painted_limestone_plaster_to_limestone_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.limestone",
+        "amount": 1,
+        "meta": 24
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.limestone",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/indigo_painted_ceramic_block_to_ceramic_block",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.block.ceramic.painted",
+        "amount": 1,
+        "meta": 24
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.block.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/indigo_painted_ceramic_tile_to_ceramic_tile",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.tile.ceramic.painted",
+        "amount": 1,
+        "meta": 24
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.tile.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/indigo_painted_plaster_to_wet_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "item.nonamedyes.plaster.painted",
+        "amount": 1,
+        "meta": 24
+      }
+    },
+    "output": {
+      "key": "item.nonamedyes.plaster.wet",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/xanthic_painted_planks_to_planks",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.planks.oak.painted",
+        "amount": 1,
+        "meta": 144
+      }
+    },
+    "output": {
+      "key": "tile.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/xanthic_painted_fence_to_fence",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.fence.planks.oak.painted",
+        "amount": 1,
+        "meta": 9
+      }
+    },
+    "output": {
+      "key": "tile.fence.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/xanthic_painted_fencegate_to_fencegate",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.fencegate.planks.oak.painted",
+        "amount": 1,
+        "meta": 144
+      }
+    },
+    "output": {
+      "key": "tile.fencegate.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/xanthic_painted_oak_slab_to_oak_slab",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.slab.planks.oak.painted",
+        "amount": 1,
+        "meta": 144
+      }
+    },
+    "output": {
+      "key": "tile.slab.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/xanthic_painted_oak_stairs_to_oak_stairs",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.stairs.planks.oak.painted",
+        "amount": 1,
+        "meta": 144
+      }
+    },
+    "output": {
+      "key": "tile.stairs.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/xanthic_painted_chest_to_chest",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.chest.planks.oak.painted",
+        "amount": 1,
+        "meta": 144
+      }
+    },
+    "output": {
+      "key": "tile.chest.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/xanthic_painted_wool_to_wool",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.wool",
+        "amount": 1,
+        "meta": 9
+      }
+    },
+    "output": {
+      "key": "tile.wool",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/xanthic_painted_lamp_to_lamp",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.lamp.idle",
+        "amount": 1,
+        "meta": 9
+      }
+    },
+    "output": {
+      "key": "tile.lamp.idle",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/xanthic_painted_mud_plaster_to_mud_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.mud",
+        "amount": 1,
+        "meta": 25
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.mud",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/xanthic_painted_limestone_plaster_to_limestone_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.limestone",
+        "amount": 1,
+        "meta": 25
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.limestone",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/xanthic_painted_ceramic_block_to_ceramic_block",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.block.ceramic.painted",
+        "amount": 1,
+        "meta": 25
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.block.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/xanthic_painted_ceramic_tile_to_ceramic_tile",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.tile.ceramic.painted",
+        "amount": 1,
+        "meta": 25
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.tile.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/xanthic_painted_plaster_to_wet_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "item.nonamedyes.plaster.painted",
+        "amount": 1,
+        "meta": 25
+      }
+    },
+    "output": {
+      "key": "item.nonamedyes.plaster.wet",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/cinnamon_painted_planks_to_planks",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.planks.oak.painted",
+        "amount": 1,
+        "meta": 160
+      }
+    },
+    "output": {
+      "key": "tile.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/cinnamon_painted_fence_to_fence",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.fence.planks.oak.painted",
+        "amount": 1,
+        "meta": 10
+      }
+    },
+    "output": {
+      "key": "tile.fence.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/cinnamon_painted_fencegate_to_fencegate",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.fencegate.planks.oak.painted",
+        "amount": 1,
+        "meta": 160
+      }
+    },
+    "output": {
+      "key": "tile.fencegate.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/cinnamon_painted_oak_slab_to_oak_slab",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.slab.planks.oak.painted",
+        "amount": 1,
+        "meta": 160
+      }
+    },
+    "output": {
+      "key": "tile.slab.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/cinnamon_painted_oak_stairs_to_oak_stairs",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.stairs.planks.oak.painted",
+        "amount": 1,
+        "meta": 160
+      }
+    },
+    "output": {
+      "key": "tile.stairs.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/cinnamon_painted_chest_to_chest",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.chest.planks.oak.painted",
+        "amount": 1,
+        "meta": 160
+      }
+    },
+    "output": {
+      "key": "tile.chest.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/cinnamon_painted_wool_to_wool",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.wool",
+        "amount": 1,
+        "meta": 10
+      }
+    },
+    "output": {
+      "key": "tile.wool",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/cinnamon_painted_lamp_to_lamp",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.lamp.idle",
+        "amount": 1,
+        "meta": 10
+      }
+    },
+    "output": {
+      "key": "tile.lamp.idle",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/cinnamon_painted_mud_plaster_to_mud_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.mud",
+        "amount": 1,
+        "meta": 26
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.mud",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/cinnamon_painted_limestone_plaster_to_limestone_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.limestone",
+        "amount": 1,
+        "meta": 26
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.limestone",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/cinnamon_painted_ceramic_block_to_ceramic_block",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.block.ceramic.painted",
+        "amount": 1,
+        "meta": 26
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.block.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/cinnamon_painted_ceramic_tile_to_ceramic_tile",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.tile.ceramic.painted",
+        "amount": 1,
+        "meta": 26
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.tile.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/cinnamon_painted_plaster_to_wet_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "item.nonamedyes.plaster.painted",
+        "amount": 1,
+        "meta": 26
+      }
+    },
+    "output": {
+      "key": "item.nonamedyes.plaster.wet",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/navy_blue_painted_planks_to_planks",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.planks.oak.painted",
+        "amount": 1,
+        "meta": 176
+      }
+    },
+    "output": {
+      "key": "tile.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/navy_blue_painted_fence_to_fence",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.fence.planks.oak.painted",
+        "amount": 1,
+        "meta": 11
+      }
+    },
+    "output": {
+      "key": "tile.fence.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/navy_blue_painted_fencegate_to_fencegate",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.fencegate.planks.oak.painted",
+        "amount": 1,
+        "meta": 176
+      }
+    },
+    "output": {
+      "key": "tile.fencegate.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/navy_blue_painted_oak_slab_to_oak_slab",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.slab.planks.oak.painted",
+        "amount": 1,
+        "meta": 176
+      }
+    },
+    "output": {
+      "key": "tile.slab.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/navy_blue_painted_oak_stairs_to_oak_stairs",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.stairs.planks.oak.painted",
+        "amount": 1,
+        "meta": 176
+      }
+    },
+    "output": {
+      "key": "tile.stairs.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/navy_blue_painted_chest_to_chest",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.chest.planks.oak.painted",
+        "amount": 1,
+        "meta": 176
+      }
+    },
+    "output": {
+      "key": "tile.chest.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/navy_blue_painted_wool_to_wool",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.wool",
+        "amount": 1,
+        "meta": 11
+      }
+    },
+    "output": {
+      "key": "tile.wool",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/navy_blue_painted_lamp_to_lamp",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.lamp.idle",
+        "amount": 1,
+        "meta": 11
+      }
+    },
+    "output": {
+      "key": "tile.lamp.idle",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/navy_blue_painted_mud_plaster_to_mud_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.mud",
+        "amount": 1,
+        "meta": 27
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.mud",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/navy_blue_painted_limestone_plaster_to_limestone_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.limestone",
+        "amount": 1,
+        "meta": 27
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.limestone",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/navy_blue_painted_ceramic_block_to_ceramic_block",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.block.ceramic.painted",
+        "amount": 1,
+        "meta": 27
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.block.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/navy_blue_painted_ceramic_tile_to_ceramic_tile",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.tile.ceramic.painted",
+        "amount": 1,
+        "meta": 27
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.tile.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/navy_blue_painted_plaster_to_wet_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "item.nonamedyes.plaster.painted",
+        "amount": 1,
+        "meta": 27
+      }
+    },
+    "output": {
+      "key": "item.nonamedyes.plaster.wet",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/royal_purple_painted_planks_to_planks",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.planks.oak.painted",
+        "amount": 1,
+        "meta": 192
+      }
+    },
+    "output": {
+      "key": "tile.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/royal_purple_painted_fence_to_fence",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.fence.planks.oak.painted",
+        "amount": 1,
+        "meta": 12
+      }
+    },
+    "output": {
+      "key": "tile.fence.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/royal_purple_painted_fencegate_to_fencegate",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.fencegate.planks.oak.painted",
+        "amount": 1,
+        "meta": 192
+      }
+    },
+    "output": {
+      "key": "tile.fencegate.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/royal_purple_painted_oak_slab_to_oak_slab",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.slab.planks.oak.painted",
+        "amount": 1,
+        "meta": 192
+      }
+    },
+    "output": {
+      "key": "tile.slab.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/royal_purple_painted_oak_stairs_to_oak_stairs",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.stairs.planks.oak.painted",
+        "amount": 1,
+        "meta": 192
+      }
+    },
+    "output": {
+      "key": "tile.stairs.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/royal_purple_painted_chest_to_chest",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.chest.planks.oak.painted",
+        "amount": 1,
+        "meta": 192
+      }
+    },
+    "output": {
+      "key": "tile.chest.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/royal_purple_painted_wool_to_wool",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.wool",
+        "amount": 1,
+        "meta": 12
+      }
+    },
+    "output": {
+      "key": "tile.wool",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/royal_purple_painted_lamp_to_lamp",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.lamp.idle",
+        "amount": 1,
+        "meta": 12
+      }
+    },
+    "output": {
+      "key": "tile.lamp.idle",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/royal_purple_painted_mud_plaster_to_mud_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.mud",
+        "amount": 1,
+        "meta": 28
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.mud",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/royal_purple_painted_limestone_plaster_to_limestone_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.plaster.limestone",
+        "amount": 1,
+        "meta": 28
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.plaster.limestone",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/royal_purple_painted_ceramic_block_to_ceramic_block",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.block.ceramic.painted",
+        "amount": 1,
+        "meta": 28
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.block.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/royal_purple_painted_ceramic_tile_to_ceramic_tile",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "tile.nonamedyes.tile.ceramic.painted",
+        "amount": 1,
+        "meta": 28
+      }
+    },
+    "output": {
+      "key": "tile.nonamedyes.tile.ceramic.painted",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/royal_purple_painted_plaster_to_wet_plaster",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "stack": {
+        "key": "item.nonamedyes.plaster.painted",
+        "amount": 1,
+        "meta": 28
+      }
+    },
+    "output": {
+      "key": "item.nonamedyes.plaster.wet",
+      "amount": 1,
+      "meta": 0
+    }
+  }
 ]

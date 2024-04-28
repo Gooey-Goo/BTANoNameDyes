@@ -166,9 +166,7 @@ public class TileEntityBleacher extends TileEntity implements IInventory {
         for (int i=0;i<4;i++) {
             if (bleacherItemStacks[1+i] == null) continue;
 			ItemStack itemstack = null;
-			System.out.println(ModRecipes.BLEACHER);
 			for (RecipeEntryBleacher recipeEntryBase : ModRecipes.BLEACHER) {
-				System.out.println(recipeEntryBase);
 				if (recipeEntryBase == null || !recipeEntryBase.matches(bleacherItemStacks[1+i])) continue;
 				itemstack = recipeEntryBase.getOutput();
 			}
