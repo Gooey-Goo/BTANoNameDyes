@@ -8,6 +8,7 @@ import net.minecraft.core.item.ItemStack;
 import java.util.HashMap;
 import java.util.Map;
 
+@Deprecated
 public class RecipesBleacher {
     private static final RecipesBleacher bleachingBase = new RecipesBleacher();
     private final Map<Integer, ItemStack> bleachingList = new HashMap<>();

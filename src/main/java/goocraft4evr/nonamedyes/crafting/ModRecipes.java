@@ -11,9 +11,7 @@ import net.minecraft.core.block.Block;
 import net.minecraft.core.crafting.LookupFuelFurnace;
 import net.minecraft.core.data.DataLoader;
 import net.minecraft.core.data.registry.Registries;
-import net.minecraft.core.data.registry.recipe.RecipeGroup;
-import net.minecraft.core.data.registry.recipe.RecipeNamespace;
-import net.minecraft.core.data.registry.recipe.RecipeSymbol;
+import net.minecraft.core.data.registry.recipe.*;
 import net.minecraft.core.data.registry.recipe.entry.RecipeEntryBlastFurnace;
 import net.minecraft.core.data.registry.recipe.entry.RecipeEntryCrafting;
 import net.minecraft.core.data.registry.recipe.entry.RecipeEntryFurnace;
@@ -23,25 +21,29 @@ import net.minecraft.core.item.ItemStack;
 import org.jetbrains.annotations.NotNull;
 import turniplabs.halplibe.util.RecipeEntrypoint;
 
-import java.util.Collection;
-import java.util.Iterator;
+import java.util.*;
+
+import static net.minecraft.core.data.registry.Registries.RECIPE_TYPES;
 
 public class ModRecipes implements RecipeEntrypoint {
 	public static final RecipeNamespace RN = new RecipeNamespace();
 	public static final RecipeGroup<RecipeEntryCrafting<?, ?>> WORKBENCH = new RecipeGroup<>(new RecipeSymbol(new ItemStack(Block.workbench)));
 	public static final RecipeGroup<RecipeEntryFurnace> FURNACE = new RecipeGroup<>(new RecipeSymbol(new ItemStack(Block.furnaceStoneActive)));
 	public static final RecipeGroup<RecipeEntryBlastFurnace> BLAST_FURNACE = new RecipeGroup<>(new RecipeSymbol(new ItemStack(Block.furnaceBlastActive)));
+	public static final RecipeGroup<RecipeEntryBleacher> BLEACHER = new RecipeGroup<>(new RecipeSymbol(new ItemStack(ModBlocks.bleacher)));
+
 	@Override
 	public void onRecipesReady() {
 		WORKBENCH.register("label_dye", new RecipeEntryLabelModDye());
 		WORKBENCH.register("cinnamon", new RecipeEntryCinnamon());
 
-		Registries.RECIPE_TYPES.register("nonamedyes:crafting/label_dye", RecipeEntryLabelModDye.class);
-		Registries.RECIPE_TYPES.register("nonamedyes:crafting/cinnamon", RecipeEntryCinnamon.class);
+		RECIPE_TYPES.register("nonamedyes:crafting/label_dye", RecipeEntryLabelModDye.class);
+		RECIPE_TYPES.register("nonamedyes:crafting/cinnamon", RecipeEntryCinnamon.class);
 
 		craftingRecipes();
 		furnaceRecipes();
 		trommelRecipes();
+		bleachingRecipes();
 	}
 
 	@Override
@@ -50,6 +52,8 @@ public class ModRecipes implements RecipeEntrypoint {
 		RN.register("furnace", FURNACE);
 		RN.register("blast_furnace", BLAST_FURNACE);
 		RN.register("workbench", WORKBENCH);
+		RN.register("bleacher", BLEACHER);
+		RECIPE_TYPES.register("nonamedyes:bleaching",RecipeEntryBleacher.class);
 
 		Registries.ITEM_GROUPS.register("nonamedyes:ceramics", Registries.stackListOf());
 		Registries.ITEM_GROUPS.register("nonamedyes:ceramic_tiles", Registries.stackListOf());
@@ -76,6 +80,10 @@ public class ModRecipes implements RecipeEntrypoint {
 
 		Registries.ITEM_GROUPS.getItem("minecraft:chests").add(ModBlocks.chestPlanksOakPainted.getDefaultStack());
 
+	}
+
+	private void bleachingRecipes() {
+		DataLoader.loadRecipesFromFile(String.format("/assets/%s/recipes/bleacher.json", NoNameDyes.MOD_ID));
 	}
 
 	private void craftingRecipes(){

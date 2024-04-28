@@ -1,0 +1,50 @@
+[
+  {
+    "name": "nonamedyes:bleacher/painted_planks_to_planks",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "group" : "minecraft:planks"
+    },
+    "output": {
+      "key": "tile.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/painted_lamps_to_lamps",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "group" : "minecraft:lamps"
+    },
+    "output": {
+      "key": "tile.lamp.idle",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/painted_wool_to_wool",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "group" : "minecraft:wool"
+    },
+    "output": {
+      "key": "tile.wool",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+  {
+    "name": "nonamedyes:bleacher/painted_chests_to_chest",
+    "type": "nonamedyes:bleaching",
+    "input": {
+      "group" : "minecraft:chests"
+    },
+    "output": {
+      "key": "tile.chest.planks.oak",
+      "amount": 1,
+      "meta": 0
+    }
+  },
+]

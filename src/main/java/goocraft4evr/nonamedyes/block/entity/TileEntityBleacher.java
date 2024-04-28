@@ -1,12 +1,17 @@
 package goocraft4evr.nonamedyes.block.entity;
 
-import goocraft4evr.nonamedyes.crafting.recipe.RecipesBleacher;
+import goocraft4evr.nonamedyes.crafting.ModRecipes;
+import goocraft4evr.nonamedyes.crafting.RecipeEntryBleacher;
 import goocraft4evr.nonamedyes.item.ModItems;
 import net.minecraft.core.block.Block;
 import net.minecraft.core.block.entity.TileEntity;
+import net.minecraft.core.data.registry.Registries;
+import net.minecraft.core.data.registry.recipe.entry.RecipeEntryFurnace;
 import net.minecraft.core.entity.player.EntityPlayer;
 import net.minecraft.core.item.ItemStack;
 import net.minecraft.core.player.inventory.IInventory;
+
+import java.util.List;
 
 public class TileEntityBleacher extends TileEntity implements IInventory {
     public final ItemStack[] bleacherItemStacks = new ItemStack[9];
@@ -118,12 +123,15 @@ public class TileEntityBleacher extends TileEntity implements IInventory {
 
     private void bleachItem() {
         if (!canBleach()) return;
-        ItemStack itemstack;
         int emptyIndex = -1;
         boolean hasOutput = false;
         for (int i=0;i<4;i++) {
             if (bleacherItemStacks[1+i] == null) continue;
-            itemstack = RecipesBleacher.bleaching().getBleachingResult(bleacherItemStacks[1+i].getItem().id);
+			ItemStack itemstack = null;
+			for (RecipeEntryBleacher recipeEntryBase : ModRecipes.BLEACHER) {
+				if (recipeEntryBase == null || !recipeEntryBase.matches(bleacherItemStacks[1+i])) continue;
+				itemstack = recipeEntryBase.getOutput();
+			}
             if (itemstack == null) continue;
             for (int j=0;j<4;j++) {
                 if (bleacherItemStacks[5+j] == null) {
@@ -155,10 +163,15 @@ public class TileEntityBleacher extends TileEntity implements IInventory {
     }
 
     private boolean canBleach() {
-        ItemStack itemstack;
         for (int i=0;i<4;i++) {
             if (bleacherItemStacks[1+i] == null) continue;
-            itemstack = RecipesBleacher.bleaching().getBleachingResult(bleacherItemStacks[1+i].getItem().id);
+			ItemStack itemstack = null;
+			System.out.println(ModRecipes.BLEACHER);
+			for (RecipeEntryBleacher recipeEntryBase : ModRecipes.BLEACHER) {
+				System.out.println(recipeEntryBase);
+				if (recipeEntryBase == null || !recipeEntryBase.matches(bleacherItemStacks[1+i])) continue;
+				itemstack = recipeEntryBase.getOutput();
+			}
             if (itemstack == null) continue;
             for (int j=0;j<4;j++) {
                 if (bleacherItemStacks[5+j] == null) return true;
