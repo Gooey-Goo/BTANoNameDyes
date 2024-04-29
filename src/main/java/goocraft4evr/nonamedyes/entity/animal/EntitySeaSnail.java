@@ -75,7 +75,7 @@ public class EntitySeaSnail extends EntityWaterAnimal {
 
 	@Override
 	public String getEntityTexture() {
-		return String.format("assets/%s/mob/%s/%d.png", NoNameDyes.MOD_ID,skinName,getSkinVariant());
+		return String.format("/assets/%s/mob/%s/%d.png", NoNameDyes.MOD_ID,skinName,getSkinVariant());
 	}
 
 	@Override
