@@ -25,7 +25,7 @@ import java.util.Random;
 public class TileEntityVileReactor extends TileEntity {
     public int killCount = 0;
     private final int range = 4;
-    private final int killLimit = 10;
+    private final int killLimit = 20;
     private final int killMark = killLimit/3;
     private static final WeightedRandomBag<WeightedRandomLootObject> reactorDrops = new WeightedRandomBag();
 
@@ -91,7 +91,7 @@ public class TileEntityVileReactor extends TileEntity {
     }
 
     private void generateItems(World world, Random rand, int x, int y, int z) {
-        int chances = 15 + rand.nextInt(10);
+        int chances = 10 + rand.nextInt(10);
         for (int i=0;i<chances;i++) {
             ItemStack itemstack = reactorDrops.getRandom().getItemStack();
             float f = rand.nextFloat() * 0.8f + 0.1f;
@@ -112,10 +112,10 @@ public class TileEntityVileReactor extends TileEntity {
 
     //this could be a world feature if I weren't lazy
     private void generateNetherrack(World world, Random random, int x, int y, int z) {
-        int minrad = 1;
-        int maxrad = 2;
-        int mindepth = 2;
-        int maxdepth = 7;
+        final int minrad = 2;
+		final int maxrad = 3;
+		final int mindepth = 4;
+		final int maxdepth = 8;
         int minradX = -minrad - random.nextInt(maxrad+1-minrad);
         int maxradX = minrad + random.nextInt(maxrad+1-minrad);
         int minradZ = -minrad - random.nextInt(maxrad+1-minrad);
@@ -148,8 +148,8 @@ public class TileEntityVileReactor extends TileEntity {
 	}
 
     static {
-        reactorDrops.addEntry(new WeightedRandomLootObject(new ItemStack(ModItems.vileShard), 2, 6), 30.0);
-        reactorDrops.addEntry(new WeightedRandomLootObject(new ItemStack(Item.bone), 2, 5), 15.0);
+        reactorDrops.addEntry(new WeightedRandomLootObject(new ItemStack(ModItems.vileShard), 2, 3), 30.0);
+        reactorDrops.addEntry(new WeightedRandomLootObject(new ItemStack(Item.bone), 1, 2), 15.0);
         reactorDrops.addEntry(new WeightedRandomLootObject(new ItemStack(Item.dye,1,15), 1, 3), 12.0);
         reactorDrops.addEntry(new WeightedRandomLootObject(new ItemStack(Item.sulphur), 1, 3), 7.0);
         //reactorDrops.addEntry(new WeightedRandomLootObject(new ItemStack(ModBlocks.netherrackVile), 1, 2), 2.5);
