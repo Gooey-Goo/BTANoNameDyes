@@ -27,20 +27,20 @@ public class BleachingSection extends SearchableGuidebookSection {
 	@Override
 	public List<GuidebookPage> searchPages(SearchQuery query) {
 		if (this.filteredPages == null || !Objects.equals(this.filteredPages.getLeft(), query.rawQuery)) {
-			ArrayList<RecipeEntryBleacher> filteredRecipes = new ArrayList<RecipeEntryBleacher>();
-			ArrayList<RecipeEntryBleacher> allRecipes = new ArrayList<RecipeEntryBleacher>(ModRecipes.BLEACHER.getAllRecipes());
+			ArrayList<RecipeEntryBleacher> filteredRecipes = new ArrayList<>();
+			ArrayList<RecipeEntryBleacher> allRecipes = new ArrayList<>(ModRecipes.BLEACHER.getAllRecipes());
 			allRecipes.removeIf(Objects::isNull);
 			NoNameDyes.LOGGER.info(allRecipes.toString());
 			for (RecipeEntryBleacher recipe : allRecipes) {
 				if (!recipe.matchesQueryIgnoreExceptions(query)) continue;
 				filteredRecipes.add(recipe);
 			}
-			ArrayList<GuidebookPage> filteredPages = new ArrayList<GuidebookPage>();
+			ArrayList<GuidebookPage> filteredPages = new ArrayList<>();
 			int filteredRecipeSize = filteredRecipes.size();
 			int filteredPageCount = MathHelper.ceilInt(filteredRecipeSize, 3);
 			for (int i = 0; i < filteredPageCount; ++i) {
 				int j = i * 6;
-				ArrayList<RecipeEntryBleacher> recipes = new ArrayList<RecipeEntryBleacher>(filteredRecipes.subList(Math.min(j, filteredRecipeSize), Math.min(j + 6, filteredRecipeSize)));
+				ArrayList<RecipeEntryBleacher> recipes = new ArrayList<>(filteredRecipes.subList(Math.min(j, filteredRecipeSize), Math.min(j + 6, filteredRecipeSize)));
 				if (recipes.size() <= 0) continue;
 				filteredPages.add(new BleachingPage(this, recipes));
 			}
@@ -52,14 +52,14 @@ public class BleachingSection extends SearchableGuidebookSection {
 
 	public void reloadRecipes() {
 		this.pages.clear();
-		ArrayList<RecipeEntryBleacher> allRecipes = new ArrayList<RecipeEntryBleacher>(ModRecipes.BLEACHER.getAllRecipes());
+		ArrayList<RecipeEntryBleacher> allRecipes = new ArrayList<>(ModRecipes.BLEACHER.getAllRecipes());
 		NoNameDyes.LOGGER.info(allRecipes.toString());
 		allRecipes.removeIf(Objects::isNull);
 		int totalRecipes = allRecipes.size();
 		int totalPages = MathHelper.ceilInt(totalRecipes, 6);
 		for (int i = 0; i < totalPages; ++i) {
 			int j = i * 6;
-			ArrayList<RecipeEntryBleacher> recipes = new ArrayList<RecipeEntryBleacher>(allRecipes.subList(Math.min(j, totalRecipes), Math.min(j + 6, totalRecipes)));
+			ArrayList<RecipeEntryBleacher> recipes = new ArrayList<>(allRecipes.subList(Math.min(j, totalRecipes), Math.min(j + 6, totalRecipes)));
 			this.pages.add(new BleachingPage(this, recipes));
 		}
 	}

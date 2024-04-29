@@ -1,5 +1,7 @@
 package goocraft4evr.nonamedyes.block.entity;
 
+import com.mojang.nbt.CompoundTag;
+import com.mojang.nbt.ListTag;
 import goocraft4evr.nonamedyes.block.BlockVileReactor;
 import goocraft4evr.nonamedyes.block.ModBlocks;
 import goocraft4evr.nonamedyes.item.ModItems;
@@ -132,6 +134,18 @@ public class TileEntityVileReactor extends TileEntity {
             }
         }
     }
+
+	@Override
+	public void readFromNBT(CompoundTag nbttagcompound) {
+		super.readFromNBT(nbttagcompound);
+		killCount = nbttagcompound.getShort("Kills");
+	}
+
+	@Override
+	public void writeToNBT(CompoundTag nbttagcompound) {
+		super.writeToNBT(nbttagcompound);
+		nbttagcompound.putShort("Kills", (short)killCount);
+	}
 
     static {
         reactorDrops.addEntry(new WeightedRandomLootObject(new ItemStack(ModItems.vileShard), 2, 6), 30.0);

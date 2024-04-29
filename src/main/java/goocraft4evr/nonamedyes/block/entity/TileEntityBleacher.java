@@ -1,5 +1,7 @@
 package goocraft4evr.nonamedyes.block.entity;
 
+import com.mojang.nbt.CompoundTag;
+import com.mojang.nbt.ListTag;
 import goocraft4evr.nonamedyes.crafting.ModRecipes;
 import goocraft4evr.nonamedyes.crafting.RecipeEntryBleacher;
 import goocraft4evr.nonamedyes.item.ModItems;
@@ -14,7 +16,7 @@ import net.minecraft.core.player.inventory.IInventory;
 import java.util.List;
 
 public class TileEntityBleacher extends TileEntity implements IInventory {
-    public final ItemStack[] bleacherItemStacks = new ItemStack[9];
+    public ItemStack[] bleacherItemStacks = new ItemStack[9];
     public boolean hasWaterSource;
     public int maxFuelTime = 0;
     public int currentFuelTime = 0;
@@ -211,4 +213,37 @@ public class TileEntityBleacher extends TileEntity implements IInventory {
         if (maxBleachTime == 0) return 0;
         return currentBleachTime * i / maxBleachTime;
     }
+
+	@Override
+	public void readFromNBT(CompoundTag nbttagcompound) {
+		super.readFromNBT(nbttagcompound);
+		ListTag nbttaglist = nbttagcompound.getList("Items");
+		bleacherItemStacks = new ItemStack[this.getSizeInventory()];
+		for (int i = 0; i < nbttaglist.tagCount(); ++i) {
+			CompoundTag nbttagcompound1 = (CompoundTag)nbttaglist.tagAt(i);
+			byte byte0 = nbttagcompound1.getByte("Slot");
+			if (byte0 < 0 || byte0 >= bleacherItemStacks.length) continue;
+			bleacherItemStacks[byte0] = ItemStack.readItemStackFromNbt(nbttagcompound1);
+		}
+		currentFuelTime = nbttagcompound.getShort("FuelTime");
+		currentBleachTime = nbttagcompound.getShort("BleachTime");
+		maxFuelTime = nbttagcompound.getShort("MaxFuelTime");
+	}
+
+	@Override
+	public void writeToNBT(CompoundTag nbttagcompound) {
+		super.writeToNBT(nbttagcompound);
+		nbttagcompound.putShort("FuelTime", (short)currentFuelTime);
+		nbttagcompound.putShort("BleachTime", (short)currentBleachTime);
+		nbttagcompound.putShort("MaxFuelTime", (short)maxFuelTime);
+		ListTag nbttaglist = new ListTag();
+		for (int i = 0; i < bleacherItemStacks.length; ++i) {
+			if (bleacherItemStacks[i] == null) continue;
+			CompoundTag nbttagcompound1 = new CompoundTag();
+			nbttagcompound1.putByte("Slot", (byte)i);
+			bleacherItemStacks[i].writeToNBT(nbttagcompound1);
+			nbttaglist.addTag(nbttagcompound1);
+		}
+		nbttagcompound.put("Items", nbttaglist);
+	}
 }

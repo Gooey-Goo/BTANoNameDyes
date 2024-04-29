@@ -1,6 +1,5 @@
 package goocraft4evr.nonamedyes.client.gui.guidebook.bleaching;
 
-import goocraft4evr.nonamedyes.NoNameDyes;
 import goocraft4evr.nonamedyes.crafting.RecipeEntryBleacher;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiRenderItem;
@@ -13,7 +12,6 @@ import net.minecraft.core.achievement.AchievementList;
 import net.minecraft.core.data.registry.recipe.RecipeSymbol;
 import net.minecraft.core.data.registry.recipe.SearchQuery;
 import net.minecraft.core.entity.player.EntityPlayer;
-import net.minecraft.core.item.ItemStack;
 import net.minecraft.core.player.inventory.slot.Slot;
 import net.minecraft.core.player.inventory.slot.SlotGuidebook;
 import org.lwjgl.input.Keyboard;
@@ -122,7 +120,7 @@ public class BleachingPage extends RecipePage<RecipeEntryBleacher> {
 		for (int i = 1; i <= this.recipes.size(); ++i) {
 			RecipeEntryBleacher recipe = this.recipes.get(i - 1);
 			List<SlotGuidebook> list = this.map.get(recipe);
-			this.drawTexturedModalRect(x + list.get((int)(list.size() - 1)).xDisplayPosition - 32, y + list.get((int)(list.size() - 1)).yDisplayPosition, 90, 35, 22, 15);
+			this.drawTexturedModalRect(x + list.get(list.size() - 1).xDisplayPosition - 32, y + list.get(list.size() - 1).yDisplayPosition, 90, 35, 22, 15);
 		}
 	}
 
