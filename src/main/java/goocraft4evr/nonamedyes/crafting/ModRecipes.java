@@ -2,10 +2,12 @@ package goocraft4evr.nonamedyes.crafting;
 
 import goocraft4evr.nonamedyes.NoNameDyes;
 import goocraft4evr.nonamedyes.block.ModBlocks;
+import goocraft4evr.nonamedyes.client.gui.guidebook.bleaching.BleachingSection;
 import goocraft4evr.nonamedyes.crafting.recipe.RecipeEntryCinnamon;
 import goocraft4evr.nonamedyes.crafting.recipe.RecipeEntryLabelModDye;
 import goocraft4evr.nonamedyes.item.ItemModDye;
 import goocraft4evr.nonamedyes.item.ModItems;
+import net.minecraft.client.gui.guidebook.GuidebookSections;
 import net.minecraft.core.WeightedRandomLootObject;
 import net.minecraft.core.block.Block;
 import net.minecraft.core.crafting.LookupFuelFurnace;
@@ -18,10 +20,7 @@ import net.minecraft.core.data.registry.recipe.entry.RecipeEntryFurnace;
 import net.minecraft.core.data.registry.recipe.entry.RecipeEntryTrommel;
 import net.minecraft.core.item.ItemDye;
 import net.minecraft.core.item.ItemStack;
-import org.jetbrains.annotations.NotNull;
 import turniplabs.halplibe.util.RecipeEntrypoint;
-
-import java.util.*;
 
 import static net.minecraft.core.data.registry.Registries.RECIPE_TYPES;
 
@@ -80,6 +79,7 @@ public class ModRecipes implements RecipeEntrypoint {
 
 		Registries.ITEM_GROUPS.getItem("minecraft:chests").add(ModBlocks.chestPlanksOakPainted.getDefaultStack());
 
+		GuidebookSections.register(new BleachingSection("guidebook.section.bleacher", new ItemStack(ModBlocks.bleacher), 0x808000, 0xFFFF00));
 	}
 
 	private void bleachingRecipes() {
