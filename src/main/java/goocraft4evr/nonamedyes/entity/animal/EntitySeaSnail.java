@@ -2,18 +2,11 @@ package goocraft4evr.nonamedyes.entity.animal;
 
 import goocraft4evr.nonamedyes.NoNameDyes;
 import goocraft4evr.nonamedyes.item.ModItems;
-import net.minecraft.core.Global;
 import net.minecraft.core.block.material.Material;
-import net.minecraft.core.entity.Entity;
 import net.minecraft.core.entity.animal.EntityWaterAnimal;
-import net.minecraft.core.entity.player.EntityPlayer;
-import net.minecraft.core.item.Item;
 import net.minecraft.core.item.ItemStack;
 import net.minecraft.core.util.helper.DamageType;
-import net.minecraft.core.util.phys.AABB;
 import net.minecraft.core.world.World;
-
-import java.util.List;
 
 public class EntitySeaSnail extends EntityWaterAnimal {
 	private int timeUntilNextGoo;

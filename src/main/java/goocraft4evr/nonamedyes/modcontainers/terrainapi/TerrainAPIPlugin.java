@@ -11,7 +11,6 @@ import net.minecraft.core.world.biome.Biome;
 import net.minecraft.core.world.biome.Biomes;
 import net.minecraft.core.world.generate.feature.WorldFeatureFlowers;
 import net.minecraft.core.world.generate.feature.WorldFeatureLake;
-import net.minecraft.core.world.generate.feature.WorldFeatureSpinifexPatch;
 import useless.terrainapi.api.TerrainAPI;
 import useless.terrainapi.generation.Parameters;
 import useless.terrainapi.generation.nether.api.ChunkDecoratorNetherAPI;
