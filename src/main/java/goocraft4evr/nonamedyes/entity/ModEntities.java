@@ -1,5 +1,6 @@
 package goocraft4evr.nonamedyes.entity;
 
+import goocraft4evr.nonamedyes.UtilIdRegistrar;
 import goocraft4evr.nonamedyes.client.render.entity.SeaSnailRenderer;
 import goocraft4evr.nonamedyes.entity.animal.EntitySeaSnail;
 import goocraft4evr.nonamedyes.item.ModItems;
@@ -15,7 +16,7 @@ public class ModEntities {
 	}
 
 	public static void register() {
-		EntityHelper.Core.createEntity(EntitySeaSnail.class, 200, "Seasnail");
+		EntityHelper.Core.createEntity(EntitySeaSnail.class, UtilIdRegistrar.nextId(), "Seasnail");
 
 		MobInfoRegistry.register(EntitySeaSnail.class, "sea.snail.name", "sea.snail.desc",
 			15, 10, new MobInfoRegistry.MobDrop[]{

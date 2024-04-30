@@ -22,10 +22,12 @@ public class NoNameDyes implements ModInitializer, ClientStartEntrypoint, GameSt
         prop.setProperty("starting_block_id","1000");
         prop.setProperty("starting_item_id","17000");
         prop.setProperty("starting_gui_id","8");
+		prop.setProperty("starting_entity_id","200");
         ConfigHandler config = new ConfigHandler(MOD_ID,prop);
         UtilIdRegistrar.initIds(config.getInt("starting_block_id")
                 ,config.getInt("starting_item_id")
-                ,config.getInt("starting_gui_id"));
+                ,config.getInt("starting_gui_id")
+			,config.getInt("starting_entity_id"));
         config.updateConfig();
     }
 
@@ -53,6 +55,7 @@ public class NoNameDyes implements ModInitializer, ClientStartEntrypoint, GameSt
 
 	@Override
 	public void beforeGameStart() {
+		UtilIdRegistrar.setIdToEntity();
 		ModEntities.register();
 	}
 
