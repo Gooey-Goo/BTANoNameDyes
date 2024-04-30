@@ -1,6 +1,5 @@
 # BTANoNameDyes
-I never bothered to properly document all of the features added to the mod so far, so hopefully this document should fix the issue. 
-On a technical note, you can change the starting ID for all blocks and items, in the event there's a conflict with another mod. 
+This (hopefully) documents all features of NoName Dyes.
 
 # Blocks
 + Nether Roots
@@ -28,16 +27,9 @@ On a technical note, you can change the starting ID for all blocks and items, in
   + Spawns naturally in seasonal forests, rainforests and cinnamon forests.
   + Crafts 2 indigo dye.
   + Can grow on grass, but only in the biomes it spawns naturally in.
-+ Cocoa Log
-  + DEPRECATED, turns into mossy oak log
-+ Ripe Cocoa Log
-  + DEPRECATED, turns into mossy oak log
-+ Cocoa Leaves
-  + DEPRECATED, turns into cacao leaves
-+ Cocoa Sapling
-  + DEPRECATED, turns into cacao sapling
 + Malachite Bricks
   + 4 malachite crafts 4 bricks.
+  + Can be used to craft slabs and stairs.
 + Bleaching Basin
   + Crafted from 2 cobblestone and 5 polished stone.
   + Bleaches blocks in its gui when placed above water and given bleaching powder.
@@ -61,21 +53,19 @@ On a technical note, you can change the starting ID for all blocks and items, in
   + Currently does not craft into 9 vile shards.
 + Vile Reactor
   + 4 gallstones and 4 vile netherrack craft 1 vile reactor
-  + Upon detecting 10 kill, the reactor converts nearby netherrack into vile netherrack. It also spawns multiple items.
+  + Upon detecting 20 kills, the reactor converts nearby netherrack into vile netherrack. It also spawns multiple items.
   + Only works in the nether
 + Ebony Log
-  + Generates as part of cinnamon trees.
+  + Generates as part of ebony trees.
   + Crafts into black wooden planks.
   + Functions like other logs.
 + Ebony Leaves
-  + Generates as part of cinnamon trees.
+  + Generates as part of ebony trees.
   + Drops ebony saplings.
   + Functions like other leaves.
 + Ebony Sapling
   + Grows ebony trees.
   + Functions like other saplings.
-+ Plaster
-  + DEPRECATED, turns into white plastered mud.
 + Plastered Mud
   + Obtained by using dyed plaster on mud.
   + Weak stone-like block, comes in different colours.
@@ -93,6 +83,20 @@ On a technical note, you can change the starting ID for all blocks and items, in
 + Tiled Ceramic
   + 2 ceramic blocks crafts 2 tiled ceramic blocks. (also works for painted ceramic)
   + Undyed tiled ceramic deprecated, turns into white tiled ceramic
++ Palm Log
+  + Generates as part of palm trees.
+  + Crafts into buff wooden planks.
+  + Functions like other logs.
++ Palm Leaves
+  + Generates as part of cinnamon trees.
+  + Drops palm saplings.
+  + Functions like other leaves.
++ Palm Sapling
+  + Grows palm trees.
+  + Functions like other saplings.
++ Ochre Bricks
+  + 4 ochre bricks crafts 4 bricks.
+  + Can be used to craft slabs and stairs.
 
 # Items
 + Bleaching Powder
@@ -116,7 +120,15 @@ On a technical note, you can change the starting ID for all blocks and items, in
 + Dyed Plaster
   + 8 wet plaster and 1 dye yields 8 dyed plaster.
   + Right clicking mud or cobbled limestone will plaster them.
-  
++ Ochre Bricks
+  + Obtained from smelting ochre.
+  + Used to craft ochre bricks.
+
+# Entities
++ Sea Snails
+  + Passive mob that spawns in oceans and lakes
+  + Drops 0 to 2 snail slime
+  + Drops snail slime roughly every 2.5 minutes
 
 # Biomes
 + Cinnamon Forest
@@ -125,16 +137,16 @@ On a technical note, you can change the starting ID for all blocks and items, in
 + Ebony Forest
   + Biome that spawns oak trees and ebony trees
   + Typically found around seasonal forests
++ Palm Beach
+  + Biome that exclusively spawns palm trees
+  + Found around deserts and other hot biomes
 
 # Obtaining/renewing dyes
-+ Brown dye
-  OBTAINING Cocoa beans are dungeon loot but also drop from ripe cocoa logs.
-  RENEWING Ripe cocoa logs can be generated from the trees grown by cocoa saplings.
 + Crimson
-  OBTAINING Crafted from nether roots.
-  RENEWING Nether roots can be grown with bone meal.
+  - OBTAINING Crafted from nether roots.
+  - RENEWING Nether roots can be grown with bone meal.
 + Maroon
-  OBTAINING: Crafted from crimson dye and cocoa beans.
+  - OBTAINING: Crafted from crimson dye and cocoa beans.
 + Ash Gray
   - OBTAINING: Crafted from shaggy manes.
   - RENEWING: Shaggy manes grow eventually, but grow faster near certain blocks.
@@ -161,3 +173,6 @@ On a technical note, you can change the starting ID for all blocks and items, in
   - RENEWING: Cinnamon logs generate in cinnamon trees.
 + Navy Blue
   - OBTAINING: Crafted from indigo dye and ink sac.
++ Royal Purple
+  - OBTAINING: From snail slime, which is dropped by sea snails but also produced periodically by them.
+  - RENEWING: Due to infrequent spawns, it's better to farm sea snails than to kill them.
