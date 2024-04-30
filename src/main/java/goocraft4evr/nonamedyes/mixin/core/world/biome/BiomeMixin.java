@@ -17,6 +17,6 @@ public class BiomeMixin {
 	protected List<SpawnListEntry> spawnableWaterCreatureList;
 	@Inject(method="<init>",at=@At(value = "TAIL"))
 	private void inject(CallbackInfo ci) {
-		spawnableWaterCreatureList.add(new SpawnListEntry(EntitySeaSnail.class, 8));
+		spawnableWaterCreatureList.add(new SpawnListEntry(EntitySeaSnail.class, 10));
 	}
 }

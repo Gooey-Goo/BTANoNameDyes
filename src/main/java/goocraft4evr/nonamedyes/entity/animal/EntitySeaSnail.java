@@ -91,7 +91,7 @@ public class EntitySeaSnail extends EntityWaterAnimal {
 
 	@Override
 	protected void dropFewItems() {
-		int j = 2+this.random.nextInt(4);
+		int j = this.random.nextInt(3);
 		for (int k = 0; k < j; ++k) {
 			this.spawnAtLocation(new ItemStack(ModItems.dye.id,1,12), 1);
 		}
