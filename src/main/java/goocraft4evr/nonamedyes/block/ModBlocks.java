@@ -93,8 +93,7 @@ public abstract class ModBlocks {
             .setVisualUpdateOnMetadata()
             .setBlockSound(BlockSounds.GLASS)
             .build(new BlockModLamp("lamp.active",UtilIdRegistrar.nextId(),true)
-            .withTags(BlockTags.NOT_IN_CREATIVE_MENU, BlockTags.MINEABLE_BY_PICKAXE))
-            .withTexCoords(19, 31); // TODO individual textures
+            .withTags(BlockTags.NOT_IN_CREATIVE_MENU, BlockTags.MINEABLE_BY_PICKAXE));
     public static final Block wool = new BlockBuilder(NoNameDyes.MOD_ID)
             .setHardness(0.8f)
             .setVisualUpdateOnMetadata()

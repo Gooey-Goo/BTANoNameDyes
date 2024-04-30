@@ -24,6 +24,7 @@
     "core.world.biome.provider.BiomeProviderOverworldMixin"
   ],
   "client": [
+    "client.gui.guidebook.GuidebookSectionsMixin",
     "client.gui.GuiEditFlagMixin",
     "client.gui.GuiHeldItemTooltipMixin",
     "client.net.handler.NetClientHandlerMixin",
