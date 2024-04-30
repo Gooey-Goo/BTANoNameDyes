@@ -31,11 +31,11 @@ import turniplabs.halplibe.util.RecipeEntrypoint;
 import static net.minecraft.core.data.registry.Registries.RECIPE_TYPES;
 
 public class ModRecipes implements RecipeEntrypoint {
-	public static final RecipeNamespace RN = new RecipeNamespace();
-	public static final RecipeGroup<RecipeEntryCrafting<?, ?>> WORKBENCH = new RecipeGroup<>(new RecipeSymbol(new ItemStack(Block.workbench)));
-	public static final RecipeGroup<RecipeEntryFurnace> FURNACE = new RecipeGroup<>(new RecipeSymbol(new ItemStack(Block.furnaceStoneActive)));
-	public static final RecipeGroup<RecipeEntryBlastFurnace> BLAST_FURNACE = new RecipeGroup<>(new RecipeSymbol(new ItemStack(Block.furnaceBlastActive)));
-	public static final RecipeGroup<RecipeEntryBleacher> BLEACHER = new RecipeGroup<>(new RecipeSymbol(new ItemStack(ModBlocks.bleacher)));
+	public static RecipeNamespace RN;
+	public static RecipeGroup<RecipeEntryCrafting<?, ?>> WORKBENCH;
+	public static RecipeGroup<RecipeEntryFurnace> FURNACE;
+	public static RecipeGroup<RecipeEntryBlastFurnace> BLAST_FURNACE;
+	public static RecipeGroup<RecipeEntryBleacher> BLEACHER;
 
 	@Override
 	public void onRecipesReady() {
@@ -53,6 +53,12 @@ public class ModRecipes implements RecipeEntrypoint {
 
 	@Override
 	public void initNamespaces() {
+		RN = new RecipeNamespace();
+		WORKBENCH = new RecipeGroup<>(new RecipeSymbol(new ItemStack(Block.workbench)));
+		FURNACE = new RecipeGroup<>(new RecipeSymbol(new ItemStack(Block.furnaceStoneActive)));
+		BLAST_FURNACE = new RecipeGroup<>(new RecipeSymbol(new ItemStack(Block.furnaceBlastActive)));
+		BLEACHER = new RecipeGroup<>(new RecipeSymbol(new ItemStack(ModBlocks.bleacher)));
+
 		Registries.RECIPES.register(NoNameDyes.MOD_ID, RN);
 		RN.register("furnace", FURNACE);
 		RN.register("blast_furnace", BLAST_FURNACE);
