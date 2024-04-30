@@ -289,7 +289,7 @@ public class ModRecipes implements RecipeEntrypoint {
 		new RecipeBuilderShaped(NoNameDyes.MOD_ID)
 			.setShape("##", "##")
 			.addInput('#',ModItems.dye,6)
-			.create("brick_malachite",new ItemStack(ModBlocks.brickMalachite));
+			.create("brick_malachite",new ItemStack(ModBlocks.brickMalachite,4));
 		new RecipeBuilderShapeless(NoNameDyes.MOD_ID)
 			.addInput(Item.sulphur)
 			.addInput(Item.dye,15)
@@ -356,6 +356,22 @@ public class ModRecipes implements RecipeEntrypoint {
 			.setShape("##","##")
 			.addInput('#',ModItems.brickOchre)
 			.create("brick_ochre",new ItemStack(ModBlocks.brickOchre,4));
+		new RecipeBuilderShaped(NoNameDyes.MOD_ID)
+			.setShape("###")
+			.addInput('#',ModBlocks.brickOchre)
+			.create("slab_brick_ochre",new ItemStack(ModBlocks.slabBrickOchre,6));
+		new RecipeBuilderShaped(NoNameDyes.MOD_ID)
+			.setShape("#  ", "## ","###")
+			.addInput('#',ModBlocks.brickOchre)
+			.create("stairs_brick_ochre",new ItemStack(ModBlocks.stairsBrickOchre,6));
+		new RecipeBuilderShaped(NoNameDyes.MOD_ID)
+			.setShape("###")
+			.addInput('#',ModBlocks.brickMalachite)
+			.create("slab_brick_malachite",new ItemStack(ModBlocks.slabBrickMalachite,6));
+		new RecipeBuilderShaped(NoNameDyes.MOD_ID)
+			.setShape("#  ", "## ","###")
+			.addInput('#',ModBlocks.brickMalachite)
+			.create("stairs_brick_malachite",new ItemStack(ModBlocks.stairsBrickMalachite,6));
 
 		//the dyes
 		new RecipeBuilderShapeless(NoNameDyes.MOD_ID)

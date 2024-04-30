@@ -33,10 +33,6 @@ item.nonamedyes.plaster.wet.name = Wet Plaster
 item.nonamedyes.plaster.wet.desc = Paste that can be applied to certain blocks. Needs a dye.
 item.nonamedyes.tool.paintscraper.name = Paint Scraper
 item.nonamedyes.tool.paintscraper.desc = Scrapes plaster off of blocks.
-item.nonamedyes.brick.ochre.name=Ochre Brick
-item.nonamedyes.brick.ochre.desc=A different shade of brick.
-tile.nonamedyes.brick.ochre.name=Ochre Bricks
-tile.nonamedyes.brick.ochre.desc=Stacked bricks of baked ochre.
 
 tile.nonamedyes.log.ebony.name = Ebony Log
 tile.nonamedyes.log.ebony.desc = A log from an ebony tree.
@@ -73,6 +69,19 @@ tile.nonamedyes.block.malachite.name=Block of Malachite
 tile.nonamedyes.block.malachite.desc=A solid block of malachite.
 tile.nonamedyes.brick.malachite.name=Malachite Bricks
 tile.nonamedyes.brick.malachite.desc=Stacked bricks of malachite.
+tile.nonamedyes.slab.brick.malachite.name=Malachite Brick Slab
+tile.nonamedyes.slab.brick.malachite.desc=A slab of malachite bricks.
+tile.nonamedyes.stairs.brick.malachite.name=Malachite Brick Stairs
+tile.nonamedyes.stairs.brick.malachite.desc=Malachite brick block used for rapid vertical movement.
+
+item.nonamedyes.brick.ochre.name=Ochre Brick
+item.nonamedyes.brick.ochre.desc=A different shade of brick.
+tile.nonamedyes.brick.ochre.name=Ochre Bricks
+tile.nonamedyes.brick.ochre.desc=Stacked bricks of baked ochre.
+tile.nonamedyes.slab.brick.ochre.name=Ochre Brick Slab
+tile.nonamedyes.slab.brick.ochre.desc=A slab of ochre bricks.
+tile.nonamedyes.stairs.brick.ochre.name=Ochre Brick Stairs
+tile.nonamedyes.stairs.brick.ochre.desc=Ochre brick block used for rapid vertical movement.
 
 tile.nonamedyes.plaster.name=Plaster
 tile.nonamedyes.plaster.desc=DEPRECATED

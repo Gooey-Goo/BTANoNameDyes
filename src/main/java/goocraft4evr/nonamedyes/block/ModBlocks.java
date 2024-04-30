@@ -16,12 +16,11 @@ import goocraft4evr.nonamedyes.item.block.ItemBlockPlasterPainted;
 import goocraft4evr.nonamedyes.item.block.ItemModBlockSlabPainted;
 import net.minecraft.client.render.block.color.BlockColorLeaves;
 import net.minecraft.client.render.block.model.BlockModelRenderBlocks;
-import net.minecraft.core.block.Block;
-import net.minecraft.core.block.BlockFlower;
-import net.minecraft.core.block.BlockLog;
+import net.minecraft.core.block.*;
 import net.minecraft.core.block.material.Material;
 import net.minecraft.core.block.tag.BlockTags;
 import net.minecraft.core.item.Item;
+import net.minecraft.core.item.block.ItemBlockSlab;
 import net.minecraft.core.sound.BlockSounds;
 import turniplabs.halplibe.helper.BlockBuilder;
 
@@ -406,6 +405,38 @@ public abstract class ModBlocks {
 		.setResistance(10.0f)
 		.setTextures("brick_ochre.png")
 		.build(new Block("brick.ochre", UtilIdRegistrar.nextId(), Material.stone))
+		.withTags(BlockTags.MINEABLE_BY_PICKAXE);
+
+	public static final Block slabBrickOchre = new BlockBuilder(NoNameDyes.MOD_ID)
+		.setBlockSound(BlockSounds.STONE)
+		.setItemBlock(ItemBlockSlab::new)
+		.setVisualUpdateOnMetadata()
+		.setUseInternalLight()
+		.build(new BlockSlab(brickOchre, UtilIdRegistrar.nextId()))
+		.withTags(BlockTags.MINEABLE_BY_PICKAXE);
+
+	public static final Block stairsBrickOchre = new BlockBuilder(NoNameDyes.MOD_ID)
+		.setBlockSound(BlockSounds.STONE)
+		.setBlockModel(new BlockModelRenderBlocks(10))
+		.setVisualUpdateOnMetadata()
+		.setUseInternalLight()
+		.build(new BlockStairs(brickOchre, UtilIdRegistrar.nextId()))
+		.withTags(BlockTags.MINEABLE_BY_PICKAXE);
+
+	public static final Block slabBrickMalachite = new BlockBuilder(NoNameDyes.MOD_ID)
+		.setBlockSound(BlockSounds.STONE)
+		.setItemBlock(ItemBlockSlab::new)
+		.setVisualUpdateOnMetadata()
+		.setUseInternalLight()
+		.build(new BlockSlab(brickMalachite, UtilIdRegistrar.nextId()))
+		.withTags(BlockTags.MINEABLE_BY_PICKAXE);
+
+	public static final Block stairsBrickMalachite = new BlockBuilder(NoNameDyes.MOD_ID)
+		.setBlockSound(BlockSounds.STONE)
+		.setBlockModel(new BlockModelRenderBlocks(10))
+		.setVisualUpdateOnMetadata()
+		.setUseInternalLight()
+		.build(new BlockStairs(brickMalachite, UtilIdRegistrar.nextId()))
 		.withTags(BlockTags.MINEABLE_BY_PICKAXE);
 
 
