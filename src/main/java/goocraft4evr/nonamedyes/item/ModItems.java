@@ -57,6 +57,12 @@ public class ModItems {
 		"tool.paintscraper",
 		"paint_scraper.png");
 
+	public static Item brickOchre = ItemHelper.createItem(
+		NoNameDyes.MOD_ID,
+		new Item("brick.ochre",UtilIdRegistrar.nextId()),
+		"brick.ochre",
+		"brick_ochre.png");
+
     public static void register() {
 
     }

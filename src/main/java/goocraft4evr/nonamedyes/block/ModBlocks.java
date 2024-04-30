@@ -400,6 +400,14 @@ public abstract class ModBlocks {
 		.build(new BlockCeramicPainted("plaster.limestone", UtilIdRegistrar.nextId(),Material.stone,"plaster/*_limestone_plaster.png"))
 		.withTags(BlockTags.MINEABLE_BY_PICKAXE,BlockTags.NOT_IN_CREATIVE_MENU);
 
+	public static final Block brickOchre = new BlockBuilder(NoNameDyes.MOD_ID)
+		.setBlockSound(BlockSounds.STONE)
+		.setHardness(3.0f)
+		.setResistance(10.0f)
+		.setTextures("brick_ochre.png")
+		.build(new Block("brick.ochre", UtilIdRegistrar.nextId(), Material.stone))
+		.withTags(BlockTags.MINEABLE_BY_PICKAXE);
+
 
 	public static void register() {
 		Item.itemsList[plaster.id] = new ItemBlockDeprecated(plaster,plasterMud);

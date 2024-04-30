@@ -33,6 +33,10 @@ item.nonamedyes.plaster.wet.name = Wet Plaster
 item.nonamedyes.plaster.wet.desc = Paste that can be applied to certain blocks. Needs a dye.
 item.nonamedyes.tool.paintscraper.name = Paint Scraper
 item.nonamedyes.tool.paintscraper.desc = Scrapes plaster off of blocks.
+item.nonamedyes.brick.ochre.name=Ochre Brick
+item.nonamedyes.brick.ochre.desc=A different shade of brick.
+tile.nonamedyes.brick.ochre.name=Ochre Bricks
+tile.nonamedyes.brick.ochre.desc=Stacked bricks of baked ochre.
 
 tile.nonamedyes.log.ebony.name = Ebony Log
 tile.nonamedyes.log.ebony.desc = A log from an ebony tree.

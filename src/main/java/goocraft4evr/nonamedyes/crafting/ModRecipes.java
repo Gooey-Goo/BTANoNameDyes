@@ -352,6 +352,10 @@ public class ModRecipes implements RecipeEntrypoint {
 			.addInput('S',Item.stick)
 			.addInput('I',Item.ingotIron)
 			.create("paint_scraper",new ItemStack(ModItems.paintScraper));
+		new RecipeBuilderShaped(NoNameDyes.MOD_ID)
+			.setShape("##","##")
+			.addInput('#',ModItems.brickOchre)
+			.create("brick_ochre",new ItemStack(ModBlocks.brickOchre,4));
 
 		//the dyes
 		new RecipeBuilderShapeless(NoNameDyes.MOD_ID)
@@ -406,6 +410,9 @@ public class ModRecipes implements RecipeEntrypoint {
 		new RecipeBuilderFurnace(NoNameDyes.MOD_ID)
 			.setInput(ModItems.vileShard)
 			.create("vile_shard_to_dye",new ItemStack(ModItems.dye,1,9));
+		new RecipeBuilderFurnace(NoNameDyes.MOD_ID)
+			.setInput(ModItems.dye,4)
+			.create("ochre_to_ochre_brick",new ItemStack(ModItems.brickOchre));
 
 		//blast furnace
 		new RecipeBuilderBlastFurnace(NoNameDyes.MOD_ID)
@@ -414,6 +421,15 @@ public class ModRecipes implements RecipeEntrypoint {
 		new RecipeBuilderBlastFurnace(NoNameDyes.MOD_ID)
 			.setInput(ModBlocks.netherrackVile)
 			.create("netherrack_vile_to_dye",new ItemStack(ModItems.dye,1,9));
+		new RecipeBuilderBlastFurnace(NoNameDyes.MOD_ID)
+			.setInput("nonamedyes:ores_malachite")
+			.create("ore_malachite_to_malachite",new ItemStack(ModItems.dye,1,6));
+		new RecipeBuilderBlastFurnace(NoNameDyes.MOD_ID)
+			.setInput(ModItems.vileShard)
+			.create("vile_shard_to_dye",new ItemStack(ModItems.dye,1,9));
+		new RecipeBuilderBlastFurnace(NoNameDyes.MOD_ID)
+			.setInput(ModItems.dye,4)
+			.create("ochre_to_ochre_brick",new ItemStack(ModItems.brickOchre));
 	}
 	private void trommelRecipes(){
 		RecipeGroup<RecipeEntryTrommel> trommel = Registries.RECIPES.TROMMEL;
