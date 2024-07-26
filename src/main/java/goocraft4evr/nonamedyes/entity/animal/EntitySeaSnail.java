@@ -5,6 +5,7 @@ import goocraft4evr.nonamedyes.item.ModItems;
 import net.minecraft.core.block.material.Material;
 import net.minecraft.core.entity.animal.EntityWaterAnimal;
 import net.minecraft.core.item.ItemStack;
+import net.minecraft.core.util.collection.NamespaceID;
 import net.minecraft.core.util.helper.DamageType;
 import net.minecraft.core.world.World;
 
@@ -12,7 +13,7 @@ public class EntitySeaSnail extends EntityWaterAnimal {
 	private int timeUntilNextGoo;
 	public EntitySeaSnail(World world) {
 		super(world);
-		skinName = "seasnail";
+		this.textureIdentifier = new NamespaceID(NoNameDyes.MOD_ID, "seasnail");
 		setSize(0.9f, 0.9f);
 		scoreValue = 10;
 		moveSpeed = 0.1f;
@@ -68,7 +69,9 @@ public class EntitySeaSnail extends EntityWaterAnimal {
 
 	@Override
 	public String getEntityTexture() {
-		return String.format("/assets/%s/mob/%s/%d.png", NoNameDyes.MOD_ID,skinName,getSkinVariant());
+		//TODO: determine if we need this method
+		return super.getEntityTexture();
+		//return String.format("/assets/%s/mob/%s/%d.png", NoNameDyes.MOD_ID,skinName,getSkinVariant());
 	}
 
 	@Override

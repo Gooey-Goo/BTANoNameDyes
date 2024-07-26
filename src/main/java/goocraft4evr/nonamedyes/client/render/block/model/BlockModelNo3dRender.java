@@ -1,10 +1,11 @@
 package goocraft4evr.nonamedyes.client.render.block.model;
 
-import net.minecraft.client.render.block.model.BlockModelRenderBlocks;
+import net.minecraft.client.render.block.model.BlockModelStandard;
+import net.minecraft.core.block.Block;
 
-public class BlockModelNo3dRender extends BlockModelRenderBlocks {
-    public BlockModelNo3dRender() {
-        super(0);
+public class BlockModelNo3dRender<T extends Block> extends BlockModelStandard<T> {
+    public BlockModelNo3dRender(Block block) {
+        super(block);
     }
 
     @Override

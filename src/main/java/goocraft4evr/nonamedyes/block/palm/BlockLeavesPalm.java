@@ -9,18 +9,10 @@ import net.minecraft.core.block.material.Material;
 import net.minecraft.core.util.helper.Side;
 
 public class BlockLeavesPalm extends BlockLeavesBase {
-    private static TextureMap textures;
 
     public BlockLeavesPalm(String key, int id) {
-        super(key, id, Material.leaves, false);
-        textures = new TextureMap(NoNameDyes.MOD_ID,2);
-        textures.addBlockTexture("leaves_palm_fancy.png");
-        textures.addBlockTexture("leaves_palm.png");
-    }
+        super(key, id, Material.leaves);
 
-    @Override
-    public int getBlockTextureFromSideAndMetadata(Side side, int j) {
-        return textures.getTexture(!fancyGraphics ? 1 : 0);
     }
 
     @Override

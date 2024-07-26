@@ -16,16 +16,14 @@ public class BlockModWool extends Block {
 
     public BlockModWool(String key, int id) {
         super(key, id, Material.cloth);
+		/*
         textures = new TextureMap(NoNameDyes.MOD_ID,ItemModDye.dyeColors.length);
         for (int i = 0; i< textures.length(); i++) {
             //generate textures for the remaining dyes to ensure they're all contiguous
             textures.addBlockTexture( "wool/"+ItemModDye.getTextureName(ItemModDye.dyeColors[i])+"_wool.png");
         }
-    }
 
-    @Override
-    public int getBlockTextureFromSideAndMetadata(Side side, int meta) {
-        return textures.getTexture(meta);
+		 */
     }
 
     @Override

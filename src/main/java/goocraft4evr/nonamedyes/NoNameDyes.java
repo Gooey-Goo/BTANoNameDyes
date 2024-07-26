@@ -19,7 +19,7 @@ public class NoNameDyes implements ModInitializer, ClientStartEntrypoint, GameSt
 
     private void handleConfig() {
         Properties prop = new Properties();
-        prop.setProperty("starting_block_id","1000");
+        prop.setProperty("starting_block_id","8128");
         prop.setProperty("starting_item_id","17000");
         prop.setProperty("starting_gui_id","8");
 		prop.setProperty("starting_entity_id","200");

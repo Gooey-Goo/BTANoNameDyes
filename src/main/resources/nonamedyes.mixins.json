@@ -31,8 +31,7 @@
     "client.render.FlagRendererMixin",
     "client.render.FontRendererMixin",
     "client.render.RenderBlocksMixin",
-    "client.render.RenderEngineMixin",
-    "client.render.colorizer.ColorPropertiesAccessor"
+    "client.render.RenderEngineMixin"
   ],
   "server": [
     "server.entity.player.EntityPlayerMPAccessor"

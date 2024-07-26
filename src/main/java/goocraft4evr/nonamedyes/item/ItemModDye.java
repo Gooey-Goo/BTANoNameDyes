@@ -30,15 +30,17 @@ public class ItemModDye extends Item {
             "navy.blue",
 			"royal.purple"};
     public static final int NUM_DYES = dyeColors.length;
-    private static TextureMap textures;
 
     //this method ensures all dye textures are contiguous
     public static Item createDyes(String name, int id) {
+		/*
         textures = new TextureMap(NoNameDyes.MOD_ID,dyeColors.length);
         for (int i = 0; i< textures.length(); i++) {
             //generate textures for the remaining dyes to ensure they're all contiguous
-            textures.addItemTexture(getTextureName(dyeColors[i])+"_dye.png");
+            textures.addTexture(getTextureName(dyeColors[i])+"_dye.png");
         }
+
+		 */
         //once that's done we just create the item lol
         ItemModDye item = new ItemModDye(name, id);
         item.setKey(HalpLibe.addModId(NoNameDyes.MOD_ID, name));
@@ -60,13 +62,16 @@ public class ItemModDye extends Item {
         return super.getKey() + "." + dyeColors[itemstack.getMetadata()%dyeColors.length];
     }
 
+	/*
     @Override
     public int getIconFromDamage(int id) {
         return textures.getTexture(id);
     }
 
+	 */
+
     @Override
-    public boolean onItemUse(ItemStack itemstack, EntityPlayer entityplayer, World world, int blockX, int blockY, int blockZ, Side side, double xPlaced, double yPlaced) {
+    public boolean onUseItemOnBlock(ItemStack itemstack, EntityPlayer entityplayer, World world, int blockX, int blockY, int blockZ, Side side, double xPlaced, double yPlaced) {
         if (world.getBlockId(blockX, blockY, blockZ) == Block.signPostPlanksOak.id || world.getBlockId(blockX, blockY, blockZ) == Block.signWallPlanksOak.id) {
             TileEntitySign sign = (TileEntitySign) world.getBlockTileEntity(blockX, blockY, blockZ);
             //TODO: this will break if signs can have obfuscated text

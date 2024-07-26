@@ -74,7 +74,7 @@ public class TileEntityVileReactor extends TileEntity {
             double motionX = 1.3*(rand.nextFloat()-0.5);
             double motionY = 1.3*(rand.nextFloat()-0.5);
             double motionZ = 1.3*(rand.nextFloat()-0.5);
-            world.spawnParticle("explode", particleX, particleY, particleZ, motionX, motionY, motionZ);
+            world.spawnParticle("explode", particleX, particleY, particleZ, motionX, motionY, motionZ,0);
         }
     }
 
@@ -86,7 +86,7 @@ public class TileEntityVileReactor extends TileEntity {
             double motionX = 0.2*(rand.nextFloat()-0.5);
             double motionY = 0.1*rand.nextFloat();
             double motionZ = 0.2*(rand.nextFloat()-0.5);
-            world.spawnParticle("largesmoke", particleX, particleY, particleZ, motionX, motionY, motionZ);
+            world.spawnParticle("largesmoke", particleX, particleY, particleZ, motionX, motionY, motionZ,0);
         }
     }
 

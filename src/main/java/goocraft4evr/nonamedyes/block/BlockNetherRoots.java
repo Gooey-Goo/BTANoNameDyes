@@ -28,7 +28,7 @@ public class BlockNetherRoots extends Block {
     }
 
     @Override
-    public AABB getCollisionBoundingBoxFromPool(World world, int x, int y, int z) {
+    public AABB getCollisionBoundingBoxFromPool(WorldSource world, int x, int y, int z) {
         return null;
     }
 

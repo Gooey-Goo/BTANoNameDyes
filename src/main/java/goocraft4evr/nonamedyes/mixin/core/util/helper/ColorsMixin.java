@@ -27,31 +27,31 @@ public abstract class ColorsMixin {
     private static final Color[] allFlagColors = new Color[16+ItemModDye.NUM_DYES];
     @Final
     private static final Color[] allSignColors = new Color[16+ItemModDye.NUM_DYES];
-    @Redirect(method="loadColors",at=@At(value="INVOKE",target="Lnet/minecraft/client/util/helper/Colors;fillColorArray(Lnet/minecraft/client/render/texturepack/TexturePack;Ljava/lang/String;[Lnet/minecraft/core/util/helper/Color;)V"))
-    private static void loadColorsOrSomeShit(TexturePack stream, String imagePath, Color[] array) {
+	@Redirect(method = "loadColors",at= @At(value = "INVOKE", target = "Lnet/minecraft/client/util/helper/Colors;fillColorArray(Ljava/lang/String;[Lnet/minecraft/core/util/helper/Color;)V"))
+    private static void loadColorsOrSomeShit(String imagePath, Color[] array) {
         //only redirect methods that would throw an exception
         if (array.length != 16+ItemModDye.NUM_DYES) {
-            Colors.fillColorArray(stream, imagePath, array);
+            Colors.fillColorArray(imagePath, array);
             return;
         }
         //fill each array individually to get around exception
         Color[] vanillaColors = new Color[16];
-        Colors.fillColorArray(stream,imagePath,vanillaColors);
+        Colors.fillColorArray(imagePath,vanillaColors);
         Color[] modColors = new Color[ItemModDye.NUM_DYES];
         String modPath = "/assets/"+ NoNameDyes.MOD_ID +"/misc"+imagePath.substring(imagePath.lastIndexOf('/'));
-        Colors.fillColorArray(stream,modPath,modColors);
+        Colors.fillColorArray(modPath,modColors);
         //copy both arrays into array to return
         System.arraycopy(vanillaColors, 0, array, 0, vanillaColors.length);
         System.arraycopy(modColors, 0, array, vanillaColors.length, modColors.length);
-        ModColors.loadColors(stream);
+        ModColors.loadColors();
     }
 
     @Inject(method="loadColors",at=@At("TAIL"))
-    private static void initializeFleeceArray(TexturePack texturePack, CallbackInfo ci) {
+    private static void initializeFleeceArray(CallbackInfo ci) {
         //initialize the fleece array
         float[][] vanillaRGB = EntitySheep.fleeceColorTable;
         Color[] fleeceColors = new Color[ItemModDye.NUM_DYES];
-        Colors.fillColorArray(texturePack, "/assets/"+ NoNameDyes.MOD_ID +"/misc/colors_fleece.png", fleeceColors);
+        Colors.fillColorArray("/assets/"+ NoNameDyes.MOD_ID +"/misc/colors_fleece.png", fleeceColors);
         float[][] modRGB = new float[vanillaRGB.length+fleeceColors.length][];
         System.arraycopy(vanillaRGB, 0, modRGB, 0, vanillaRGB.length);
         for (int i=0;i<fleeceColors.length;i++) {

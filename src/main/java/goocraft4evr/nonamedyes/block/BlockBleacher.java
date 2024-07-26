@@ -25,16 +25,11 @@ import net.minecraft.server.entity.player.EntityPlayerMP;
 import java.util.Random;
 
 public class BlockBleacher extends BlockTileEntity {
-    public final TextureMap textures;
 
     protected Random bleacherRand = new Random();
 
     public BlockBleacher(String key, int id) {
         super(key, id, Material.stone);
-        textures = new TextureMap(NoNameDyes.MOD_ID, 3);
-        textures.addBlockTexture("bleacher_fluid_water.png");
-        textures.addBlockTexture("bleacher_fluid_bleach.png");
-        textures.addBlockTexture("bleacher_top.png");
     }
 
     @Override
@@ -53,32 +48,26 @@ public class BlockBleacher extends BlockTileEntity {
     public void randomDisplayTick(World world, int x, int y, int z, Random rand) {
         TileEntityBleacher tileEntityBleacher = (TileEntityBleacher) world.getBlockTileEntity(x,y,z);
         if (tileEntityBleacher.isFuelled()) {
-            float particleX = (float)x + rand.nextFloat();
-            float particleY = (float)y + 1.0f;
-            float particleZ = (float)z + rand.nextFloat();
-            float motionX = rand.nextFloat()*0.01f-0.02f;
-            float motionY = rand.nextFloat()*0.04f;
-            float motionZ = rand.nextFloat()*0.01f-0.02f;
+            double particleX = (double)x + rand.nextFloat();
+			double particleY = (double)y + 1.0f;
+			double particleZ = (double)z + rand.nextFloat();
+			double motionX = rand.nextFloat()*0.01f-0.02f;
+			double motionY = rand.nextFloat()*0.04f;
+			double motionZ = rand.nextFloat()*0.01f-0.02f;
             world.spawnParticle("bubble",
                     particleX, particleY, particleZ,
-                    motionX, motionY, motionZ);
+                    motionX, motionY, motionZ,0);
         }
     }
 
     @Override
-    public boolean blockActivated(World world, int x, int y, int z, EntityPlayer player) {
+	public boolean onBlockRightClicked(World world, int x, int y, int z, EntityPlayer player, Side side, double xPlaced, double yPlaced) {
         if (!world.isClientSide) {
             TileEntityBleacher tileEntityBleacher = (TileEntityBleacher) world.getBlockTileEntity(x,y,z);
             if ((player instanceof EntityPlayerSP)) displayGUIBleacherClient((EntityPlayerSP) player, tileEntityBleacher);
             else displayGUIBleacherServer((EntityPlayerMP) player, tileEntityBleacher);
         }
         return true;
-    }
-
-    @Override
-    public int getBlockTexture(WorldSource blockAccess, int x, int y, int z, Side side) {
-        if (side != Side.TOP) return super.getBlockTexture(blockAccess,x,y,z,side);
-        return textures.getTexture(2);
     }
 
     public static void displayGUIBleacherClient(EntityPlayerSP player, TileEntityBleacher tileentitybleacher) {

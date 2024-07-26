@@ -13,27 +13,9 @@ import net.minecraft.core.util.helper.Side;
 import net.minecraft.core.world.World;
 
 public class BlockCeramicPainted extends Block {
-    private TextureMap textures;
 
-    public BlockCeramicPainted(String key, int id, Material material, String path) {
+    public BlockCeramicPainted(String key, int id, Material material) {
         super(key, id, material);
-        textures = new TextureMap(NoNameDyes.MOD_ID, ItemDye.dyeColors.length+ItemModDye.dyeColors.length);
-        int idx = path.indexOf('*');
-        String prefix = path.substring(0,idx);
-        String postfix = path.substring(idx+1);
-        for (int i = 0; i< ItemDye.dyeColors.length; i++) {
-            //generate textures for the remaining dyes to ensure they're all contiguous
-            textures.addBlockTexture( prefix+ItemDye.dyeColors[i^0xF]+postfix);
-        }
-        for (int i = 0; i< ItemModDye.dyeColors.length; i++) {
-            //generate textures for the remaining dyes to ensure they're all contiguous
-            textures.addBlockTexture( prefix+ItemModDye.getTextureName(ItemModDye.dyeColors[i])+postfix);
-        }
-    }
-
-    @Override
-    public int getBlockTextureFromSideAndMetadata(Side side, int meta) {
-        return textures.getTexture(meta);
     }
 
     @Override

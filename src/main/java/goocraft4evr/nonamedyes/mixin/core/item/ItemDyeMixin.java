@@ -16,7 +16,7 @@ import java.util.Random;
 
 @Mixin(value= ItemDye.class, remap=false)
 public abstract class ItemDyeMixin {
-    @Inject(method="onItemUse",at=@At("TAIL"),cancellable = true)
+    @Inject(method="onUseItemOnBlock",at=@At("TAIL"),cancellable = true)
     private void injected(ItemStack itemstack,
                           EntityPlayer entityplayer,
                           World world,

@@ -24,11 +24,19 @@ public class TextureMap {
         return textures.length;
     }
 
+	//replaced with addTexture
+	@Deprecated
     public void addBlockTexture(String texture) {
         textures[curr++] = TextureRegistry.getTexture(texture);
     }
 
+	//replaced with addTexture
+	@Deprecated
     public void addItemTexture(String texture) {
 		textures[curr++] = TextureRegistry.getTexture(texture);
     }
+
+	public void addTexture(String texture) {
+		textures[curr++] = TextureRegistry.getTexture(texture);
+	}
 }

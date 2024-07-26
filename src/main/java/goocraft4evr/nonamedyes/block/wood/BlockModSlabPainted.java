@@ -22,13 +22,4 @@ public class BlockModSlabPainted extends BlockSlab {
         int meta = entity.getVerticalPlacementDirection(side, sideHeight) == Direction.UP ? 2 : 0;
         world.setBlockMetadataWithNotify(x, y, z, meta | world.getBlockMetadata(x, y, z));
     }
-	@Override
-	public int getBlockTextureFromSideAndMetadata(Side side, int meta) {
-		return BlockModPlanksPainted.getIndexFromMeta(meta, true);
-	}
-
-	@Override
-	public int getBlockTexture(WorldSource blockAccess, int x, int y, int z, Side side) {
-		return this.getBlockTextureFromSideAndMetadata(side, blockAccess.getBlockMetadata(x, y, z));
-	}
 }

@@ -129,7 +129,7 @@ dependencies {
 
 	modImplementation "BTWaila:btwaila:${project.btwalia_version}"
 //	modImplementation "ModMenu:modmenu:2.0.3"
-	modImplementation "BTA_Babric_PrismaticLibe:prismaticlibe:${project.prismatic_version}"
+//	modImplementation "BTA_Babric_PrismaticLibe:prismaticlibe:${project.prismatic_version}"
 
 	implementation "org.slf4j:slf4j-api:1.8.0-beta4"
 	implementation "org.apache.logging.log4j:log4j-slf4j18-impl:2.16.0"

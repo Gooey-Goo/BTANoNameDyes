@@ -3,6 +3,7 @@ package goocraft4evr.nonamedyes.item;
 import goocraft4evr.nonamedyes.block.ModBlocks;
 import net.minecraft.core.block.Block;
 import net.minecraft.core.block.tag.BlockTags;
+import net.minecraft.core.entity.EntityLiving;
 import net.minecraft.core.entity.player.EntityPlayer;
 import net.minecraft.core.enums.EnumBlockSoundEffectType;
 import net.minecraft.core.item.Item;
@@ -19,7 +20,7 @@ public class ItemToolPaintScraper extends Item {
 	}
 
 	@Override
-	public boolean onItemUse(ItemStack itemstack, EntityPlayer entityplayer, World world, int blockX, int blockY, int blockZ, Side side, double xPlaced, double yPlaced) {
+	public boolean onUseItemOnBlock(ItemStack itemstack, EntityPlayer entityplayer, World world, int blockX, int blockY, int blockZ, Side side, double xPlaced, double yPlaced) {
 		int id = world.getBlockId(blockX, blockY, blockZ);
 		//Too lazy to make a tag, ping me if you want one.
 		int newId;
@@ -38,10 +39,5 @@ public class ItemToolPaintScraper extends Item {
 		world.setBlockWithNotify(blockX,blockY,blockZ,newId);
 		itemstack.damageItem(1, entityplayer);
 		return true;
-	}
-
-	@Override
-	public boolean canHarvestBlock(Block block) {
-		return block.hasTag(BlockTags.MINEABLE_BY_SHEARS);
 	}
 }

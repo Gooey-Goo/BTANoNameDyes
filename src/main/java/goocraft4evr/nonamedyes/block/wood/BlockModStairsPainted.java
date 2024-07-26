@@ -9,14 +9,7 @@ public class BlockModStairsPainted extends BlockStairs {
     public BlockModStairsPainted(Block modelBlock, int id) {
         super(modelBlock, id);
     }
-	@Override
-	public int getBlockTexture(WorldSource blockAccess, int x, int y, int z, Side side) {
-		return this.getBlockTextureFromSideAndMetadata(side, blockAccess.getBlockMetadata(x, y, z));
-	}
-	@Override
-	public int getBlockTextureFromSideAndMetadata(Side side, int meta) {
-		return BlockModPlanksPainted.getIndexFromMeta(meta, true);
-	}
+
     public static int getMetaForDyeColor(int i) {
         return i << 4;
     }
