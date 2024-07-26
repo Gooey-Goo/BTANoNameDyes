@@ -1,22 +1,23 @@
 package goocraft4evr.nonamedyes;
 
+import net.minecraft.client.render.stitcher.IconCoordinate;
+import net.minecraft.client.render.stitcher.TextureRegistry;
 import net.minecraft.core.block.Block;
-import turniplabs.halplibe.helper.TextureHelper;
 
 public class TextureMap {
-    private final int[] textures;
+    private final IconCoordinate[] textures;
     private int curr;
     private final String modid;
 
     public TextureMap(String modid, int length) {
         this.modid = modid;
-        textures = new int[length];
+        textures = new IconCoordinate[length];
         curr = 0;
     }
 
-    public int getTexture(int index) {
-        if (index<0 || index>textures.length-1) return 0;
-        return textures[index];
+    public IconCoordinate getTexture(int index) {
+		//just return the first texture if the index range is out of bounds
+		return textures[index<0 || index>textures.length-1 ? 0 : index];
     }
 
     public int length() {
@@ -24,12 +25,10 @@ public class TextureMap {
     }
 
     public void addBlockTexture(String texture) {
-        int[] mainCoords = TextureHelper.getOrCreateBlockTexture(modid, texture);
-        textures[curr++] = Block.texCoordToIndex(mainCoords[0],mainCoords[1]);
+        textures[curr++] = TextureRegistry.getTexture(texture);
     }
 
     public void addItemTexture(String texture) {
-        int[] mainCoords = TextureHelper.getOrCreateItemTexture(modid, texture);
-        textures[curr++] = Block.texCoordToIndex(mainCoords[0],mainCoords[1]);
+		textures[curr++] = TextureRegistry.getTexture(texture);
     }
 }
