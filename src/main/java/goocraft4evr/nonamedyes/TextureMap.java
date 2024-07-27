@@ -16,8 +16,7 @@ public class TextureMap {
     }
 
     public IconCoordinate getTexture(int index) {
-		//just return the first texture if the index range is out of bounds
-		return textures[index<0 || index>textures.length-1 ? 0 : index];
+		return index<0 || index>textures.length-1? TextureRegistry.getTexture("minecraft:block/null") : textures[index];
     }
 
     public int length() {

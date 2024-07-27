@@ -78,7 +78,6 @@ public abstract class ModBlocks {
 		.build(new BlockModChestPainted("chest.planks.oak.painted",UtilIdRegistrar.nextId(), Material.wood))
 		.withTags(BlockTags.FENCES_CONNECT, BlockTags.MINEABLE_BY_AXE, BlockTags.NOT_IN_CREATIVE_MENU);
 
-    //TODO: This used .setDisabledStats()
     public static final Block lampIdle = new BlockBuilder(NoNameDyes.MOD_ID)
 		.setHardness(0.5f)
 		.setVisualUpdateOnMetadata()
@@ -87,10 +86,8 @@ public abstract class ModBlocks {
 		.setItemBlock(ItemModBlockPainted::new)
 		.build(new BlockModLamp("lamp.idle",UtilIdRegistrar.nextId(),false)
 		.withTags(BlockTags.MINEABLE_BY_PICKAXE, BlockTags.NOT_IN_CREATIVE_MENU));
-		//.withTexCoords(17, 31); // TODO individual textures
 
 
-    //TODO: luminance was initially 0.9375f, this block used setDisabledStats()
     public static final Block lampActive = new BlockBuilder(NoNameDyes.MOD_ID)
 		.setLuminance(14)
 		.setHardness(0.5f)
@@ -118,7 +115,6 @@ public abstract class ModBlocks {
 		.build(new BlockNetherRoots("nether.roots", UtilIdRegistrar.nextId(), Material.plant)
 		.withTags(BlockTags.MINEABLE_BY_SHEARS,BlockTags.SHEARS_DO_SILK_TOUCH));
 
-    //NOTE: luminance was originally 0.125f
     public static final Block mushroomInkCap = new BlockBuilder(NoNameDyes.MOD_ID)
 		.setTextures(NoNameDyes.MOD_ID+":block/ink_cap")
 		.setBlockSound(BlockSounds.GRASS)
@@ -197,7 +193,6 @@ public abstract class ModBlocks {
             .build(new BlockDeprecated("log.palm.ripe", UtilIdRegistrar.nextId(), Material.wood,Block.logOakMossy.id))
             .withTags(BlockTags.FENCES_CONNECT, BlockTags.MINEABLE_BY_AXE,BlockTags.NOT_IN_CREATIVE_MENU);
 
-    //HAS DISABLED STATS
     public static final Block leavesPalm = new BlockBuilder(NoNameDyes.MOD_ID)
             .setBlockSound(BlockSounds.GRASS)
             .setHardness(0.2f)
@@ -226,15 +221,13 @@ public abstract class ModBlocks {
             .withTags(BlockTags.MINEABLE_BY_PICKAXE);
 
     public static final Block bleacher = new BlockBuilder(NoNameDyes.MOD_ID)
-            .setVisualUpdateOnMetadata()
-            .setImmovable()
-            .setHardness(3.5f)
-            .setBlockSound(BlockSounds.STONE)
-            .setSideTextures(NoNameDyes.MOD_ID+":block/bleacher_sides")
-            .setBottomTexture(NoNameDyes.MOD_ID+":block/bleacher_bottom")
-            .setTopTexture(NoNameDyes.MOD_ID+":block/bleacher_top_empty")
-            .build(new BlockBleacher("bleacher", UtilIdRegistrar.nextId()))
-            .withTags(BlockTags.MINEABLE_BY_PICKAXE);
+		.setVisualUpdateOnMetadata()
+		.setImmovable()
+		.setHardness(3.5f)
+		.setBlockSound(BlockSounds.STONE)
+		.setBlockModel(BlockModelBleacher::new)
+		.build(new BlockBleacher("bleacher", UtilIdRegistrar.nextId()))
+		.withTags(BlockTags.MINEABLE_BY_PICKAXE);
 
     public static final Block netherrackVile = new BlockBuilder(NoNameDyes.MOD_ID)
             .setTextures(NoNameDyes.MOD_ID+":block/netherrack_vile")
