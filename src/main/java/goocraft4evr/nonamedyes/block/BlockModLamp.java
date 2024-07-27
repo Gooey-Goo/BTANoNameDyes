@@ -15,7 +15,7 @@ import net.minecraft.core.world.WorldSource;
 import java.util.Random;
 
 public class BlockModLamp extends Block {
-    boolean isActive;
+    public boolean isActive;
 
     public BlockModLamp(String key, int id, boolean isActivated) {
         super(key, id, Material.stone);

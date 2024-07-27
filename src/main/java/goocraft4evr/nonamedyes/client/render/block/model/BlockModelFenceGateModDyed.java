@@ -17,7 +17,7 @@ public class BlockModelFenceGateModDyed<T extends BlockFenceGate> extends BlockM
 		super(block);
 		TEXTURES = new TextureMap(NoNameDyes.MOD_ID, ItemModDye.NUM_DYES);
 		for (int i = 0; i < ItemModDye.NUM_DYES; ++i) {
-			TEXTURES.addTexture(String.format(textureNamespace,ItemModDye.dyeColors[i]));
+			TEXTURES.addTexture(String.format(textureNamespace,ItemModDye.getTextureName(ItemModDye.dyeColors[i])));
 		}
 	}
 

@@ -35,34 +35,36 @@ public abstract class ModBlocks {
 
 
     public static final Block planksOakPainted = woodBlockBuilder
-            .setItemBlock(block -> new ItemModBlockPainted(block,false))
-            .build(new BlockModPlanksPainted("planks.oak.painted",UtilIdRegistrar.nextId()))
-            .withTags(BlockTags.FENCES_CONNECT, BlockTags.MINEABLE_BY_AXE, BlockTags.NOT_IN_CREATIVE_MENU);
+		.setItemBlock(block -> new ItemModBlockPainted(block,false))
+		.setBlockModel(b -> new BlockModelModDyed<>(b,NoNameDyes.MOD_ID+":block/plank/%s_plank",false))
+		.build(new BlockModPlanksPainted("planks.oak.painted",UtilIdRegistrar.nextId()))
+		.withTags(BlockTags.FENCES_CONNECT, BlockTags.MINEABLE_BY_AXE, BlockTags.NOT_IN_CREATIVE_MENU);
 
     public static final Block fencePlanksOakPainted = woodBlockBuilder
-            .setItemBlock(block -> new ItemModBlockPainted(block,false))
-            .setBlockModel(BlockModelFence::new)
+            .setItemBlock(b -> new ItemModBlockPainted(b,false))
+            .setBlockModel(b -> new BlockModelFenceModDyed<>(b,NoNameDyes.MOD_ID+":block/plank/%s_plank"))
             .build(new BlockModFencePainted("fence.planks.oak.painted",UtilIdRegistrar.nextId()))
             .withTags(BlockTags.FENCES_CONNECT, BlockTags.MINEABLE_BY_AXE, BlockTags.CAN_HANG_OFF, BlockTags.NOT_IN_CREATIVE_MENU);
 
     public static final Block fencegatePlanksOakPainted = woodBlockBuilder
-            .setItemBlock(block -> new ItemModBlockPainted(block,true))
+            .setItemBlock(b -> new ItemModBlockPainted(b,true))
             .setBlockModel(b -> new BlockModelFenceGateModDyed<>(b,NoNameDyes.MOD_ID+":block/plank/%s_plank"))
             .build(new BlockModFenceGatePainted("fencegate.planks.oak.painted",UtilIdRegistrar.nextId()))
             .withTags(BlockTags.FENCES_CONNECT, BlockTags.MINEABLE_BY_AXE, BlockTags.NOT_IN_CREATIVE_MENU);
 
     public static final Block slabPlanksOakPainted = woodBlockBuilder
-            .setItemBlock(ItemModBlockSlabPainted::new)
-            .setUseInternalLight()
-            .build(new BlockModSlabPainted(planksOakPainted,UtilIdRegistrar.nextId()))
-            .withTags(BlockTags.MINEABLE_BY_AXE, BlockTags.NOT_IN_CREATIVE_MENU);
+		.setItemBlock(ItemModBlockSlabPainted::new)
+		.setUseInternalLight()
+		.setBlockModel(b -> new BlockModelSlabModDyed<>(b,NoNameDyes.MOD_ID+":block/plank/%s_plank"))
+		.build(new BlockModSlabPainted(planksOakPainted,UtilIdRegistrar.nextId()))
+		.withTags(BlockTags.MINEABLE_BY_AXE, BlockTags.NOT_IN_CREATIVE_MENU);
 
     public static final Block stairsPlanksOakPainted = woodBlockBuilder
-            .setItemBlock(block -> new ItemModBlockPainted(block,true))
-            .setUseInternalLight()
-            .setBlockModel(BlockModelStairs::new)
-            .build(new BlockModStairsPainted(planksOakPainted,UtilIdRegistrar.nextId()))
-            .withTags(BlockTags.MINEABLE_BY_AXE, BlockTags.NOT_IN_CREATIVE_MENU);
+		.setItemBlock(b -> new ItemModBlockPainted(b,true))
+		.setUseInternalLight()
+		.setBlockModel(b -> new BlockModelStairsModDyed<>(b,NoNameDyes.MOD_ID+":block/plank/%s_plank"))
+		.build(new BlockModStairsPainted(planksOakPainted,UtilIdRegistrar.nextId()))
+		.withTags(BlockTags.MINEABLE_BY_AXE, BlockTags.NOT_IN_CREATIVE_MENU);
 
     public static final Block chestPlanksOakPainted = new BlockBuilder(NoNameDyes.MOD_ID)
 		.setHardness(2.5f)
@@ -71,7 +73,8 @@ public abstract class ModBlocks {
 		.setBlockSound(BlockSounds.WOOD)
 		.setImmovable()
 		.setLightOpacity(3)
-		.setItemBlock(block -> new ItemModBlockPainted(block,true))
+		.setItemBlock(b -> new ItemModBlockPainted(b,true))
+		.setBlockModel(BlockModelChestModDyed::new)
 		.build(new BlockModChestPainted("chest.planks.oak.painted",UtilIdRegistrar.nextId(), Material.wood))
 		.withTags(BlockTags.FENCES_CONNECT, BlockTags.MINEABLE_BY_AXE, BlockTags.NOT_IN_CREATIVE_MENU);
 
@@ -102,6 +105,7 @@ public abstract class ModBlocks {
 		.setBlockSound(BlockSounds.CLOTH)
 		.setFlammability(30,60)
 		.setItemBlock(ItemModBlockPainted::new)
+		.setBlockModel(b -> new BlockModelModDyed<>(b,NoNameDyes.MOD_ID+":block/wool/%s_wool",false))
 		.build(new BlockModWool("wool",UtilIdRegistrar.nextId())
 		.withTags(BlockTags.MINEABLE_BY_SHEARS, BlockTags.NOT_IN_CREATIVE_MENU));
 
@@ -139,27 +143,27 @@ public abstract class ModBlocks {
             .setTags(BlockTags.MINEABLE_BY_PICKAXE);
 
     public static final Block oreMalachiteStone = malachiteBuilder
-            .setTextures(NoNameDyes.MOD_ID+":block/ore_malachite_stone.png")
+            .setTextures(NoNameDyes.MOD_ID+":block/ore_malachite_stone")
             .build(new BlockOreMalachite("ore.malachite.stone",UtilIdRegistrar.nextId()));
 
     public static final Block oreMalachiteBasalt = malachiteBuilder
-            .setTextures(NoNameDyes.MOD_ID+":block/ore_malachite_basalt.png")
+            .setTextures(NoNameDyes.MOD_ID+":block/ore_malachite_basalt")
             .build(new BlockOreMalachite("ore.malachite.basalt",UtilIdRegistrar.nextId()));
 
     public static final Block oreMalachiteLimestone = malachiteBuilder
-            .setTextures(NoNameDyes.MOD_ID+":block/ore_malachite_limestone.png")
+            .setTextures(NoNameDyes.MOD_ID+":block/ore_malachite_limestone")
             .build(new BlockOreMalachite("ore.malachite.limestone",UtilIdRegistrar.nextId()));
 
     public static final Block oreMalachiteGranite = malachiteBuilder
-            .setTextures(NoNameDyes.MOD_ID+":block/ore_malachite_granite.png")
+            .setTextures(NoNameDyes.MOD_ID+":block/ore_malachite_granite")
             .build(new BlockOreMalachite("ore.malachite.granite",UtilIdRegistrar.nextId()));
 
     public static final Block blockMalachite = malachiteBuilder
-            .setTextures(NoNameDyes.MOD_ID+":block/malachite_block.png")
+            .setTextures(NoNameDyes.MOD_ID+":block/malachite_block")
             .build(new Block("block.malachite",UtilIdRegistrar.nextId(),Material.stone));
 
     public static final Block flowerIndigo = (new BlockBuilder(NoNameDyes.MOD_ID)
-            .setTextures(NoNameDyes.MOD_ID+":block/indigo_flower.png")
+            .setTextures(NoNameDyes.MOD_ID+":block/indigo_flower")
             .setBlockSound(BlockSounds.GRASS)
             .setHardness(0.0f)
             .setBlockModel(BlockModelCrossedSquares::new)
@@ -168,8 +172,8 @@ public abstract class ModBlocks {
             .withTags(BlockTags.BROKEN_BY_FLUIDS,BlockTags.PLANTABLE_IN_JAR);
 
 	public static final Block logPalm = new BlockBuilder(NoNameDyes.MOD_ID)
-            .setTopBottomTextures(NoNameDyes.MOD_ID+":block/log_palm_top.png")
-            .setSideTextures(NoNameDyes.MOD_ID+":block/log_palm_sides.png")
+            .setTopBottomTextures(NoNameDyes.MOD_ID+":block/log_palm_top")
+            .setSideTextures(NoNameDyes.MOD_ID+":block/log_palm_sides")
             .setBlockSound(BlockSounds.WOOD)
             .setHardness(2.0f)
             .setVisualUpdateOnMetadata()
@@ -183,8 +187,8 @@ public abstract class ModBlocks {
 	@Deprecated
 	public static final Block logPalmRipe = new BlockBuilder(NoNameDyes.MOD_ID)
 		.setItemBlock(b -> new ItemBlockDeprecated(b,Block.logOakMossy))
-            .setTopBottomTextures(NoNameDyes.MOD_ID+":block/log_palm_top.png")
-            .setSideTextures(NoNameDyes.MOD_ID+":block/log_palm_ripe_sides.png")
+            .setTopBottomTextures(NoNameDyes.MOD_ID+":block/log_palm_top")
+            .setSideTextures(NoNameDyes.MOD_ID+":block/log_palm_ripe_sides")
             .setBlockSound(BlockSounds.WOOD)
             .setHardness(2.0f)
             .setVisualUpdateOnMetadata()
@@ -206,7 +210,7 @@ public abstract class ModBlocks {
             .withTags(BlockTags.SHEARS_DO_SILK_TOUCH, BlockTags.MINEABLE_BY_AXE, BlockTags.MINEABLE_BY_HOE, BlockTags.MINEABLE_BY_SWORD, BlockTags.MINEABLE_BY_SHEARS);
 
 	public static final Block saplingPalm = new BlockBuilder(NoNameDyes.MOD_ID)
-            .setTextures(NoNameDyes.MOD_ID+":block/sapling_palm.png")
+            .setTextures(NoNameDyes.MOD_ID+":block/sapling_palm")
             .setBlockSound(BlockSounds.GRASS)
             .setBlockModel(BlockModelCrossedSquares::new)
             .setHardness(0.0f)
@@ -217,7 +221,7 @@ public abstract class ModBlocks {
 
     public static final Block brickMalachite = malachiteBuilder
             .setResistance(10.0f)
-            .setTextures(NoNameDyes.MOD_ID+":block/brick_malachite.png")
+            .setTextures(NoNameDyes.MOD_ID+":block/brick_malachite")
             .build(new Block("brick.malachite", UtilIdRegistrar.nextId(), Material.stone))
             .withTags(BlockTags.MINEABLE_BY_PICKAXE);
 
@@ -226,22 +230,22 @@ public abstract class ModBlocks {
             .setImmovable()
             .setHardness(3.5f)
             .setBlockSound(BlockSounds.STONE)
-            .setSideTextures(NoNameDyes.MOD_ID+":block/bleacher_sides.png")
-            .setBottomTexture(NoNameDyes.MOD_ID+":block/bleacher_bottom.png")
-            .setTopTexture(NoNameDyes.MOD_ID+":block/bleacher_top_empty.png")
+            .setSideTextures(NoNameDyes.MOD_ID+":block/bleacher_sides")
+            .setBottomTexture(NoNameDyes.MOD_ID+":block/bleacher_bottom")
+            .setTopTexture(NoNameDyes.MOD_ID+":block/bleacher_top_empty")
             .build(new BlockBleacher("bleacher", UtilIdRegistrar.nextId()))
             .withTags(BlockTags.MINEABLE_BY_PICKAXE);
 
     public static final Block netherrackVile = new BlockBuilder(NoNameDyes.MOD_ID)
-            .setTextures(NoNameDyes.MOD_ID+":block/netherrack_vile.png")
+            .setTextures(NoNameDyes.MOD_ID+":block/netherrack_vile")
             .setHardness(0.4f)
             .setInfiniburn()
             .build(new Block("netherrack.vile", UtilIdRegistrar.nextId(),Material.stone))
             .withTags(BlockTags.MINEABLE_BY_PICKAXE);
 
     public static final Block logCinnamon = new BlockBuilder(NoNameDyes.MOD_ID)
-            .setTopBottomTextures(NoNameDyes.MOD_ID+":block/log_cinnamon_top.png")
-            .setSideTextures(NoNameDyes.MOD_ID+":block/log_cinnamon_sides.png")
+            .setTopBottomTextures(NoNameDyes.MOD_ID+":block/log_cinnamon_top")
+            .setSideTextures(NoNameDyes.MOD_ID+":block/log_cinnamon_sides")
             .setBlockSound(BlockSounds.WOOD)
             .setHardness(2.0f)
             .setVisualUpdateOnMetadata()
@@ -268,7 +272,7 @@ public abstract class ModBlocks {
             .setBlockSound(BlockSounds.GRASS)
             .setBlockModel(BlockModelCrossedSquares::new)
             .setHardness(0.0f)
-            .setTextures(NoNameDyes.MOD_ID+":block/sapling_cinnamon.png")
+            .setTextures(NoNameDyes.MOD_ID+":block/sapling_cinnamon")
             .setTickOnLoad()
             .setVisualUpdateOnMetadata()
             .build(new BlockSaplingCinnamon("sapling.cinnamon", UtilIdRegistrar.nextId()))
@@ -278,7 +282,7 @@ public abstract class ModBlocks {
             .setBlockSound(BlockSounds.STONE)
             .setHardness(1.5f)
             .setResistance(8.0f)
-            .setTextures(NoNameDyes.MOD_ID+":block/gallstone.png")
+            .setTextures(NoNameDyes.MOD_ID+":block/gallstone")
             .build(new Block("gallstone", UtilIdRegistrar.nextId(),Material.stone))
             .withTags(BlockTags.MINEABLE_BY_PICKAXE);
 
@@ -286,7 +290,7 @@ public abstract class ModBlocks {
             .setBlockSound(BlockSounds.STONE)
             .setHardness(2.0f)
             .setResistance(15.0f)
-            .setTextures(NoNameDyes.MOD_ID+":block/vile_reactor_0.png")
+            .setTextures(NoNameDyes.MOD_ID+":block/vile_reactor_0")
             .build(new BlockVileReactor("vile.reactor.idle", UtilIdRegistrar.nextId()))
             .withTags(BlockTags.MINEABLE_BY_PICKAXE);
 
@@ -295,7 +299,7 @@ public abstract class ModBlocks {
             .setHardness(2.0f)
             .setResistance(15.0f)
             .setLuminance(6)
-            .setTextures(NoNameDyes.MOD_ID+":block/vile_reactor_1.png")
+            .setTextures(NoNameDyes.MOD_ID+":block/vile_reactor_1")
             .build(new BlockVileReactor("vile.reactor.active", UtilIdRegistrar.nextId()))
             .withTags(BlockTags.MINEABLE_BY_PICKAXE,BlockTags.NOT_IN_CREATIVE_MENU);
 
@@ -304,40 +308,40 @@ public abstract class ModBlocks {
             .setHardness(2.0f)
             .setResistance(15.0f)
             .setLuminance(12)
-            .setTextures(NoNameDyes.MOD_ID+":block/vile_reactor_2.png")
+            .setTextures(NoNameDyes.MOD_ID+":block/vile_reactor_2")
             .build(new BlockVileReactor("vile.reactor.veryactive", UtilIdRegistrar.nextId()))
             .withTags(BlockTags.MINEABLE_BY_PICKAXE,BlockTags.NOT_IN_CREATIVE_MENU);
 
     public static final Block logEbony = new BlockBuilder(NoNameDyes.MOD_ID)
-            .setTopBottomTextures(NoNameDyes.MOD_ID+":block/log_ebony_top.png")
-            .setSideTextures(NoNameDyes.MOD_ID+":block/log_ebony_sides.png")
-            .setBlockSound(BlockSounds.WOOD)
-            .setHardness(2.0f)
-            .setVisualUpdateOnMetadata()
-            .setFlammability(5,5)
-            .setBlockModel(BlockModelAxisAligned::new)
-            .build(new BlockLog("log.ebony", UtilIdRegistrar.nextId()))
-            .withTags(BlockTags.FENCES_CONNECT, BlockTags.MINEABLE_BY_AXE);
+		.setBlockSound(BlockSounds.WOOD)
+		.setHardness(2.0f)
+		.setVisualUpdateOnMetadata()
+		.setFlammability(5,5)
+		.setBlockModel(b -> new BlockModelAxisAligned<>(b)
+			.withTextures(NoNameDyes.MOD_ID+":block/log_ebony_top",
+				NoNameDyes.MOD_ID+":block/log_ebony_sides"))
+		.build(new BlockLog("log.ebony", UtilIdRegistrar.nextId()))
+		.withTags(BlockTags.FENCES_CONNECT, BlockTags.MINEABLE_BY_AXE);
 
     //HAS DISABLED STATS
     public static final Block leavesEbony = new BlockBuilder(NoNameDyes.MOD_ID)
-            .setBlockSound(BlockSounds.GRASS)
-            .setHardness(0.2f)
-            .setLightOpacity(1)
-            .setVisualUpdateOnMetadata()
-            .setTickOnLoad()
-            .setBlockColor(b -> new BlockColorCustom(ModColorizers.ebony))
-            .setFlammability(30,60)
-		.setBlockModel(b -> new BlockModelLeaves<>(b,NoNameDyes.MOD_ID+":block/ebony"))
-            .build(new BlockLeavesEbony("leaves.ebony", UtilIdRegistrar.nextId()))
-            .withDisabledStats()
-            .withTags(BlockTags.SHEARS_DO_SILK_TOUCH, BlockTags.MINEABLE_BY_AXE, BlockTags.MINEABLE_BY_HOE, BlockTags.MINEABLE_BY_SWORD, BlockTags.MINEABLE_BY_SHEARS);
+		.setBlockSound(BlockSounds.GRASS)
+		.setHardness(0.2f)
+		.setLightOpacity(1)
+		.setVisualUpdateOnMetadata()
+		.setTickOnLoad()
+		.setBlockColor(b -> new BlockColorCustom(ModColorizers.ebony))
+		.setFlammability(30,60)
+		.setBlockModel(b -> new BlockModelLeaves<>(b,NoNameDyes.MOD_ID+":block/leaves_ebony"))
+		.build(new BlockLeavesEbony("leaves.ebony", UtilIdRegistrar.nextId()))
+		.withDisabledStats()
+		.withTags(BlockTags.SHEARS_DO_SILK_TOUCH, BlockTags.MINEABLE_BY_AXE, BlockTags.MINEABLE_BY_HOE, BlockTags.MINEABLE_BY_SWORD, BlockTags.MINEABLE_BY_SHEARS);
 
     public static final Block saplingEbony = new BlockBuilder(NoNameDyes.MOD_ID)
             .setBlockSound(BlockSounds.GRASS)
             .setBlockModel(BlockModelCrossedSquares::new)
             .setHardness(0.0f)
-            .setTextures(NoNameDyes.MOD_ID+":block/sapling_ebony.png")
+            .setTextures(NoNameDyes.MOD_ID+":block/sapling_ebony")
             .setTickOnLoad()
             .setVisualUpdateOnMetadata()
             .build(new BlockSaplingEbony("sapling.ebony", UtilIdRegistrar.nextId()))
@@ -348,7 +352,7 @@ public abstract class ModBlocks {
     public static final Block plaster = new BlockBuilder(NoNameDyes.MOD_ID)
             .setBlockSound(BlockSounds.STONE)
             .setHardness(0.3f)
-            .setTextures(NoNameDyes.MOD_ID+":block/plaster/plaster.png")
+            .setTextures(NoNameDyes.MOD_ID+":block/plaster/plaster")
             .build(new BlockDeprecated("plaster", UtilIdRegistrar.nextId(),Material.stone,UtilIdRegistrar.curr_id))
             .withTags(BlockTags.MINEABLE_BY_PICKAXE,BlockTags.NOT_IN_CREATIVE_MENU);
 
@@ -366,7 +370,7 @@ public abstract class ModBlocks {
 
             .setBlockSound(BlockSounds.STONE)
             .setHardness(1.0f)
-            .setTextures(NoNameDyes.MOD_ID+":block/ceramic/ceramic_block.png")
+            .setTextures(NoNameDyes.MOD_ID+":block/ceramic/ceramic_block")
             .build(new BlockDeprecated("block.ceramic", UtilIdRegistrar.nextId(),Material.stone,UtilIdRegistrar.curr_id+1))
             .withTags(BlockTags.MINEABLE_BY_PICKAXE,BlockTags.NOT_IN_CREATIVE_MENU);
 
@@ -376,7 +380,7 @@ public abstract class ModBlocks {
 
             .setBlockSound(BlockSounds.STONE)
             .setHardness(1.0f)
-            .setTextures(NoNameDyes.MOD_ID+":block/ceramic/ceramic_tile.png")
+            .setTextures(NoNameDyes.MOD_ID+":block/ceramic/ceramic_tile")
             .build(new BlockDeprecated("tile.ceramic", UtilIdRegistrar.nextId(),Material.stone,UtilIdRegistrar.curr_id+1))
             .withTags(BlockTags.MINEABLE_BY_PICKAXE,BlockTags.NOT_IN_CREATIVE_MENU);
 
@@ -384,8 +388,8 @@ public abstract class ModBlocks {
             .setItemBlock(ItemBlockPlasterPainted::new)
             .setBlockSound(BlockSounds.STONE)
             .setHardness(1.0f)
-            .setTextures(NoNameDyes.MOD_ID+":block/ceramic/ceramic_block_painted.png")
-		.setBlockModel(b -> new BlockModelModDyed<>(b,NoNameDyes.MOD_ID+":block/ceramic/%s_ceramic_block.png",true))
+            .setTextures(NoNameDyes.MOD_ID+":block/ceramic/ceramic_block_painted")
+		.setBlockModel(b -> new BlockModelModDyed<>(b,NoNameDyes.MOD_ID+":block/ceramic/%s_ceramic_block",true))
             .build(new BlockCeramicPainted("block.ceramic.painted", UtilIdRegistrar.nextId(),Material.stone))
             .withTags(BlockTags.MINEABLE_BY_PICKAXE,BlockTags.NOT_IN_CREATIVE_MENU);
 
@@ -393,8 +397,7 @@ public abstract class ModBlocks {
 		.setItemBlock(ItemBlockPlasterPainted::new)
 		.setBlockSound(BlockSounds.STONE)
 		.setHardness(1.0f)
-		.setTextures(NoNameDyes.MOD_ID+":block/ceramic/%s_ceramic_tile.png")
-		.setBlockModel(b -> new BlockModelModDyed<>(b,NoNameDyes.MOD_ID+":block/plaster/%s_mud_plaster.png",true))
+		.setBlockModel(b -> new BlockModelModDyed<>(b,NoNameDyes.MOD_ID+":block/ceramic/%s_ceramic_tile",true))
 		.build(new BlockCeramicPainted("tile.ceramic.painted", UtilIdRegistrar.nextId(),Material.stone))
 		.withTags(BlockTags.MINEABLE_BY_PICKAXE,BlockTags.NOT_IN_CREATIVE_MENU);
 
@@ -403,7 +406,8 @@ public abstract class ModBlocks {
 		.setBlockSound(BlockSounds.STONE)
 		.setHardness(1.5f)
 		.setResistance(10.0f)
-		.setTextures(NoNameDyes.MOD_ID+":block/plaster/%s_limestone_plaster.png")
+		.setBlockModel(b -> new BlockModelModDyed<>(b,NoNameDyes.MOD_ID+":block/plaster/%s_limestone_plaster",true))
+
 		.build(new BlockCeramicPainted("plaster.limestone", UtilIdRegistrar.nextId(),Material.stone))
 		.withTags(BlockTags.MINEABLE_BY_PICKAXE,BlockTags.NOT_IN_CREATIVE_MENU);
 
@@ -411,7 +415,8 @@ public abstract class ModBlocks {
 		.setBlockSound(BlockSounds.STONE)
 		.setHardness(3.0f)
 		.setResistance(10.0f)
-		.setTextures(NoNameDyes.MOD_ID+":block/brick_ochre.png")
+		.setBlockModel(b -> new BlockModelStandard<>(b)
+			.withTextures(NoNameDyes.MOD_ID+":block/brick_ochre"))
 		.build(new Block("brick.ochre", UtilIdRegistrar.nextId(), Material.stone))
 		.withTags(BlockTags.MINEABLE_BY_PICKAXE);
 
@@ -420,6 +425,8 @@ public abstract class ModBlocks {
 		.setItemBlock(ItemBlockSlab::new)
 		.setVisualUpdateOnMetadata()
 		.setUseInternalLight()
+		.setBlockModel(b -> new BlockModelSlab<>(b)
+			.withTextures(NoNameDyes.MOD_ID+":block/brick_ochre"))
 		.build(new BlockSlab(brickOchre, UtilIdRegistrar.nextId()))
 		.withTags(BlockTags.MINEABLE_BY_PICKAXE);
 
@@ -436,6 +443,8 @@ public abstract class ModBlocks {
 		.setItemBlock(ItemBlockSlab::new)
 		.setVisualUpdateOnMetadata()
 		.setUseInternalLight()
+		.setBlockModel(b -> new BlockModelSlab<>(b)
+			.withTextures(NoNameDyes.MOD_ID+":block/brick_malachite"))
 		.build(new BlockSlab(brickMalachite, UtilIdRegistrar.nextId()))
 		.withTags(BlockTags.MINEABLE_BY_PICKAXE);
 

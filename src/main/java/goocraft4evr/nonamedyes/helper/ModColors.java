@@ -9,6 +9,6 @@ public abstract class ModColors {
     public static final Color[] allPlasterColors = new Color[16+ItemModDye.NUM_DYES];
 
     public static void loadColors() {
-        Colors.fillColorArray("/assets/"+ NoNameDyes.MOD_ID +"/misc/colors_plaster.png", allPlasterColors);
+        Colors.fillColorArray("/assets/"+ NoNameDyes.MOD_ID +"/textures/misc/colors_plaster.png", allPlasterColors);
     }
 }
