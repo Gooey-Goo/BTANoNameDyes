@@ -25,7 +25,7 @@ public class BlockModelNetherRoots<T extends Block> extends BlockModelStandard<T
 		float grum = 0.001f;
 		//set brightness maybe?
 		float blockBrightness = getBlockBrightness(renderBlocks.blockAccess, x, y, z);
-		Tessellator.instance.setColorOpaque_F(blockBrightness, blockBrightness, blockBrightness);
+		tessellator.setColorOpaque_F(blockBrightness, blockBrightness, blockBrightness);
 		//base quad
 		tessellator.addVertexWithUV(x, y+grum, z, TEXTURE.getIconUMin(), TEXTURE.getIconVMin());
 		tessellator.addVertexWithUV(x, y+grum, z+1, TEXTURE.getIconUMax(), TEXTURE.getIconVMin());

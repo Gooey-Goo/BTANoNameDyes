@@ -37,13 +37,6 @@ public class BlockBleacher extends BlockTileEntity {
         return false;
     }
 
-    /*
-    @Override
-    public boolean isBlockOpaqueCube() {
-        return false;
-    }
-     */
-
     @Override
     public void randomDisplayTick(World world, int x, int y, int z, Random rand) {
         TileEntityBleacher tileEntityBleacher = (TileEntityBleacher) world.getBlockTileEntity(x,y,z);

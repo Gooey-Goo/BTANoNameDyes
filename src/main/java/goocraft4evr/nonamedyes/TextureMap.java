@@ -16,7 +16,7 @@ public class TextureMap {
     }
 
     public IconCoordinate getTexture(int index) {
-		return index<0 || index>textures.length-1? TextureRegistry.getTexture("minecraft:block/null") : textures[index];
+		return index<0 || index>textures.length-1? TextureRegistry.getTexture("minecraft:block/texture_missing") : textures[index];
     }
 
     public int length() {
