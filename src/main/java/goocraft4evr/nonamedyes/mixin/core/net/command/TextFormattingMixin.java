@@ -1,7 +1,9 @@
 package goocraft4evr.nonamedyes.mixin.core.net.command;
 
 import goocraft4evr.nonamedyes.item.ItemModDye;
+import net.minecraft.client.util.helper.Colors;
 import net.minecraft.core.net.command.TextFormatting;
+import net.minecraft.core.util.helper.Color;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -17,8 +19,14 @@ import static goocraft4evr.nonamedyes.NoNameDyes.LOGGER;
 @Mixin(value= TextFormatting.class,remap = false)
 public abstract class TextFormattingMixin {
 
+	@Unique
+	private final String theBigOne = "ɏɐɑɒɓɔɕɖɗɘəɚɛɜɝɞɟɠɡɢɣɤɥɦɧɨɩɪɫɬɭɮɯɰɱɲɳɴɵɶɷɸɹɺɻɼɽɾɿʀʁʂʃʄʅʆʇʈʉʊʋʌʍʎʏʐʑʒʓʔʕʖʗʘʙʚʛʜʝʞʟʠʡʢʣʤʥʦʧʨʩʪʫʬʭʮʯʰʱʲʳʴʵʶʷʸʹʺʻʼʽʾʿˀˁ˂˃˄˅ˆˇˈˉˊˋˌˍˎ";
     @Final
     private static final TextFormatting[] FORMATTINGS = new TextFormatting[22+ItemModDye.NUM_DYES];
+	@Final
+	private int id;
+	@Final
+	public char code;
 
     @Unique
     private static String getNameFromKey(String key) {
@@ -79,6 +87,16 @@ public abstract class TextFormattingMixin {
 
     @ModifyConstant(method="<init>", constant = @Constant(stringValue = "0123456789abcdefklmnor"))
     private String methodName(String variable) {
-        return variable + "ɏɐɑɒɓɔɕɖɗɘəɚɛɜɝɞɟɠɡɢɣɤɥɦɧɨɩɪɫɬɭɮɯɰɱɲɳɴɵɶɷɸɹɺɻɼɽɾɿʀʁʂʃʄʅʆʇʈʉʊʋʌʍʎʏʐʑʒʓʔʕʖʗʘʙʚʛʜʝʞʟʠʡʢʣʤʥʦʧʨʩʪʫʬʭʮʯʰʱʲʳʴʵʶʷʸʹʺʻʼʽʾʿˀˁ˂˃˄˅ˆˇˈˉˊˋˌˍˎ";
+        return variable + theBigOne;
     }
+
+	@Inject(method = "toString", at = @At("RETURN"), cancellable = true)
+	private void injected(CallbackInfoReturnable<String> cir) {
+		if (id>21) {
+			int index = theBigOne.indexOf(code);
+			Color colour = Colors.allChatColors[16+index];
+			cir.setReturnValue("\u00a7<" + colour.toHexRGBA().substring(2,8) + ">");
+
+		}
+	}
 }
