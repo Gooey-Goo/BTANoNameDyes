@@ -40,7 +40,7 @@ public class GuiBleacher extends GuiContainer {
 
     @Override
     protected void drawGuiContainerBackgroundLayer(float f) {
-        int guiTexture = mc.renderEngine.getTexture(String.format("/assets/%s/gui/bleaching.png", NoNameDyes.MOD_ID));
+        int guiTexture = mc.renderEngine.getTexture(String.format("/assets/%s/textures/gui/bleaching.png", NoNameDyes.MOD_ID));
         GL11.glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
         mc.renderEngine.bindTexture(guiTexture);
         int j = (width - xSize) / 2;
