@@ -12,6 +12,8 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.ModifyConstant;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
+import static goocraft4evr.nonamedyes.NoNameDyes.LOGGER;
+
 @Mixin(value= TextFormatting.class,remap = false)
 public abstract class TextFormattingMixin {
 
@@ -70,21 +72,8 @@ public abstract class TextFormattingMixin {
         FORMATTINGS[19] = TextFormatting.UNDERLINE;
         FORMATTINGS[20] = TextFormatting.ITALIC;
         FORMATTINGS[21] = TextFormatting.RESET;
-        FORMATTINGS[22] = new TextFormatting(22).setNames("Crimson");
-        FORMATTINGS[23] = new TextFormatting(23).setNames("Maroon");
-        FORMATTINGS[24] = new TextFormatting(24).setNames("Ash Grey", "Ash Gray");
-        FORMATTINGS[25] = new TextFormatting(25).setNames("Olive");
-        FORMATTINGS[26] = new TextFormatting(26).setNames("Ochre");
-        FORMATTINGS[27] = new TextFormatting(27).setNames("Buff");
-        FORMATTINGS[28] = new TextFormatting(28).setNames("Verdigris");
-        FORMATTINGS[29] = new TextFormatting(29).setNames("Light Yellow");
-        FORMATTINGS[30] = new TextFormatting(30).setNames("Indigo");
-        FORMATTINGS[31] = new TextFormatting(31).setNames("Xanthic");
-        FORMATTINGS[32] = new TextFormatting(32).setNames("Cinnamon");
-        FORMATTINGS[33] = new TextFormatting(33).setNames("Navy Blue");
-		FORMATTINGS[34] = new TextFormatting(34).setNames("Royal Purple");
-        for (int i=22;i<22+ItemModDye.NUM_DYES-FORMATTINGS.length;i++) {
-            FORMATTINGS[22+i] = new TextFormatting(22+i).setNames(getNameFromKey(ItemModDye.dyeColors[i]));
+        for (int i=22;i<FORMATTINGS.length;i++) {
+            FORMATTINGS[i] = new TextFormatting(i).setNames(getNameFromKey(ItemModDye.dyeColors[i-22]));
         }
     }
 
