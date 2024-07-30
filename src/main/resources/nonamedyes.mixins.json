@@ -28,8 +28,7 @@
     "client.gui.GuiEditFlagMixin",
     "client.gui.GuiHeldItemTooltipMixin",
     "client.net.handler.NetClientHandlerMixin",
-    "client.render.FlagRendererMixin",
-    "client.render.RenderEngineMixin"
+    "client.render.FlagRendererMixin"
   ],
   "server": [
     "server.entity.player.EntityPlayerMPAccessor"

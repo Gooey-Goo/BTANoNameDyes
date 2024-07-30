@@ -1,6 +1,7 @@
 package goocraft4evr.nonamedyes;
 
 import goocraft4evr.nonamedyes.block.ModBlocks;
+import goocraft4evr.nonamedyes.client.render.colorizer.ModColorizers;
 import goocraft4evr.nonamedyes.entity.ModEntities;
 import goocraft4evr.nonamedyes.entity.animal.EntitySeaSnail;
 import goocraft4evr.nonamedyes.item.ModItems;
@@ -65,6 +66,7 @@ public class NoNameDyes implements ModInitializer, ClientStartEntrypoint, GameSt
 	@Override
 	public void afterGameStart() {
 		ModEntities.registerPost();
+		ModColorizers.register();
 	}
 
 	@Override
