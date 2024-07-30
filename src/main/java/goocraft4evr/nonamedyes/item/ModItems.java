@@ -2,6 +2,9 @@ package goocraft4evr.nonamedyes.item;
 
 import goocraft4evr.nonamedyes.NoNameDyes;
 import goocraft4evr.nonamedyes.UtilIdRegistrar;
+import goocraft4evr.nonamedyes.client.render.item.model.ItemModelModDye;
+import goocraft4evr.nonamedyes.client.render.item.model.ItemModelPaintedPlaster;
+import net.minecraft.client.render.item.model.ItemModelStandard;
 import net.minecraft.core.item.Item;
 import net.minecraft.core.item.ItemFood;
 import net.minecraft.core.item.tag.ItemTags;
@@ -9,8 +12,12 @@ import turniplabs.halplibe.helper.ItemBuilder;
 
 public class ModItems {
 
-    public static Item dye = ItemModDye.createDyes("dye", UtilIdRegistrar.nextId()).withTags(ItemTags.NOT_IN_CREATIVE_MENU);
-    public static Item bleachingPowder = new ItemBuilder(NoNameDyes.MOD_ID)
+    public static Item dye = new ItemBuilder(NoNameDyes.MOD_ID)
+		.setItemModel(ItemModelModDye::new)
+		.build(new ItemModDye("dye",UtilIdRegistrar.nextId()))
+		.withTags(ItemTags.NOT_IN_CREATIVE_MENU);
+
+	public static Item bleachingPowder = new ItemBuilder(NoNameDyes.MOD_ID)
 			.setIcon(String.format("%s:item/bleaching_powder",NoNameDyes.MOD_ID))
 			.build(new Item("bleaching.powder",UtilIdRegistrar.nextId()));
 
@@ -35,9 +42,13 @@ public class ModItems {
 		.build(new Item("plaster.wet",UtilIdRegistrar.nextId()));
 
 	public static Item paintedPlaster = new ItemBuilder(NoNameDyes.MOD_ID)
+		.setIcon(String.format("%s:item/painted_wet_plaster",NoNameDyes.MOD_ID))
+		.setItemModel(ItemModelPaintedPlaster::new)
 		.build(new ItemPaintedPlaster("plaster.painted",UtilIdRegistrar.nextId()));
 
 	public static Item paintScraper = new ItemBuilder(NoNameDyes.MOD_ID)
+		.setItemModel(b -> new ItemModelStandard(b, NoNameDyes.MOD_ID).setFull3D())
+		.setIcon(String.format("%s:item/paint_scraper",NoNameDyes.MOD_ID))
 		.build(new ItemToolPaintScraper("tool.paintscraper",UtilIdRegistrar.nextId()));
 
 	public static Item brickOchre = new ItemBuilder(NoNameDyes.MOD_ID)

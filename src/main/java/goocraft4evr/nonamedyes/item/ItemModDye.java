@@ -1,7 +1,5 @@
 package goocraft4evr.nonamedyes.item;
 
-import goocraft4evr.nonamedyes.NoNameDyes;
-import goocraft4evr.nonamedyes.TextureMap;
 import net.minecraft.core.block.Block;
 import net.minecraft.core.block.entity.TileEntitySign;
 import net.minecraft.core.entity.EntityLiving;
@@ -12,7 +10,6 @@ import net.minecraft.core.item.ItemStack;
 import net.minecraft.core.net.command.TextFormatting;
 import net.minecraft.core.util.helper.Side;
 import net.minecraft.core.world.World;
-import turniplabs.halplibe.HalpLibe;
 
 public class ItemModDye extends Item {
     public static String[] dyeColors = {
@@ -31,22 +28,6 @@ public class ItemModDye extends Item {
 			"royal.purple"};
     public static final int NUM_DYES = dyeColors.length;
 
-    //this method ensures all dye textures are contiguous
-    public static Item createDyes(String name, int id) {
-		/*
-        textures = new TextureMap(NoNameDyes.MOD_ID,dyeColors.length);
-        for (int i = 0; i< textures.length(); i++) {
-            //generate textures for the remaining dyes to ensure they're all contiguous
-            textures.addTexture(getTextureName(dyeColors[i])+"_dye.png");
-        }
-
-		 */
-        //once that's done we just create the item lol
-        ItemModDye item = new ItemModDye(name, id);
-        item.setKey(HalpLibe.addModId(NoNameDyes.MOD_ID, name));
-        return item;
-    }
-
     public static String getTextureName(String dyeName) {
         return dyeName.replace('.','_');
     }
@@ -61,14 +42,6 @@ public class ItemModDye extends Item {
     public String getLanguageKey(ItemStack itemstack) {
         return super.getKey() + "." + dyeColors[itemstack.getMetadata()%dyeColors.length];
     }
-
-	/*
-    @Override
-    public int getIconFromDamage(int id) {
-        return textures.getTexture(id);
-    }
-
-	 */
 
     @Override
     public boolean onUseItemOnBlock(ItemStack itemstack, EntityPlayer entityplayer, World world, int blockX, int blockY, int blockZ, Side side, double xPlaced, double yPlaced) {
