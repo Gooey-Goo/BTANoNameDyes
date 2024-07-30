@@ -167,18 +167,18 @@ public abstract class ModBlocks {
             .setKilledByWeather()
             .withTags(BlockTags.BROKEN_BY_FLUIDS,BlockTags.PLANTABLE_IN_JAR);
 
+	@Deprecated
 	public static final Block logPalm = new BlockBuilder(NoNameDyes.MOD_ID)
-            .setTopBottomTextures(NoNameDyes.MOD_ID+":block/log_palm_top")
-            .setSideTextures(NoNameDyes.MOD_ID+":block/log_palm_sides")
-            .setBlockSound(BlockSounds.WOOD)
-            .setHardness(2.0f)
-            .setVisualUpdateOnMetadata()
-			.setTickOnLoad()
-            .setFlammability(5,5)
-            .setBlockModel(BlockModelAxisAligned::new)
-            .build(new BlockLog("log.palm", UtilIdRegistrar.nextId()) {
-			})
-            .withTags(BlockTags.FENCES_CONNECT, BlockTags.MINEABLE_BY_AXE);
+		.setTopBottomTextures(NoNameDyes.MOD_ID+":block/log_palm_top")
+		.setSideTextures(NoNameDyes.MOD_ID+":block/log_palm_sides")
+		.setBlockSound(BlockSounds.WOOD)
+		.setHardness(2.0f)
+		.setVisualUpdateOnMetadata()
+		.setTickOnLoad()
+		.setFlammability(5,5)
+		.setBlockModel(BlockModelAxisAligned::new)
+		.build(new BlockDeprecated("log.palm", UtilIdRegistrar.nextId(), Material.wood,Block.logPalm.id))
+		.withTags(BlockTags.FENCES_CONNECT, BlockTags.MINEABLE_BY_AXE);
 	//TODO: change
 	@Deprecated
 	public static final Block logPalmRipe = new BlockBuilder(NoNameDyes.MOD_ID)
@@ -193,26 +193,28 @@ public abstract class ModBlocks {
             .build(new BlockDeprecated("log.palm.ripe", UtilIdRegistrar.nextId(), Material.wood,Block.logOakMossy.id))
             .withTags(BlockTags.FENCES_CONNECT, BlockTags.MINEABLE_BY_AXE,BlockTags.NOT_IN_CREATIVE_MENU);
 
+	@Deprecated
     public static final Block leavesPalm = new BlockBuilder(NoNameDyes.MOD_ID)
-            .setBlockSound(BlockSounds.GRASS)
-            .setHardness(0.2f)
-            .setLightOpacity(1)
-            .setVisualUpdateOnMetadata()
-            .setTickOnLoad()
-            .setFlammability(30,60)
-            .build(new BlockLeavesPalm("leaves.palm", UtilIdRegistrar.nextId()))
-            .withDisabledStats()
-            .withTags(BlockTags.SHEARS_DO_SILK_TOUCH, BlockTags.MINEABLE_BY_AXE, BlockTags.MINEABLE_BY_HOE, BlockTags.MINEABLE_BY_SWORD, BlockTags.MINEABLE_BY_SHEARS);
+		.setBlockSound(BlockSounds.GRASS)
+		.setHardness(0.2f)
+		.setLightOpacity(1)
+		.setVisualUpdateOnMetadata()
+		.setTickOnLoad()
+		.setFlammability(30,60)
+		.build(new BlockDeprecated("leaves.palm", UtilIdRegistrar.nextId(), Material.leaves,Block.leavesPalm.id))
+		.withDisabledStats()
+		.withTags(BlockTags.SHEARS_DO_SILK_TOUCH, BlockTags.MINEABLE_BY_AXE, BlockTags.MINEABLE_BY_HOE, BlockTags.MINEABLE_BY_SWORD, BlockTags.MINEABLE_BY_SHEARS);
 
+	@Deprecated
 	public static final Block saplingPalm = new BlockBuilder(NoNameDyes.MOD_ID)
-            .setTextures(NoNameDyes.MOD_ID+":block/sapling_palm")
-            .setBlockSound(BlockSounds.GRASS)
-            .setBlockModel(BlockModelCrossedSquares::new)
-            .setHardness(0.0f)
-            .setTickOnLoad()
-            .setVisualUpdateOnMetadata()
-            .build(new BlockSaplingPalm("sapling.palm", UtilIdRegistrar.nextId()))
-            .withTags(BlockTags.BROKEN_BY_FLUIDS,BlockTags.PLANTABLE_IN_JAR);
+		.setTextures(NoNameDyes.MOD_ID+":block/sapling_palm")
+		.setBlockSound(BlockSounds.GRASS)
+		.setBlockModel(BlockModelCrossedSquares::new)
+		.setHardness(0.0f)
+		.setTickOnLoad()
+		.setVisualUpdateOnMetadata()
+		.build(new BlockDeprecated("sapling.palm", UtilIdRegistrar.nextId(), Material.plant,Block.saplingPalm.id))
+		.withTags(BlockTags.BROKEN_BY_FLUIDS,BlockTags.PLANTABLE_IN_JAR);
 
     public static final Block brickMalachite = malachiteBuilder
             .setResistance(10.0f)
@@ -454,5 +456,8 @@ public abstract class ModBlocks {
 		Item.itemsList[plaster.id] = new ItemBlockDeprecated(plaster,plasterMud);
 		Item.itemsList[blockCeramic.id] = new ItemBlockDeprecated(blockCeramic,blockCeramicPainted);
 		Item.itemsList[tileCeramic.id] = new ItemBlockDeprecated(tileCeramic,tileCeramicPainted);
+		Item.itemsList[logPalm.id] = new ItemBlockDeprecated(logPalm,Block.logPalm);
+		Item.itemsList[leavesPalm.id] = new ItemBlockDeprecated(leavesPalm,Block.leavesPalm);
+		Item.itemsList[saplingPalm.id] = new ItemBlockDeprecated(saplingPalm,Block.saplingPalm);
     }
 }

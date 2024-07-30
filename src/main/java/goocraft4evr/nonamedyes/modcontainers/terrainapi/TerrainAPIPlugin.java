@@ -39,13 +39,9 @@ public class TerrainAPIPlugin implements TerrainAPI {
 		ChunkDecoratorOverworldAPI.randomFeatures.addFeature(new WorldFeatureFlowers(ModBlocks.mushroomInkCap.id), 48, -1, 1,
 			new Biome[]{Biomes.OVERWORLD_GRASSLANDS, Biomes.OVERWORLD_MEADOW, Biomes.OVERWORLD_PLAINS});
 		ChunkDecoratorOverworldAPI.randomFeatures.addFeature(new WorldFeatureOchre(32), 6, -1, 1,
-			new Biome[]{Biomes.OVERWORLD_DESERT, Biomes.OVERWORLD_OUTBACK, Biomes.OVERWORLD_OUTBACK_GRASSY,ModBiomes.OVERWORLD_PALM_BEACH});
+			new Biome[]{Biomes.OVERWORLD_DESERT, Biomes.OVERWORLD_OUTBACK, Biomes.OVERWORLD_OUTBACK_GRASSY});
 		ChunkDecoratorOverworldAPI.randomFeatures.addFeature(new WorldFeatureFlowers(ModBlocks.flowerIndigo.id), 2, 1, 1,
 			new Biome[]{Biomes.OVERWORLD_RAINFOREST, Biomes.OVERWORLD_SEASONAL_FOREST, ModBiomes.OVERWORLD_CINNAMON_FOREST});
-
-		ChunkDecoratorOverworldAPI.randomFeatures.addFeature(new WorldFeatureLake(Block.fluidWaterStill.id), 3, -1, 6,
-			new Biome[]{ModBiomes.OVERWORLD_PALM_BEACH});
-		ChunkDecoratorOverworldAPI.biomeFeatures.addFeature((Parameters x) -> new WorldFeatureTreePalm(ModBlocks.leavesPalm.id,ModBlocks.logPalm.id), null, ComplexFunctions::getTreePlamDensity, null, -1);
 
 		ChunkDecoratorNetherAPI.randomFeatures.addFeature(ComplexFunctions::getVileNetherrack, null, (Parameters x) -> 1, null, 12, 120/128f);
 		ChunkDecoratorNetherAPI.biomeFeatures.addFeature((Parameters x) -> new WorldFeatureNetherRoots(24), null, ComplexFunctions::getNetherRootsDensity, null, 120/128f);

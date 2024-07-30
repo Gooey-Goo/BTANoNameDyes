@@ -15,12 +15,4 @@ public abstract class ModBiomes {
     public static final Biome OVERWORLD_EBONY_FOREST =
             Biomes.register(NoNameDyes.MOD_ID+":overworld.ebony_forest",
                     new BiomeEbonyForest("ebony_forest"));
-
-	public static final Biome OVERWORLD_PALM_BEACH =
-		Biomes.register(NoNameDyes.MOD_ID+":overworld.palm_beach",
-			new BiomePalmBeach("palm_beach"))
-			.setColor(0xFFFB00)
-			.setBlockedWeathers(Weather.overworldSnow)
-			.setTopBlock(Block.sand.id)
-			.setFillerBlock(Block.sand.id);
 }
