@@ -68,13 +68,6 @@ public class EntitySeaSnail extends EntityWaterAnimal {
 	}
 
 	@Override
-	public String getEntityTexture() {
-		//TODO: determine if we need this method
-		return super.getEntityTexture();
-		//return String.format("/assets/%s/mob/%s/%d.png", NoNameDyes.MOD_ID,skinName,getSkinVariant());
-	}
-
-	@Override
 	public int getSkinVariant() {
 		int skinVariantCount = 5;
 		return entityData.getByte(1) % skinVariantCount;
