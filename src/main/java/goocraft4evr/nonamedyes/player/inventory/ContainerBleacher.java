@@ -11,6 +11,8 @@ import net.minecraft.core.player.inventory.slot.Slot;
 
 import java.util.List;
 
+import static goocraft4evr.nonamedyes.NoNameDyes.LOGGER;
+
 public class ContainerBleacher extends Container {
     public TileEntityBleacher tileEntity;
     private boolean hasWaterSource = false;
@@ -21,50 +23,50 @@ public class ContainerBleacher extends Container {
 
     public ContainerBleacher(InventoryPlayer inventoryplayer, TileEntityBleacher tileentitybleacher) {
         tileEntity = tileentitybleacher;
-        //fuel slot
+        //fuel slot (0)
         this.addSlot(new Slot(tileEntity, 0, 20, 35));
-        //input slots
+        //input slots (1-4)
         for (int i = 0; i < 2; ++i) {
             for (int j = 0; j < 2; ++j) {
                 this.addSlot(new Slot(tileentitybleacher, i*2+j+1, 50+j * 18, 17+i * 18));
             }
         }
-        //output slots
+        //output slots (5-8)
         for (int i = 0; i < 2; ++i) {
             for (int j = 0; j < 2; ++j) {
                 this.addSlot(new SlotBleaching(tileentitybleacher, i*2+j+5, 122+j * 18, 17+i * 18));
             }
         }
-        //inventory slots
-        for (int i = 0; i < 3; ++i) {
-            for (int k = 0; k < 9; ++k) {
-                this.addSlot(new Slot(inventoryplayer, k + i * 9 + 9, 8 + k * 18, 66 + i * 18));
-            }
-        }
-        for (int j = 0; j < 9; ++j) {
-            this.addSlot(new Slot(inventoryplayer, j, 8 + j * 18, 124));
-        }
+		//player slots (9-35)
+		for (int i = 0; i < 3; ++i) {
+			for (int k = 0; k < 9; ++k) {
+				this.addSlot(new Slot(inventoryplayer, k + i * 9 + 9, 8 + k * 18, 66 + i * 18));
+			}
+		}
+		//player slots (0-8)
+		for (int j = 0; j < 9; ++j) {
+			this.addSlot(new Slot(inventoryplayer, j, 8 + j * 18, 124));
+		}
     }
 
     @Override
     public void updateInventory() {
         super.updateInventory();
-        for (Object crafter : crafters) {
-            ICrafting icrafting = (ICrafting)crafter;
+        for (ICrafting crafter : crafters) {
             if (hasWaterSource != tileEntity.hasWaterSource) {
-                icrafting.updateCraftingInventoryInfo(this, 0, tileEntity.hasWaterSource?1:0);
+				crafter.updateCraftingInventoryInfo(this, 0, tileEntity.hasWaterSource?1:0);
             }
             if (currentBleachTime != tileEntity.currentBleachTime) {
-                icrafting.updateCraftingInventoryInfo(this, 1, tileEntity.currentBleachTime);
+				crafter.updateCraftingInventoryInfo(this, 1, tileEntity.currentBleachTime);
             }
             if (currentFuelTime != tileEntity.currentFuelTime) {
-                icrafting.updateCraftingInventoryInfo(this, 2, tileEntity.currentFuelTime);
+				crafter.updateCraftingInventoryInfo(this, 2, tileEntity.currentFuelTime);
             }
             if (itemBleachTime != tileEntity.maxBleachTime) {
-                icrafting.updateCraftingInventoryInfo(this, 3, tileEntity.maxBleachTime);
+				crafter.updateCraftingInventoryInfo(this, 3, tileEntity.maxBleachTime);
             }
             if (itemFuelTime == tileEntity.maxFuelTime) continue;
-            icrafting.updateCraftingInventoryInfo(this, 4, tileEntity.maxFuelTime);
+			crafter.updateCraftingInventoryInfo(this, 4, tileEntity.maxFuelTime);
         }
         hasWaterSource = tileEntity.hasWaterSource;
         currentBleachTime = tileEntity.currentBleachTime;
@@ -94,48 +96,41 @@ public class ContainerBleacher extends Container {
 
     @Override
     public List<Integer> getMoveSlots(InventoryAction action, Slot slot, int target, EntityPlayer player) {
-        if (slot.id >= 0 && slot.id <= 10) {
-            return this.getSlots(slot.id, 1, false);
-        }
-        if (action == InventoryAction.MOVE_ALL) {
-            if (slot.id >= 10 && slot.id <= 30) {
-                return this.getSlots(10, 27, false);
-            }
-            if (slot.id >= 30 && slot.id <= 38) {
-                return this.getSlots(30, 9, false);
-            }
-        }
-        if (slot.id >= 10 && slot.id <= 38) {
-            return this.getSlots(10, 36, false);
-        }
-        return null;
+		if (slot.id >= 0 && slot.id <= 9) {
+			return this.getSlots(slot.id, 1, false);
+		}
+		if (action == InventoryAction.MOVE_ALL) {
+			if (slot.id >= 9 && slot.id <= 36) {
+				return this.getSlots(9, 27, false);
+			}
+			if (slot.id >= 36 && slot.id <= 44) {
+				return this.getSlots(36, 9, false);
+			}
+		}
+		if (slot.id >= 9 && slot.id <= 43) {
+			return this.getSlots(9, 36, false);
+		}
+		return null;
     }
 
     @Override
     public List<Integer> getTargetSlots(InventoryAction action, Slot slot, int target, EntityPlayer player) {
-        if (slot.id >= 10 && slot.id <= 39) {
-            if (action != InventoryAction.MOVE_ALL) {
-                if (target == 1) {
-                    return this.getSlots(0, 1, false);
-                }
-                if (target == 9) {
-                    return this.getSlots(1, 1, false);
-                }
-            }
-            if (slot.id <= 29) {
-                return this.getSlots(30, 9, false);
-            }
-            if (slot.id >= 31 && slot.id <= 38) {
-                return this.getSlots(10, 27, false);
-            }
-        }
-        if (slot.id >= 0 && slot.id <= 9) {
-            if (slot.id == 9) {
-                return this.getSlots(10, 36, true);
-            }
-            return this.getSlots(10, 36, false);
-        }
-        return null;
+		if (slot.id >= 9 && slot.id <= 44) {
+			if (action != InventoryAction.MOVE_ALL) {
+				if (target > 0 && target < 9) return this.getSlots(target-1, 1, false);
+			}
+			if (slot.id <= 35) {
+				return this.getSlots(36, 9, false);
+			}
+			return this.getSlots(9, 27, false);
+		}
+		if (slot.id >= 0) {
+			if (slot.id >= 5) {
+				return this.getSlots(9, 36, true);
+			}
+			return this.getSlots(9, 36, false);
+		}
+		return null;
     }
 
     @Override
