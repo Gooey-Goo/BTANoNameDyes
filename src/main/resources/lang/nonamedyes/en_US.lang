@@ -296,6 +296,8 @@ tile.nonamedyes.lamp.idle.crimson.name=Crimson Lamp
 tile.nonamedyes.lamp.idle.crimson.desc=A redstone lamp that can emit light. Tinted crimson.
 tile.nonamedyes.wool.crimson.name=Crimson Wool
 tile.nonamedyes.wool.crimson.desc=Sheep's wool, dyed crimson.
+tile.nonamedyes.trapdoor.planks.oak.painted.crimson.name=Crimson Oak Trapdoor
+tile.nonamedyes.trapdoor.planks.oak.painted.crimson.desc=Like a door, but flat and painted crimson.
 
 item.nonamedyes.plaster.painted.maroon.name=Maroon Plaster
 item.nonamedyes.plaster.painted.maroon.desc=Can be used to plaster certain blocks maroon.
@@ -325,6 +327,8 @@ tile.nonamedyes.lamp.idle.maroon.name=Maroon Lamp
 tile.nonamedyes.lamp.idle.maroon.desc=A redstone lamp that can emit light. Tinted maroon.
 tile.nonamedyes.wool.maroon.name=Maroon Wool
 tile.nonamedyes.wool.maroon.desc=Sheep's wool, dyed maroon.
+tile.nonamedyes.trapdoor.planks.oak.painted.maroon.name=Maroon Oak Trapdoor
+tile.nonamedyes.trapdoor.planks.oak.painted.maroon.desc=Like a door, but flat and painted maroon.
 
 item.nonamedyes.plaster.painted.ash.gray.name=Ash Gray Plaster
 item.nonamedyes.plaster.painted.ash.gray.desc=Can be used to plaster certain blocks ash gray.
@@ -354,6 +358,8 @@ tile.nonamedyes.lamp.idle.ash.gray.name=Ash Gray Lamp
 tile.nonamedyes.lamp.idle.ash.gray.desc=A redstone lamp that can emit light. Tinted ash gray.
 tile.nonamedyes.wool.ash.gray.name=Ash Gray Wool
 tile.nonamedyes.wool.ash.gray.desc=Sheep's wool, dyed ash gray.
+tile.nonamedyes.trapdoor.planks.oak.painted.ash.gray.name=Ash Gray Oak Trapdoor
+tile.nonamedyes.trapdoor.planks.oak.painted.ash.gray.desc=Like a door, but flat and painted ash gray.
 
 item.nonamedyes.plaster.painted.olive.name=Olive Plaster
 item.nonamedyes.plaster.painted.olive.desc=Can be used to plaster certain blocks olive.
@@ -383,6 +389,8 @@ tile.nonamedyes.lamp.idle.olive.name=Olive Lamp
 tile.nonamedyes.lamp.idle.olive.desc=A redstone lamp that can emit light. Tinted olive.
 tile.nonamedyes.wool.olive.name=Olive Wool
 tile.nonamedyes.wool.olive.desc=Sheep's wool, dyed olive.
+tile.nonamedyes.trapdoor.planks.oak.painted.olive.name=Olive Oak Trapdoor
+tile.nonamedyes.trapdoor.planks.oak.painted.olive.desc=Like a door, but flat and painted olive.
 
 item.nonamedyes.plaster.painted.ochre.name=Ochre Plaster
 item.nonamedyes.plaster.painted.ochre.desc=Can be used to plaster certain blocks ochre.
@@ -412,6 +420,8 @@ tile.nonamedyes.lamp.idle.ochre.name=Ochre Lamp
 tile.nonamedyes.lamp.idle.ochre.desc=A redstone lamp that can emit light. Tinted ochre.
 tile.nonamedyes.wool.ochre.name=Ochre Wool
 tile.nonamedyes.wool.ochre.desc=Sheep's wool, dyed ochre.
+tile.nonamedyes.trapdoor.planks.oak.painted.ochre.name=Ochre Oak Trapdoor
+tile.nonamedyes.trapdoor.planks.oak.painted.ochre.desc=Like a door, but flat and painted ochre.
 
 item.nonamedyes.plaster.painted.buff.name=Buff Plaster
 item.nonamedyes.plaster.painted.buff.desc=Can be used to plaster certain blocks buff.
@@ -441,6 +451,8 @@ tile.nonamedyes.lamp.idle.buff.name=Buff Lamp
 tile.nonamedyes.lamp.idle.buff.desc=A redstone lamp that can emit light. Tinted buff.
 tile.nonamedyes.wool.buff.name=Buff Wool
 tile.nonamedyes.wool.buff.desc=Sheep's wool, dyed buff.
+tile.nonamedyes.trapdoor.planks.oak.painted.buff.name=Buff Oak Trapdoor
+tile.nonamedyes.trapdoor.planks.oak.painted.buff.desc=Like a door, but flat and painted buff.
 
 item.nonamedyes.plaster.painted.verdigris.name=Verdigris Plaster
 item.nonamedyes.plaster.painted.verdigris.desc=Can be used to plaster certain blocks verdigris.
@@ -470,6 +482,8 @@ tile.nonamedyes.lamp.idle.verdigris.name=Verdigris Lamp
 tile.nonamedyes.lamp.idle.verdigris.desc=A redstone lamp that can emit light. Tinted verdigris.
 tile.nonamedyes.wool.verdigris.name=Verdigris Wool
 tile.nonamedyes.wool.verdigris.desc=Sheep's wool, dyed verdigris.
+tile.nonamedyes.trapdoor.planks.oak.painted.verdigris.name=Verdigris Oak Trapdoor
+tile.nonamedyes.trapdoor.planks.oak.painted.verdigris.desc=Like a door, but flat and painted verdigris.
 
 item.nonamedyes.plaster.painted.light.yellow.name=Light Yellow Plaster
 item.nonamedyes.plaster.painted.light.yellow.desc=Can be used to plaster certain blocks light yellow.
@@ -499,6 +513,8 @@ tile.nonamedyes.lamp.idle.light.yellow.name=Light Yellow Lamp
 tile.nonamedyes.lamp.idle.light.yellow.desc=A redstone lamp that can emit light. Tinted light yellow.
 tile.nonamedyes.wool.light.yellow.name=Light Yellow Wool
 tile.nonamedyes.wool.light.yellow.desc=Sheep's wool, dyed light yellow.
+tile.nonamedyes.trapdoor.planks.oak.painted.light.yellow.name=Light Yellow Oak Trapdoor
+tile.nonamedyes.trapdoor.planks.oak.painted.light.yellow.desc=Like a door, but flat and painted light yellow.
 
 item.nonamedyes.plaster.painted.indigo.name=Indigo Plaster
 item.nonamedyes.plaster.painted.indigo.desc=Can be used to plaster certain blocks indigo.
@@ -528,6 +544,8 @@ tile.nonamedyes.lamp.idle.indigo.name=Indigo Lamp
 tile.nonamedyes.lamp.idle.indigo.desc=A redstone lamp that can emit light. Tinted indigo.
 tile.nonamedyes.wool.indigo.name=Indigo Wool
 tile.nonamedyes.wool.indigo.desc=Sheep's wool, dyed indigo.
+tile.nonamedyes.trapdoor.planks.oak.painted.indigo.name=Indigo Oak Trapdoor
+tile.nonamedyes.trapdoor.planks.oak.painted.indigo.desc=Like a door, but flat and painted indigo.
 
 item.nonamedyes.plaster.painted.xanthic.name=Xanthic Plaster
 item.nonamedyes.plaster.painted.xanthic.desc=Can be used to plaster certain blocks xanthic.
@@ -557,6 +575,8 @@ tile.nonamedyes.lamp.idle.xanthic.name=Xanthic Lamp
 tile.nonamedyes.lamp.idle.xanthic.desc=A redstone lamp that can emit light. Tinted xanthic.
 tile.nonamedyes.wool.xanthic.name=Xanthic Wool
 tile.nonamedyes.wool.xanthic.desc=Sheep's wool, dyed xanthic.
+tile.nonamedyes.trapdoor.planks.oak.painted.xanthic.name=Xanthic Oak Trapdoor
+tile.nonamedyes.trapdoor.planks.oak.painted.xanthic.desc=Like a door, but flat and painted xanthic.
 
 item.nonamedyes.plaster.painted.cinnamon.name=Cinnamon Plaster
 item.nonamedyes.plaster.painted.cinnamon.desc=Can be used to plaster certain blocks cinnamon.
@@ -586,6 +606,8 @@ tile.nonamedyes.lamp.idle.cinnamon.name=Cinnamon Lamp
 tile.nonamedyes.lamp.idle.cinnamon.desc=A redstone lamp that can emit light. Tinted cinnamon.
 tile.nonamedyes.wool.cinnamon.name=Cinnamon Wool
 tile.nonamedyes.wool.cinnamon.desc=Sheep's wool, dyed cinnamon.
+tile.nonamedyes.trapdoor.planks.oak.painted.cinnamon.name=Cinnamon Oak Trapdoor
+tile.nonamedyes.trapdoor.planks.oak.painted.cinnamon.desc=Like a door, but flat and painted cinnamon.
 
 item.nonamedyes.plaster.painted.navy.blue.name=Navy Blue Plaster
 item.nonamedyes.plaster.painted.navy.blue.desc=Can be used to plaster certain blocks navy blue.
@@ -615,6 +637,8 @@ tile.nonamedyes.lamp.idle.navy.blue.name=Navy Blue Lamp
 tile.nonamedyes.lamp.idle.navy.blue.desc=A redstone lamp that can emit light. Tinted navy blue.
 tile.nonamedyes.wool.navy.blue.name=Navy Blue Wool
 tile.nonamedyes.wool.navy.blue.desc=Sheep's wool, dyed navy blue.
+tile.nonamedyes.trapdoor.planks.oak.painted.navy.blue.name=Navy Blue Oak Trapdoor
+tile.nonamedyes.trapdoor.planks.oak.painted.navy.blue.desc=Like a door, but flat and painted navy blue.
 
 item.nonamedyes.plaster.painted.royal.purple.name=Royal Purple Plaster
 item.nonamedyes.plaster.painted.royal.purple.desc=Can be used to plaster certain blocks royal purple.
@@ -644,4 +668,5 @@ tile.nonamedyes.lamp.idle.royal.purple.name=Royal Purple Lamp
 tile.nonamedyes.lamp.idle.royal.purple.desc=A redstone lamp that can emit light. Tinted royal purple.
 tile.nonamedyes.wool.royal.purple.name=Royal Purple Wool
 tile.nonamedyes.wool.royal.purple.desc=Sheep's wool, dyed royal purple.
-
+tile.nonamedyes.trapdoor.planks.oak.painted.royal.purple.name=Royal Purple Oak Trapdoor
+tile.nonamedyes.trapdoor.planks.oak.painted.royal.purple.desc=Like a door, but flat and painted royal purple.

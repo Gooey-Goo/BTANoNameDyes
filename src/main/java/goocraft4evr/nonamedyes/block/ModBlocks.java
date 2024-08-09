@@ -451,6 +451,12 @@ public abstract class ModBlocks {
 		.build(new BlockStairs(brickMalachite, UtilIdRegistrar.nextId()))
 		.withTags(BlockTags.MINEABLE_BY_PICKAXE);
 
+	public static final Block trapDoorPainted = woodBlockBuilder
+		.setBlockModel(BlockModelModTrapDoorPainted::new)
+		.setItemBlock(block -> new ItemModBlockPainted(block,true))
+		.build(new BlockModTrapDoorPainted("trapdoor.planks.oak.painted",UtilIdRegistrar.nextId(),Material.wood))
+		.withTags(BlockTags.MINEABLE_BY_AXE,BlockTags.NOT_IN_CREATIVE_MENU);
+
 
 	public static void register() {
 		Item.itemsList[plaster.id] = new ItemBlockDeprecated(plaster,plasterMud);
