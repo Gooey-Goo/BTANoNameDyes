@@ -13,7 +13,7 @@ import net.minecraft.core.util.helper.Sides;
 
 public class BlockModelModTrapDoorPainted<T extends Block>
 	extends BlockModelTrapDoor<T> {
-	private final TextureMap TEXTURES;
+	protected static TextureMap TEXTURES;
 
 	public BlockModelModTrapDoorPainted(Block block) {
 		super(block);

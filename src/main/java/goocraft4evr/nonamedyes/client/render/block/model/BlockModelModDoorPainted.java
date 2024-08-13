@@ -4,6 +4,7 @@ import goocraft4evr.nonamedyes.NoNameDyes;
 import goocraft4evr.nonamedyes.TextureMap;
 import goocraft4evr.nonamedyes.item.ItemModDye;
 import net.minecraft.client.render.block.model.BlockModelDoor;
+import net.minecraft.client.render.block.model.BlockModelTrapDoorPainted;
 import net.minecraft.client.render.stitcher.IconCoordinate;
 import net.minecraft.core.block.Block;
 import net.minecraft.core.block.BlockDoor;
@@ -28,14 +29,14 @@ public class BlockModelModDoorPainted<T extends BlockDoor>
 	@Override
 	public IconCoordinate getBlockTextureFromSideAndMetadata(Side side, int data) {
 		int sideId = side.getId();
-		int color = (data >> 3 & 0x1E);
+		int color = (data >> 4 & 0xF)^15;
 		if (sideId < 2) {
-			return TEXTURES.getTexture(color+1);
+			return BlockModelModTrapDoorPainted.TEXTURES.getTexture(color*2);
 		}
 		if (this.isTop) {
-			return TEXTURES.getTexture(color+1);
+			return TEXTURES.getTexture(color*2+1);
 		}
-		return TEXTURES.getTexture(color);
+		return TEXTURES.getTexture(color*2);
 	}
 }
 
