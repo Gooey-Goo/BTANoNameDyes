@@ -457,6 +457,21 @@ public abstract class ModBlocks {
 		.build(new BlockModTrapDoorPainted("trapdoor.planks.oak.painted",UtilIdRegistrar.nextId(),Material.wood))
 		.withTags(BlockTags.MINEABLE_BY_AXE,BlockTags.NOT_IN_CREATIVE_MENU);
 
+	private static final BlockBuilder doorBuilder = new BlockBuilder(NoNameDyes.MOD_ID)
+		.setHardness(3.0f)
+		.setVisualUpdateOnMetadata()
+		.setBlockSound(BlockSounds.WOOD);
+
+	public static final Block doorPlanksOakBottom = doorBuilder
+		.setBlockModel(b -> new BlockModelModDoorPainted<>(b,false))
+		.build(new BlockModDoorPainted("door.planks.oak.painted",UtilIdRegistrar.nextId(),Material.wood,false))
+		.withTags(BlockTags.NOT_IN_CREATIVE_MENU, BlockTags.MINEABLE_BY_AXE);
+
+	public static final Block doorPlanksOakTop = doorBuilder
+		.setBlockModel(b -> new BlockModelModDoorPainted<>(b,true))
+		.build(new BlockModDoorPainted("door.planks.oak.painted",UtilIdRegistrar.nextId(),Material.wood,true))
+		.withTags(BlockTags.NOT_IN_CREATIVE_MENU, BlockTags.MINEABLE_BY_AXE);
+
 
 	public static void register() {
 		Item.itemsList[plaster.id] = new ItemBlockDeprecated(plaster,plasterMud);
