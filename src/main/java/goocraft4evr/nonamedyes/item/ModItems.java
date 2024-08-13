@@ -3,6 +3,7 @@ package goocraft4evr.nonamedyes.item;
 import goocraft4evr.nonamedyes.NoNameDyes;
 import goocraft4evr.nonamedyes.UtilIdRegistrar;
 import goocraft4evr.nonamedyes.block.ModBlocks;
+import goocraft4evr.nonamedyes.client.render.item.model.ItemModelModDoorPainted;
 import goocraft4evr.nonamedyes.client.render.item.model.ItemModelModDye;
 import goocraft4evr.nonamedyes.client.render.item.model.ItemModelPaintedPlaster;
 import net.minecraft.client.render.item.model.ItemModelStandard;
@@ -57,7 +58,7 @@ public class ModItems {
 		.build(new Item("brick.ochre",UtilIdRegistrar.nextId()));
 
 	public static Item doorOakPainted = new ItemBuilder(NoNameDyes.MOD_ID)
-		//.setItemModel(b -> new ItemModelStandard(b, NoNameDyes.MOD_ID).setFull3D())
+		.setItemModel(ItemModelModDoorPainted::new)
 		.build(new ItemModDoorPainted("door.oak.painted",UtilIdRegistrar.nextId(), ModBlocks.doorPlanksOakBottom,ModBlocks.doorPlanksOakTop))
 		.withTags(ItemTags.NOT_IN_CREATIVE_MENU);
 
