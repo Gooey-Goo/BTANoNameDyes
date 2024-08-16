@@ -117,6 +117,7 @@ public class TileEntityBleacher extends TileEntity implements IInventory {
 		}
         //change the inventory if the furnace has been updated
         if (requiresUpdate) {
+			worldObj.markBlockDirty(x,y,z);
             onInventoryChanged();
         }
     }
