@@ -246,6 +246,22 @@ public class ModRecipes implements RecipeEntrypoint {
 				.addInput('C',new ItemStack(ModBlocks.blockCeramicPainted,1,16+i))
 				.create(String.format("ceramic_tile_%s",dyename),
 					new ItemStack(ModBlocks.tileCeramicPainted,8,16+i));
+			//trapdoors
+			new RecipeBuilderShaped(NoNameDyes.MOD_ID)
+				.setShape(
+					"PPP",
+					"PPP")
+				.addInput('P',new ItemStack(ModBlocks.planksOakPainted,1,i))
+				.create(String.format("%s_trapdoor",dyename),
+					new ItemStack(ModBlocks.trapDoorPainted,6,i<<4));
+			new RecipeBuilderShaped(NoNameDyes.MOD_ID)
+				.setShape(
+					"PP",
+					"PP",
+					"PP")
+				.addInput('P',new ItemStack(ModBlocks.planksOakPainted,1,i))
+				.create(String.format("%s_door",dyename),
+					new ItemStack(ModItems.doorOakPainted,2,i));
 		}
 
 		//vanilla dyes
