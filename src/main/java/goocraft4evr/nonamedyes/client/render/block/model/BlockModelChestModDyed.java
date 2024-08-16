@@ -22,13 +22,13 @@ public class BlockModelChestModDyed<T extends Block>
 		//textures are in a 1D array instead of 2D, but otherwise the same as vanilla.
 		TEXTURES = new TextureMap(NoNameDyes.MOD_ID,ItemModDye.NUM_DYES*7);
 		for (int i = 0; i < ItemModDye.NUM_DYES; ++i) {
-			TEXTURES.addTexture(String.format(NoNameDyes.MOD_ID+":block/chest/%s_chest_front_single",ItemModDye.getTextureName(ItemModDye.dyeColors[i])));
-			TEXTURES.addTexture(String.format(NoNameDyes.MOD_ID+":block/chest/%s_chest_front_left",ItemModDye.getTextureName(ItemModDye.dyeColors[i])));
-			TEXTURES.addTexture(String.format(NoNameDyes.MOD_ID+":block/chest/%s_chest_front_right",ItemModDye.getTextureName(ItemModDye.dyeColors[i])));
-			TEXTURES.addTexture(String.format(NoNameDyes.MOD_ID+":block/chest/%s_chest_back_left",ItemModDye.getTextureName(ItemModDye.dyeColors[i])));
-			TEXTURES.addTexture(String.format(NoNameDyes.MOD_ID+":block/chest/%s_chest_back_right",ItemModDye.getTextureName(ItemModDye.dyeColors[i])));
-			TEXTURES.addTexture(String.format(NoNameDyes.MOD_ID+":block/chest/%s_chest_side",ItemModDye.getTextureName(ItemModDye.dyeColors[i])));
-			TEXTURES.addTexture(String.format(NoNameDyes.MOD_ID+":block/chest/%s_chest_top",ItemModDye.getTextureName(ItemModDye.dyeColors[i])));
+			TEXTURES.addTexture(String.format(NoNameDyes.MOD_ID+":block/chest/chest_planks_oak_painted_%s_front",ItemModDye.getTextureName(ItemModDye.dyeColors[i])));
+			TEXTURES.addTexture(String.format(NoNameDyes.MOD_ID+":block/chest/chest_planks_oak_painted_%s_left_front",ItemModDye.getTextureName(ItemModDye.dyeColors[i])));
+			TEXTURES.addTexture(String.format(NoNameDyes.MOD_ID+":block/chest/chest_planks_oak_painted_%s_right_front",ItemModDye.getTextureName(ItemModDye.dyeColors[i])));
+			TEXTURES.addTexture(String.format(NoNameDyes.MOD_ID+":block/chest/chest_planks_oak_painted_%s_left_back",ItemModDye.getTextureName(ItemModDye.dyeColors[i])));
+			TEXTURES.addTexture(String.format(NoNameDyes.MOD_ID+":block/chest/chest_planks_oak_painted_%s_right_back",ItemModDye.getTextureName(ItemModDye.dyeColors[i])));
+			TEXTURES.addTexture(String.format(NoNameDyes.MOD_ID+":block/chest/chest_planks_oak_painted_%s_side",ItemModDye.getTextureName(ItemModDye.dyeColors[i])));
+			TEXTURES.addTexture(String.format(NoNameDyes.MOD_ID+":block/chest/chest_planks_oak_painted_%s_top",ItemModDye.getTextureName(ItemModDye.dyeColors[i])));
 		}
 	}
 

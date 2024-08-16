@@ -35,8 +35,8 @@ public class BlockModelModLamp<T extends BlockModLamp>
 
 	static {
 		for (int i = 0; i < ItemModDye.NUM_DYES; ++i) {
-			texCoordsInactive[i] = TextureRegistry.getTexture(String.format(NoNameDyes.MOD_ID+":block/lamp/%s_lamp_off",ItemModDye.getTextureName(ItemModDye.dyeColors[i])));
-			texCoordsActive[i] = TextureRegistry.getTexture(String.format(NoNameDyes.MOD_ID+":block/lamp/%s_lamp_on",ItemModDye.getTextureName(ItemModDye.dyeColors[i])));
+			texCoordsInactive[i] = TextureRegistry.getTexture(String.format(NoNameDyes.MOD_ID+":block/lamp/lamp_%s_idle",ItemModDye.getTextureName(ItemModDye.dyeColors[i])));
+			texCoordsActive[i] = TextureRegistry.getTexture(String.format(NoNameDyes.MOD_ID+":block/lamp/lamp_%s_active",ItemModDye.getTextureName(ItemModDye.dyeColors[i])));
 		}
 	}
 }

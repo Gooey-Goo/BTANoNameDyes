@@ -4,7 +4,6 @@ import goocraft4evr.nonamedyes.NoNameDyes;
 import goocraft4evr.nonamedyes.TextureMap;
 import goocraft4evr.nonamedyes.item.ItemModDye;
 import net.minecraft.client.render.block.model.BlockModelDoor;
-import net.minecraft.client.render.block.model.BlockModelTrapDoorPainted;
 import net.minecraft.client.render.stitcher.IconCoordinate;
 import net.minecraft.core.block.Block;
 import net.minecraft.core.block.BlockDoor;

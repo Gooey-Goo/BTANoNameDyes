@@ -36,33 +36,33 @@ public abstract class ModBlocks {
 
     public static final Block planksOakPainted = woodBlockBuilder
 		.setItemBlock(block -> new ItemModBlockPainted(block,false))
-		.setBlockModel(b -> new BlockModelModDyed<>(b,NoNameDyes.MOD_ID+":block/plank/%s_plank",false))
+		.setBlockModel(b -> new BlockModelModDyed<>(b,NoNameDyes.MOD_ID+":block/plank/planks_oak_painted_%s",false))
 		.build(new BlockModPlanksPainted("planks.oak.painted",UtilIdRegistrar.nextId()))
 		.withTags(BlockTags.FENCES_CONNECT, BlockTags.MINEABLE_BY_AXE, BlockTags.NOT_IN_CREATIVE_MENU);
 
     public static final Block fencePlanksOakPainted = woodBlockBuilder
             .setItemBlock(b -> new ItemModBlockPainted(b,false))
-            .setBlockModel(b -> new BlockModelFenceModDyed<>(b,NoNameDyes.MOD_ID+":block/plank/%s_plank"))
+            .setBlockModel(b -> new BlockModelFenceModDyed<>(b,NoNameDyes.MOD_ID+":block/plank/planks_oak_painted_%s"))
             .build(new BlockModFencePainted("fence.planks.oak.painted",UtilIdRegistrar.nextId()))
             .withTags(BlockTags.FENCES_CONNECT, BlockTags.MINEABLE_BY_AXE, BlockTags.CAN_HANG_OFF, BlockTags.NOT_IN_CREATIVE_MENU);
 
     public static final Block fencegatePlanksOakPainted = woodBlockBuilder
             .setItemBlock(b -> new ItemModBlockPainted(b,true))
-            .setBlockModel(b -> new BlockModelFenceGateModDyed<>(b,NoNameDyes.MOD_ID+":block/plank/%s_plank"))
+            .setBlockModel(b -> new BlockModelFenceGateModDyed<>(b,NoNameDyes.MOD_ID+":block/plank/planks_oak_painted_%s"))
             .build(new BlockModFenceGatePainted("fencegate.planks.oak.painted",UtilIdRegistrar.nextId()))
             .withTags(BlockTags.FENCES_CONNECT, BlockTags.MINEABLE_BY_AXE, BlockTags.NOT_IN_CREATIVE_MENU);
 
     public static final Block slabPlanksOakPainted = woodBlockBuilder
 		.setItemBlock(ItemModBlockSlabPainted::new)
 		.setUseInternalLight()
-		.setBlockModel(b -> new BlockModelSlabModDyed<>(b,NoNameDyes.MOD_ID+":block/plank/%s_plank"))
+		.setBlockModel(b -> new BlockModelSlabModDyed<>(b,NoNameDyes.MOD_ID+":block/plank/planks_oak_painted_%s"))
 		.build(new BlockModSlabPainted(planksOakPainted,UtilIdRegistrar.nextId()))
 		.withTags(BlockTags.MINEABLE_BY_AXE, BlockTags.NOT_IN_CREATIVE_MENU);
 
     public static final Block stairsPlanksOakPainted = woodBlockBuilder
 		.setItemBlock(b -> new ItemModBlockPainted(b,true))
 		.setUseInternalLight()
-		.setBlockModel(b -> new BlockModelStairsModDyed<>(b,NoNameDyes.MOD_ID+":block/plank/%s_plank"))
+		.setBlockModel(b -> new BlockModelStairsModDyed<>(b,NoNameDyes.MOD_ID+":block/plank/planks_oak_painted_%s"))
 		.build(new BlockModStairsPainted(planksOakPainted,UtilIdRegistrar.nextId()))
 		.withTags(BlockTags.MINEABLE_BY_AXE, BlockTags.NOT_IN_CREATIVE_MENU);
 
@@ -102,7 +102,7 @@ public abstract class ModBlocks {
 		.setBlockSound(BlockSounds.CLOTH)
 		.setFlammability(30,60)
 		.setItemBlock(ItemModBlockPainted::new)
-		.setBlockModel(b -> new BlockModelModDyed<>(b,NoNameDyes.MOD_ID+":block/wool/%s_wool",false))
+		.setBlockModel(b -> new BlockModelModDyed<>(b,NoNameDyes.MOD_ID+":block/wool/wool_%s",false))
 		.build(new BlockModWool("wool",UtilIdRegistrar.nextId())
 		.withTags(BlockTags.MINEABLE_BY_SHEARS, BlockTags.NOT_IN_CREATIVE_MENU));
 
@@ -355,7 +355,7 @@ public abstract class ModBlocks {
             .setItemBlock(ItemBlockPlasterPainted::new)
             .setBlockSound(BlockSounds.STONE)
             .setHardness(0.3f)
-			.setBlockModel(b -> new BlockModelModDyed<>(b,NoNameDyes.MOD_ID+":block/plaster/%s_mud_plaster",true))
+			.setBlockModel(b -> new BlockModelModDyed<>(b,NoNameDyes.MOD_ID+":block/plaster/plaster_mud_%s",true))
             .build(new BlockCeramicPainted("plaster.mud", UtilIdRegistrar.nextId(),Material.stone))
             .withTags(BlockTags.MINEABLE_BY_PICKAXE,BlockTags.NOT_IN_CREATIVE_MENU);
 
@@ -384,7 +384,7 @@ public abstract class ModBlocks {
             .setBlockSound(BlockSounds.STONE)
             .setHardness(1.0f)
             .setTextures(NoNameDyes.MOD_ID+":block/ceramic/ceramic_block_painted")
-		.setBlockModel(b -> new BlockModelModDyed<>(b,NoNameDyes.MOD_ID+":block/ceramic/%s_ceramic_block",true))
+		.setBlockModel(b -> new BlockModelModDyed<>(b,NoNameDyes.MOD_ID+":block/ceramic/ceramic_block_%s",true))
             .build(new BlockCeramicPainted("block.ceramic.painted", UtilIdRegistrar.nextId(),Material.stone))
             .withTags(BlockTags.MINEABLE_BY_PICKAXE,BlockTags.NOT_IN_CREATIVE_MENU);
 
@@ -392,7 +392,7 @@ public abstract class ModBlocks {
 		.setItemBlock(ItemBlockPlasterPainted::new)
 		.setBlockSound(BlockSounds.STONE)
 		.setHardness(1.0f)
-		.setBlockModel(b -> new BlockModelModDyed<>(b,NoNameDyes.MOD_ID+":block/ceramic/%s_ceramic_tile",true))
+		.setBlockModel(b -> new BlockModelModDyed<>(b,NoNameDyes.MOD_ID+":block/ceramic/ceramic_tile_%s",true))
 		.build(new BlockCeramicPainted("tile.ceramic.painted", UtilIdRegistrar.nextId(),Material.stone))
 		.withTags(BlockTags.MINEABLE_BY_PICKAXE,BlockTags.NOT_IN_CREATIVE_MENU);
 
@@ -401,7 +401,7 @@ public abstract class ModBlocks {
 		.setBlockSound(BlockSounds.STONE)
 		.setHardness(1.5f)
 		.setResistance(10.0f)
-		.setBlockModel(b -> new BlockModelModDyed<>(b,NoNameDyes.MOD_ID+":block/plaster/%s_limestone_plaster",true))
+		.setBlockModel(b -> new BlockModelModDyed<>(b,NoNameDyes.MOD_ID+":block/plaster/plaster_limestone_%s",true))
 
 		.build(new BlockCeramicPainted("plaster.limestone", UtilIdRegistrar.nextId(),Material.stone))
 		.withTags(BlockTags.MINEABLE_BY_PICKAXE,BlockTags.NOT_IN_CREATIVE_MENU);
