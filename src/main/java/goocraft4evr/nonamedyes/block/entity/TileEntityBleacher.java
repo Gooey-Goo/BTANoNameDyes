@@ -17,11 +17,25 @@ import java.util.List;
 
 public class TileEntityBleacher extends TileEntity implements IInventory {
     public ItemStack[] bleacherItemStacks = new ItemStack[9];
-    public boolean hasWaterSource;
+	public int currentWaterTime = 0;
     public int maxFuelTime = 0;
     public int currentFuelTime = 0;
     public int currentBleachTime = 0;
     public int maxBleachTime = 200;
+	public int maxWaterTime = 1600;
+
+
+	public int addWater(int amount, int minAmount) {
+		if (currentWaterTime+minAmount>maxWaterTime||amount<0) return 0;
+		int diff = maxWaterTime-currentWaterTime;
+		if (diff<amount) {
+			currentWaterTime = maxWaterTime;
+			return diff;
+		}
+		currentWaterTime+=amount;
+		return amount;
+	}
+
     @Override
     public int getSizeInventory() {
         return bleacherItemStacks.length;
@@ -33,18 +47,6 @@ public class TileEntityBleacher extends TileEntity implements IInventory {
     @Override
     public ItemStack getStackInSlot(int i) {
         return bleacherItemStacks[i];
-    }
-
-    public void updateWaterSource() {
-        int blockId;
-        boolean test =
-                (((blockId = worldObj.getBlockId(x,y-1,z)) == Block.fluidWaterStill.id ||
-                        blockId == Block.fluidWaterFlowing.id) &&
-                        worldObj.getBlockMetadata(x,y-1,z) == 0);
-        if (test != hasWaterSource) {
-            hasWaterSource = test;
-            this.onInventoryChanged();
-        }
     }
 
     @Override
@@ -81,9 +83,7 @@ public class TileEntityBleacher extends TileEntity implements IInventory {
     public void tick() {
         boolean isFuelTimeHigherThan0 = currentFuelTime > 0;
         boolean requiresUpdate = false;
-        if (isFuelled()) currentFuelTime--;
         if (!this.worldObj.isClientSide) {
-            updateWaterSource();
             if (currentFuelTime == 0 && canBleach()) {
                 //NOTE: max fuel time is hardcoded to 8 items
                 maxFuelTime = currentFuelTime = getFuelTime();
@@ -111,9 +111,13 @@ public class TileEntityBleacher extends TileEntity implements IInventory {
                 worldObj.markBlockNeedsUpdate(x,y,z);
             }
         }
+		if (isFuelled()) {
+			currentFuelTime--;
+			currentWaterTime--;
+		}
         //change the inventory if the furnace has been updated
         if (requiresUpdate) {
-            this.onInventoryChanged();
+            onInventoryChanged();
         }
     }
 
@@ -161,7 +165,7 @@ public class TileEntityBleacher extends TileEntity implements IInventory {
     }
 
     public boolean isFuelled() {
-        return hasWaterSource && currentFuelTime > 0;
+        return currentWaterTime > 0 && currentFuelTime > 0;
     }
 
     private boolean canBleach() {
@@ -214,6 +218,11 @@ public class TileEntityBleacher extends TileEntity implements IInventory {
         return currentBleachTime * i / maxBleachTime;
     }
 
+	public int getWaterProgressScaled(int i) {
+		if (maxWaterTime == 0) return 0;
+		return currentWaterTime * i / maxWaterTime;
+	}
+
 	@Override
 	public void readFromNBT(CompoundTag nbttagcompound) {
 		super.readFromNBT(nbttagcompound);
@@ -225,6 +234,7 @@ public class TileEntityBleacher extends TileEntity implements IInventory {
 			if (byte0 < 0 || byte0 >= bleacherItemStacks.length) continue;
 			bleacherItemStacks[byte0] = ItemStack.readItemStackFromNbt(nbttagcompound1);
 		}
+		currentWaterTime = nbttagcompound.getShort("WaterTime");
 		currentFuelTime = nbttagcompound.getShort("FuelTime");
 		currentBleachTime = nbttagcompound.getShort("BleachTime");
 		maxFuelTime = nbttagcompound.getShort("MaxFuelTime");
@@ -236,6 +246,7 @@ public class TileEntityBleacher extends TileEntity implements IInventory {
 		nbttagcompound.putShort("FuelTime", (short)currentFuelTime);
 		nbttagcompound.putShort("BleachTime", (short)currentBleachTime);
 		nbttagcompound.putShort("MaxFuelTime", (short)maxFuelTime);
+		nbttagcompound.putShort("WaterTime", (short)currentWaterTime);
 		ListTag nbttaglist = new ListTag();
 		for (int i = 0; i < bleacherItemStacks.length; ++i) {
 			if (bleacherItemStacks[i] == null) continue;

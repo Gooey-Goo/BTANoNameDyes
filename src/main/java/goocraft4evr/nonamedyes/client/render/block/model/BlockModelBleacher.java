@@ -30,6 +30,6 @@ public class BlockModelBleacher<T extends Block> extends BlockModelStandard<T> {
 	public IconCoordinate getBlockTexture(WorldSource blockAccess, int x, int y, int z, Side side) {
 		if (side != Side.TOP) return super.getBlockTexture(blockAccess,x,y,z,side);
 		TileEntityBleacher teb = (TileEntityBleacher)renderBlocks.blockAccess.getBlockTileEntity(x,y,z);
-		return TEXTURES.getTexture(teb.hasWaterSource?(teb.isFuelled()?2:1):0);
+		return TEXTURES.getTexture(teb.currentWaterTime>0?(teb.isFuelled()?2:1):0);
 	}
 }

@@ -11,15 +11,14 @@ import net.minecraft.core.player.inventory.slot.Slot;
 
 import java.util.List;
 
-import static goocraft4evr.nonamedyes.NoNameDyes.LOGGER;
-
 public class ContainerBleacher extends Container {
     public TileEntityBleacher tileEntity;
-    private boolean hasWaterSource = false;
+	private int currentWaterTime = 0;
     private int currentBleachTime = 0;
     private int currentFuelTime = 0;
     private int itemFuelTime = 0;
     private int itemBleachTime = 0;
+	private int itemWaterTime = 0;
 
     public ContainerBleacher(InventoryPlayer inventoryplayer, TileEntityBleacher tileentitybleacher) {
         tileEntity = tileentitybleacher;
@@ -50,35 +49,9 @@ public class ContainerBleacher extends Container {
     }
 
     @Override
-    public void updateInventory() {
-        super.updateInventory();
-        for (ICrafting crafter : crafters) {
-            if (hasWaterSource != tileEntity.hasWaterSource) {
-				crafter.updateCraftingInventoryInfo(this, 0, tileEntity.hasWaterSource?1:0);
-            }
-            if (currentBleachTime != tileEntity.currentBleachTime) {
-				crafter.updateCraftingInventoryInfo(this, 1, tileEntity.currentBleachTime);
-            }
-            if (currentFuelTime != tileEntity.currentFuelTime) {
-				crafter.updateCraftingInventoryInfo(this, 2, tileEntity.currentFuelTime);
-            }
-            if (itemBleachTime != tileEntity.maxBleachTime) {
-				crafter.updateCraftingInventoryInfo(this, 3, tileEntity.maxBleachTime);
-            }
-            if (itemFuelTime == tileEntity.maxFuelTime) continue;
-			crafter.updateCraftingInventoryInfo(this, 4, tileEntity.maxFuelTime);
-        }
-        hasWaterSource = tileEntity.hasWaterSource;
-        currentBleachTime = tileEntity.currentBleachTime;
-        currentFuelTime = tileEntity.currentFuelTime;
-        itemBleachTime = tileEntity.maxBleachTime;
-        itemFuelTime = tileEntity.maxFuelTime;
-    }
-
-    @Override
     public void updateClientProgressBar(int id, int value) {
         if (id == 0) {
-            this.tileEntity.hasWaterSource = value==1;
+            this.tileEntity.currentWaterTime = value;
         }
         if (id == 1) {
             this.tileEntity.currentBleachTime = value;
@@ -92,7 +65,41 @@ public class ContainerBleacher extends Container {
         if (id == 4) {
             this.tileEntity.maxFuelTime = value;
         }
+		if (id == 5) {
+			this.tileEntity.maxWaterTime = value;
+		}
     }
+
+	@Override
+	public void updateInventory() {
+		super.updateInventory();
+		for (ICrafting crafter : crafters) {
+			if (currentWaterTime != tileEntity.currentWaterTime) {
+				crafter.updateCraftingInventoryInfo(this, 0, tileEntity.currentWaterTime);
+			}
+			if (currentBleachTime != tileEntity.currentBleachTime) {
+				crafter.updateCraftingInventoryInfo(this, 1, tileEntity.currentBleachTime);
+			}
+			if (currentFuelTime != tileEntity.currentFuelTime) {
+				crafter.updateCraftingInventoryInfo(this, 2, tileEntity.currentFuelTime);
+			}
+			if (itemBleachTime != tileEntity.maxBleachTime) {
+				crafter.updateCraftingInventoryInfo(this, 3, tileEntity.maxBleachTime);
+			}
+			if (itemFuelTime != tileEntity.maxFuelTime) {
+				crafter.updateCraftingInventoryInfo(this, 4, tileEntity.maxFuelTime);
+			}
+			if (itemWaterTime != tileEntity.maxWaterTime) {
+				crafter.updateCraftingInventoryInfo(this, 5, tileEntity.maxWaterTime);
+			}
+		}
+		currentWaterTime = tileEntity.currentWaterTime;
+		currentBleachTime = tileEntity.currentBleachTime;
+		currentFuelTime = tileEntity.currentFuelTime;
+		itemBleachTime = tileEntity.maxBleachTime;
+		itemFuelTime = tileEntity.maxFuelTime;
+		itemWaterTime = tileEntity.maxWaterTime;
+	}
 
     @Override
     public List<Integer> getMoveSlots(InventoryAction action, Slot slot, int target, EntityPlayer player) {

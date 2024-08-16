@@ -46,13 +46,14 @@ public class GuiBleacher extends GuiContainer {
         int j = (width - xSize) / 2;
         int k = (height - ySize) / 2;
         drawTexturedModalRect(j, k, 0, 0, xSize, ySize);
-        if (bleacher.hasWaterSource) {
-            drawTexturedModalRect(j + 18, k + 16, 176, 0, 3, 16);
-            drawTexturedModalRect(j + 33, k + 16, 179, 0, 3, 16);
+        if (bleacher.currentWaterTime > 0) {
+			int len = bleacher.getWaterProgressScaled(16);
+            drawTexturedModalRect(j + 18, k + 32 - len, 176, 16-len, 3, len);
+            drawTexturedModalRect(j + 33, k + 32 - len, 179, 16-len, 3, len);
         }
         if (bleacher.currentFuelTime > 0) {
             int len = bleacher.getFuelRemainingScaled(16);
-            drawTexturedModalRect(j + 21, k + 16 + 16 - len, 176, 32 - len, 12, len + 2);
+            drawTexturedModalRect(j + 21, k + 32 - len, 176, 32 - len, 12, len + 2);
         }
         if (bleacher.isFuelled()) {
             int len = bleacher.getBleachProgressScaled(24);

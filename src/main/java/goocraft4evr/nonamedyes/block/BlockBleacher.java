@@ -15,13 +15,16 @@ import net.minecraft.core.block.material.Material;
 import net.minecraft.core.entity.EntityItem;
 import net.minecraft.core.entity.player.EntityPlayer;
 import net.minecraft.core.enums.EnumDropCause;
+import net.minecraft.core.item.ItemBucket;
 import net.minecraft.core.item.ItemStack;
 import net.minecraft.core.net.packet.Packet100OpenWindow;
+import net.minecraft.core.sound.SoundCategory;
 import net.minecraft.core.util.helper.Side;
 import net.minecraft.core.world.World;
 import net.minecraft.core.world.WorldSource;
 import net.minecraft.server.entity.player.EntityPlayerMP;
 
+import java.util.Objects;
 import java.util.Random;
 
 public class BlockBleacher extends BlockTileEntity {
@@ -57,13 +60,57 @@ public class BlockBleacher extends BlockTileEntity {
 	public boolean onBlockRightClicked(World world, int x, int y, int z, EntityPlayer player, Side side, double xPlaced, double yPlaced) {
         if (!world.isClientSide) {
             TileEntityBleacher tileEntityBleacher = (TileEntityBleacher) world.getBlockTileEntity(x,y,z);
+
+			ItemStack item = player.getCurrentEquippedItem();
+			int water = getWaterAmountFromItem(item);
+			if (water > 0) {
+				int minWater = getWaterMinAmountFromItem(item);
+				int waterUsed = tileEntityBleacher.addWater(water,minWater);
+				if (waterUsed > 0) {
+					player.inventory.setInventorySlotContents(player.inventory.currentItem,updateItemStackWithWaterAdded(player.getCurrentEquippedItem(),waterUsed));
+					world.playSoundEffect(null, SoundCategory.WORLD_SOUNDS, (float)x + 0.5f, (float)y + 0.5f, (float)z + 0.5f, "liquid.splash", 0.5f, 1.0f);
+					world.markBlockDirty(x,y,z);
+					return true;
+				}
+			}
             if ((player instanceof EntityPlayerSP)) displayGUIBleacherClient((EntityPlayerSP) player, tileEntityBleacher);
             else displayGUIBleacherServer((EntityPlayerMP) player, tileEntityBleacher);
         }
         return true;
     }
 
-    public static void displayGUIBleacherClient(EntityPlayerSP player, TileEntityBleacher tileentitybleacher) {
+	/*
+	The following three methods are for modders, so they can add more items to
+	increment the bleacher's water level. I would recommend injecting at the
+	return value, then adding your own behaviour if the current return value is 0
+	(or if the returned ItemStack is equal to the parameter ItemStack).
+
+	getWaterAmountFromItem() returns how much the given item should increase the water level by.
+	getWaterMinAmountFromItem() returns the minimum amount of water the given item needs to increase the
+	water level by. e.g. if the minimum is 100, the water level will remain the same if the item contributes
+	99 or less to the water level.
+	updateItemStackWithWaterAdded() returns the item the player should be holding given what item they
+	used to add water and how much water was added. can also be used to play sound effects and other misc behaviour.
+	*/
+	private int getWaterAmountFromItem(ItemStack item) {
+		if (item == null) return 0;
+		if (item.getItem() == ItemBucket.bucketWater) return 1600;
+		return 0;
+	}
+
+	private int getWaterMinAmountFromItem(ItemStack item) {
+		return 0;
+	}
+
+	private ItemStack updateItemStackWithWaterAdded(ItemStack item, int amountAdded) {
+		assert item != null;
+		if (item.getItem() == ItemBucket.bucketWater) {
+			return new ItemStack(ItemBucket.bucket);
+		}
+		return item;
+	}
+
+	public static void displayGUIBleacherClient(EntityPlayerSP player, TileEntityBleacher tileentitybleacher) {
         Minecraft.getMinecraft(Minecraft.class).displayGuiScreen(new GuiBleacher(player.inventory, tileentitybleacher));
     }
 
