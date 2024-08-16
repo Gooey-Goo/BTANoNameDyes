@@ -214,7 +214,7 @@ public abstract class ModBlocks {
 		.setTickOnLoad()
 		.setVisualUpdateOnMetadata()
 		.build(new BlockDeprecated("sapling.palm", UtilIdRegistrar.nextId(), Material.plant,Block.saplingPalm.id))
-		.withTags(BlockTags.BROKEN_BY_FLUIDS,BlockTags.PLANTABLE_IN_JAR);
+		.withTags(BlockTags.BROKEN_BY_FLUIDS,BlockTags.PLANTABLE_IN_JAR, BlockTags.NOT_IN_CREATIVE_MENU);
 
     public static final Block brickMalachite = malachiteBuilder
             .setResistance(10.0f)
