@@ -5,18 +5,14 @@ import goocraft4evr.nonamedyes.block.ModBlocks;
 import goocraft4evr.nonamedyes.world.biome.ModBiomes;
 import goocraft4evr.nonamedyes.world.worldgen.WorldFeatureNetherRoots;
 import goocraft4evr.nonamedyes.world.worldgen.WorldFeatureOchre;
-import goocraft4evr.nonamedyes.world.worldgen.WorldFeatureTreePalm;
 import net.minecraft.core.block.Block;
 import net.minecraft.core.world.biome.Biome;
 import net.minecraft.core.world.biome.Biomes;
 import net.minecraft.core.world.generate.feature.WorldFeatureFlowers;
-import net.minecraft.core.world.generate.feature.WorldFeatureLake;
-import net.minecraft.core.world.generate.feature.WorldFeatureOre;
 import useless.terrainapi.api.TerrainAPI;
 import useless.terrainapi.generation.Parameters;
 import useless.terrainapi.generation.nether.api.ChunkDecoratorNetherAPI;
 import useless.terrainapi.generation.overworld.OverworldConfig;
-import useless.terrainapi.generation.overworld.OverworldFunctions;
 import useless.terrainapi.generation.overworld.api.ChunkDecoratorOverworldAPI;
 
 public class TerrainAPIPlugin implements TerrainAPI {

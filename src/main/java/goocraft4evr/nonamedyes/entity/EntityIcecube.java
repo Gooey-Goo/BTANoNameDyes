@@ -5,7 +5,6 @@ import net.minecraft.core.HitResult;
 import net.minecraft.core.entity.EntityItem;
 import net.minecraft.core.entity.EntityLiving;
 import net.minecraft.core.entity.projectile.EntityProjectile;
-import net.minecraft.core.item.Item;
 import net.minecraft.core.item.ItemStack;
 import net.minecraft.core.util.helper.DamageType;
 import net.minecraft.core.world.World;
