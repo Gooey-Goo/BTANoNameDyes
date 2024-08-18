@@ -25,7 +25,8 @@ public class ItemModDye extends Item {
             "xanthic",
             "cinnamon",
             "navy.blue",
-			"royal.purple"};
+			"royal.purple",
+			"viridian"};
     public static final int NUM_DYES = dyeColors.length;
 
     public static String getTextureName(String dyeName) {
