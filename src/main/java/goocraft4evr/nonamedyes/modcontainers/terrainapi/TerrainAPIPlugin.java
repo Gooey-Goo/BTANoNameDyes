@@ -11,10 +11,12 @@ import net.minecraft.core.world.biome.Biome;
 import net.minecraft.core.world.biome.Biomes;
 import net.minecraft.core.world.generate.feature.WorldFeatureFlowers;
 import net.minecraft.core.world.generate.feature.WorldFeatureLake;
+import net.minecraft.core.world.generate.feature.WorldFeatureOre;
 import useless.terrainapi.api.TerrainAPI;
 import useless.terrainapi.generation.Parameters;
 import useless.terrainapi.generation.nether.api.ChunkDecoratorNetherAPI;
 import useless.terrainapi.generation.overworld.OverworldConfig;
+import useless.terrainapi.generation.overworld.OverworldFunctions;
 import useless.terrainapi.generation.overworld.api.ChunkDecoratorOverworldAPI;
 
 public class TerrainAPIPlugin implements TerrainAPI {
@@ -27,6 +29,9 @@ public class TerrainAPIPlugin implements TerrainAPI {
     @Override
     public void onInitialize() {
 		ChunkDecoratorOverworldAPI.oreFeatures.addManagedOreFeature(getModID(), ModBlocks.oreMalachiteStone, 6, 2, 1/4f, true);
+		ComplexFunctions.addBiomeSpecificManagedOreFeature(getModID(), ModBlocks.oreEskolaiteStone, 6, 2, 1/6f, true,new Biome[]{
+			Biomes.OVERWORLD_GLACIER,Biomes.OVERWORLD_TUNDRA,Biomes.OVERWORLD_TAIGA,Biomes.OVERWORLD_BOREAL_FOREST});
+
 		overworldConfig.addTreeDensity(ModBiomes.OVERWORLD_CINNAMON_FOREST, 8);
 		overworldConfig.addTreeDensity(ModBiomes.OVERWORLD_EBONY_FOREST, 4);
 
@@ -42,6 +47,8 @@ public class TerrainAPIPlugin implements TerrainAPI {
 			new Biome[]{Biomes.OVERWORLD_DESERT, Biomes.OVERWORLD_OUTBACK, Biomes.OVERWORLD_OUTBACK_GRASSY});
 		ChunkDecoratorOverworldAPI.randomFeatures.addFeature(new WorldFeatureFlowers(ModBlocks.flowerIndigo.id), 2, 1, 1,
 			new Biome[]{Biomes.OVERWORLD_RAINFOREST, Biomes.OVERWORLD_SEASONAL_FOREST, ModBiomes.OVERWORLD_CINNAMON_FOREST});
+
+
 
 		ChunkDecoratorNetherAPI.randomFeatures.addFeature(ComplexFunctions::getVileNetherrack, null, (Parameters x) -> 1, null, 12, 120/128f);
 		ChunkDecoratorNetherAPI.biomeFeatures.addFeature((Parameters x) -> new WorldFeatureNetherRoots(24), null, ComplexFunctions::getNetherRootsDensity, null, 120/128f);

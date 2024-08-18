@@ -8,10 +8,16 @@ import net.minecraft.core.enums.EnumDropCause;
 import net.minecraft.core.item.ItemStack;
 import net.minecraft.core.world.World;
 
+import static goocraft4evr.nonamedyes.NoNameDyes.LOGGER;
+
 public class BlockOreEskolaite extends Block {
     public BlockOreEskolaite(String key, int id) {
         super(key, id, Material.stone);
     }
+
+	public void onBlockAdded(World world, int x, int y, int z) {
+		LOGGER.info(String.format("Ore at %d %d %d in biome %s",x,y,z,world.getBlockBiome(x,y,z)));
+	}
 
     @Override
     public ItemStack[] getBreakResult(World world, EnumDropCause dropCause, int x, int y, int z, int meta, TileEntity tileEntity) {
