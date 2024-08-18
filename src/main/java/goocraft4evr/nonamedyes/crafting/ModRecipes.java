@@ -337,9 +337,6 @@ public class ModRecipes implements RecipeEntrypoint {
 		new RecipeBuilderShapeless(NoNameDyes.MOD_ID)
 			.addInput(ModBlocks.logEbony)
 			.create("ebony_log_to_planks",new ItemStack(Block.planksOakPainted,4,15));
-		new RecipeBuilderShapeless(NoNameDyes.MOD_ID)
-			.addInput(ModBlocks.logPalm)
-			.create("palm_log_to_planks",new ItemStack(ModBlocks.planksOakPainted,4,5));
 		new RecipeBuilderShaped(NoNameDyes.MOD_ID)
 			.setShape("VVV", "VVV", "VVV")
 			.addInput('V',ModItems.vileShard)
@@ -394,6 +391,30 @@ public class ModRecipes implements RecipeEntrypoint {
 			.setShape("#  ", "## ","###")
 			.addInput('#',ModBlocks.brickMalachite)
 			.create("stairs_brick_malachite",new ItemStack(ModBlocks.stairsBrickMalachite,6));
+		new RecipeBuilderShaped(NoNameDyes.MOD_ID)
+			.setShape("###", "###","###")
+			.addInput('#',ModItems.dye,13)
+			.create("block_eskolaite",new ItemStack(ModBlocks.blockEskolaite));
+		new RecipeBuilderShapeless(NoNameDyes.MOD_ID)
+			.addInput(ModBlocks.blockEskolaite)
+			.create("malachite_eskolaite",new ItemStack(ModItems.dye,9,13));
+		new RecipeBuilderShaped(NoNameDyes.MOD_ID)
+			.setShape("##", "##")
+			.addInput('#',ModItems.dye,13)
+			.create("brick_eskolaite",new ItemStack(ModBlocks.brickEskolaite,4));
+		new RecipeBuilderShaped(NoNameDyes.MOD_ID)
+			.setShape("###")
+			.addInput('#',ModBlocks.brickEskolaite)
+			.create("slab_brick_eskolaite",new ItemStack(ModBlocks.slabBrickEskolaite,6));
+		new RecipeBuilderShaped(NoNameDyes.MOD_ID)
+			.setShape("#  ", "## ","###")
+			.addInput('#',ModBlocks.brickEskolaite)
+			.create("stairs_brick_eskolaite",new ItemStack(ModBlocks.stairsBrickEskolaite,6));
+		new RecipeBuilderShaped(NoNameDyes.MOD_ID)
+			.setShape("SPS","PSP","SPS")
+			.addInput('S',Item.ammoSnowball)
+			.addInput('P',Item.ammoPebble)
+			.create("slush",new ItemStack(ModBlocks.slush,1));
 
 		//the dyes
 		new RecipeBuilderShapeless(NoNameDyes.MOD_ID)
