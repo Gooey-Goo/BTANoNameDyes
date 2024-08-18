@@ -29,7 +29,7 @@ public class TerrainAPIPlugin implements TerrainAPI {
     @Override
     public void onInitialize() {
 		ChunkDecoratorOverworldAPI.oreFeatures.addManagedOreFeature(getModID(), ModBlocks.oreMalachiteStone, 6, 2, 1/4f, true);
-		ComplexFunctions.addBiomeSpecificManagedOreFeature(getModID(), ModBlocks.oreEskolaiteStone, 6, 2, 1/6f, true,new Biome[]{
+		ComplexFunctions.addBiomeSpecificManagedOreFeature(getModID(), ModBlocks.oreEskolaiteStone, 6, 2, 1/8f, true,new Biome[]{
 			Biomes.OVERWORLD_GLACIER,Biomes.OVERWORLD_TUNDRA,Biomes.OVERWORLD_TAIGA,Biomes.OVERWORLD_BOREAL_FOREST});
 
 		overworldConfig.addTreeDensity(ModBiomes.OVERWORLD_CINNAMON_FOREST, 8);
