@@ -24,7 +24,7 @@ public class ItemModelModDye
 	@NotNull
 	public IconCoordinate getIcon(@Nullable Entity entity, ItemStack itemStack) {
 		int meta = itemStack.getMetadata();
-		return dyeIcons[MathHelper.clamp(meta, 0, 15)];
+		return dyeIcons[MathHelper.clamp(meta, 0, ItemModDye.NUM_DYES-1)];
 	}
 
 	static {

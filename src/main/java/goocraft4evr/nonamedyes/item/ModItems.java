@@ -16,7 +16,7 @@ public class ModItems {
 
     public static Item dye = new ItemBuilder(NoNameDyes.MOD_ID)
 		.setItemModel(ItemModelModDye::new)
-		.build(new ItemModDye("dye",UtilIdRegistrar.nextId()))
+		.build(new ItemModDye("nonamedye",UtilIdRegistrar.nextId()))
 		.withTags(ItemTags.NOT_IN_CREATIVE_MENU);
 
 	public static Item bleachingPowder = new ItemBuilder(NoNameDyes.MOD_ID)
