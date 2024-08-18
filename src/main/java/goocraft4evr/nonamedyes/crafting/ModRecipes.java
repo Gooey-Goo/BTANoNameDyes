@@ -431,8 +431,6 @@ public class ModRecipes implements RecipeEntrypoint {
 		LookupFuelFurnace.instance.addFuelEntry(ModBlocks.slabPlanksOakPainted.id, 150);
 		LookupFuelFurnace.instance.addFuelEntry(ModBlocks.fencePlanksOakPainted.id, 300);
 		LookupFuelFurnace.instance.addFuelEntry(ModBlocks.fencegatePlanksOakPainted.id, 300);
-		LookupFuelFurnace.instance.addFuelEntry(ModBlocks.logPalm.id, 300);
-		LookupFuelFurnace.instance.addFuelEntry(ModBlocks.saplingPalm.id, 100);
 		LookupFuelFurnace.instance.addFuelEntry(ModBlocks.logCinnamon.id, 300);
 		LookupFuelFurnace.instance.addFuelEntry(ModBlocks.saplingCinnamon.id, 100);
 		LookupFuelFurnace.instance.addFuelEntry(ModBlocks.logEbony.id, 300);

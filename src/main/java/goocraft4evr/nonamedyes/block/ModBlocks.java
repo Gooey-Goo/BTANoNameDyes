@@ -179,19 +179,14 @@ public abstract class ModBlocks {
 		.setBlockModel(BlockModelAxisAligned::new)
 		.build(new BlockDeprecated("log.palm", UtilIdRegistrar.nextId(), Material.wood,Block.logPalm.id))
 		.withTags(BlockTags.FENCES_CONNECT, BlockTags.MINEABLE_BY_AXE,BlockTags.NOT_IN_CREATIVE_MENU);
-	//TODO: change
-	@Deprecated
-	public static final Block logPalmRipe = new BlockBuilder(NoNameDyes.MOD_ID)
-		.setItemBlock(b -> new ItemBlockDeprecated(b,Block.logOakMossy))
-            .setTopBottomTextures(NoNameDyes.MOD_ID+":block/log_palm_top")
-            .setSideTextures(NoNameDyes.MOD_ID+":block/log_palm_ripe_sides")
-            .setBlockSound(BlockSounds.WOOD)
-            .setHardness(2.0f)
-            .setVisualUpdateOnMetadata()
-			.setTickOnLoad()
-            .setFlammability(5,3)
-            .build(new BlockDeprecated("log.palm.ripe", UtilIdRegistrar.nextId(), Material.wood,Block.logOakMossy.id))
-            .withTags(BlockTags.FENCES_CONNECT, BlockTags.MINEABLE_BY_AXE,BlockTags.NOT_IN_CREATIVE_MENU,BlockTags.NOT_IN_CREATIVE_MENU);
+
+	public static final Block slush = new BlockBuilder(NoNameDyes.MOD_ID)
+		.setBlockSound(BlockSounds.GRAVEL)
+		.setTextures(NoNameDyes.MOD_ID+":block/slush")
+		.setVisualUpdateOnMetadata()
+		.setHardness(0.6f)
+		.build(new BlockSand("slush",UtilIdRegistrar.nextId()))
+		.withTags(BlockTags.MINEABLE_BY_SHOVEL);
 
 	@Deprecated
     public static final Block leavesPalm = new BlockBuilder(NoNameDyes.MOD_ID)
@@ -521,7 +516,6 @@ public abstract class ModBlocks {
 		.setUseInternalLight()
 		.build(new BlockStairs(brickEskolaite, UtilIdRegistrar.nextId()))
 		.withTags(BlockTags.MINEABLE_BY_PICKAXE);
-
 
 	public static void register() {
 		Item.itemsList[plaster.id] = new ItemBlockDeprecated(plaster,plasterMud);
