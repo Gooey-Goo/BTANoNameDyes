@@ -472,6 +472,28 @@ public abstract class ModBlocks {
 		.build(new BlockModDoorPainted("door.planks.oak.painted",UtilIdRegistrar.nextId(),Material.wood,true))
 		.withTags(BlockTags.NOT_IN_CREATIVE_MENU, BlockTags.MINEABLE_BY_AXE);
 
+	private static final BlockBuilder eskolaiteBuilder = new BlockBuilder(NoNameDyes.MOD_ID)
+		.setBlockSound(BlockSounds.STONE)
+		.setHardness(3.0f)
+		.setResistance(5.0f)
+		.setTags(BlockTags.MINEABLE_BY_PICKAXE);
+
+	public static final Block oreEskolaiteStone = eskolaiteBuilder
+		.setTextures(NoNameDyes.MOD_ID+":block/ore_eskolaite_stone")
+		.build(new BlockOreEskolaite("ore.eskolaite.stone",UtilIdRegistrar.nextId()));
+
+	public static final Block oreEskolaiteBasalt = eskolaiteBuilder
+		.setTextures(NoNameDyes.MOD_ID+":block/ore_eskolaite_basalt")
+		.build(new BlockOreEskolaite("ore.eskolaite.basalt",UtilIdRegistrar.nextId()));
+
+	public static final Block oreEskolaiteLimestone = eskolaiteBuilder
+		.setTextures(NoNameDyes.MOD_ID+":block/ore_eskolaite_limestone")
+		.build(new BlockOreEskolaite("ore.eskolaite.limestone",UtilIdRegistrar.nextId()));
+
+	public static final Block oreEskolaiteGranite = eskolaiteBuilder
+		.setTextures(NoNameDyes.MOD_ID+":block/ore_eskolaite_granite")
+		.build(new BlockOreEskolaite("ore.eskolaite.granite",UtilIdRegistrar.nextId()));
+
 
 	public static void register() {
 		Item.itemsList[plaster.id] = new ItemBlockDeprecated(plaster,plasterMud);

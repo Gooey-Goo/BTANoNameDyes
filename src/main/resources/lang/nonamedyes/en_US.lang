@@ -74,6 +74,23 @@ tile.nonamedyes.slab.brick.malachite.desc=A slab of malachite bricks.
 tile.nonamedyes.stairs.brick.malachite.name=Malachite Brick Stairs
 tile.nonamedyes.stairs.brick.malachite.desc=Malachite brick block used for rapid vertical movement.
 
+tile.nonamedyes.ore.eskolaite.stone.name=Stone Eskolaite Ore
+tile.nonamedyes.ore.eskolaite.stone.desc=Chunks of eskolaite embedded in stone.
+tile.nonamedyes.ore.eskolaite.basalt.name=Basalt Eskolaite Ore
+tile.nonamedyes.ore.eskolaite.basalt.desc=Chunks of eskolaite embedded in basalt.
+tile.nonamedyes.ore.eskolaite.limestone.name=Limestone Eskolaite Ore
+tile.nonamedyes.ore.eskolaite.limestone.desc=Chunks of eskolaite embedded in limestone.
+tile.nonamedyes.ore.eskolaite.granite.name=Granite Eskolaite Ore
+tile.nonamedyes.ore.eskolaite.granite.desc=Chunks of eskolaite embedded in granite.
+tile.nonamedyes.block.eskolaite.name=Block of Eskolaite
+tile.nonamedyes.block.eskolaite.desc=A solid block of eskolaite.
+tile.nonamedyes.brick.eskolaite.name=Eskolaite Bricks
+tile.nonamedyes.brick.eskolaite.desc=Stacked bricks of eskolaite.
+tile.nonamedyes.slab.brick.eskolaite.name=Eskolaite Brick Slab
+tile.nonamedyes.slab.brick.eskolaite.desc=A slab of eskolaite bricks.
+tile.nonamedyes.stairs.brick.eskolaite.name=Eskolaite Brick Stairs
+tile.nonamedyes.stairs.brick.eskolaite.desc=Eskolaite brick block used for rapid vertical movement.
+
 item.nonamedyes.brick.ochre.name=Ochre Brick
 item.nonamedyes.brick.ochre.desc=A different shade of brick.
 tile.nonamedyes.brick.ochre.name=Ochre Bricks
