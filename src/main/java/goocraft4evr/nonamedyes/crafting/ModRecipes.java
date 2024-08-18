@@ -22,10 +22,7 @@ import net.minecraft.core.data.registry.recipe.entry.RecipeEntryTrommel;
 import net.minecraft.core.item.Item;
 import net.minecraft.core.item.ItemDye;
 import net.minecraft.core.item.ItemStack;
-import turniplabs.halplibe.helper.recipeBuilders.RecipeBuilderBlastFurnace;
-import turniplabs.halplibe.helper.recipeBuilders.RecipeBuilderFurnace;
-import turniplabs.halplibe.helper.recipeBuilders.RecipeBuilderShaped;
-import turniplabs.halplibe.helper.recipeBuilders.RecipeBuilderShapeless;
+import turniplabs.halplibe.helper.recipeBuilders.*;
 import turniplabs.halplibe.util.RecipeEntrypoint;
 
 import static net.minecraft.core.data.registry.Registries.RECIPE_TYPES;
@@ -494,5 +491,15 @@ public class ModRecipes implements RecipeEntrypoint {
 		trommel.getItem("sand").getOutput().addEntry(new WeightedRandomLootObject(new ItemStack(ModItems.dye, 1, 4), 4,8), 10.0);
 		trommel.getItem("rich_dirt").getOutput().addEntry(new WeightedRandomLootObject(new ItemStack(ModItems.dye, 1, 6), 2,4), 18.0);
 		trommel.getItem("gravel").getOutput().addEntry(new WeightedRandomLootObject(new ItemStack(ModItems.dye, 1, 6), 2,4), 2.0);
+		new RecipeBuilderTrommel(NoNameDyes.MOD_ID)
+			.setInput(new ItemStack(ModBlocks.slush))
+			.addEntry(new WeightedRandomLootObject(new ItemStack(Item.ammoSnowball), 1,2), 25.0)
+			.addEntry(new WeightedRandomLootObject(new ItemStack(Item.ammoPebble), 1,4), 25.0)
+			.addEntry(new WeightedRandomLootObject(new ItemStack(Item.flint), 1,2), 20.0)
+			.addEntry(new WeightedRandomLootObject(new ItemStack(Block.ice), 1,4), 20.0)
+			.addEntry(new WeightedRandomLootObject(new ItemStack(Item.coal,1,1), 1,3), 15.0)
+			.addEntry(new WeightedRandomLootObject(new ItemStack(Item.oreRawGold), 1,2), 3.0)
+			.addEntry(new WeightedRandomLootObject(new ItemStack(ModItems.dye,1,13), 2,6), 3.0)
+			.create("slush");
 	}
 }
