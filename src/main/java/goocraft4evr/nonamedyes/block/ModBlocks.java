@@ -6,8 +6,6 @@ import goocraft4evr.nonamedyes.block.cinnamon.BlockLeavesCinnamon;
 import goocraft4evr.nonamedyes.block.cinnamon.BlockSaplingCinnamon;
 import goocraft4evr.nonamedyes.block.ebony.BlockLeavesEbony;
 import goocraft4evr.nonamedyes.block.ebony.BlockSaplingEbony;
-import goocraft4evr.nonamedyes.block.palm.BlockLeavesPalm;
-import goocraft4evr.nonamedyes.block.palm.BlockSaplingPalm;
 import goocraft4evr.nonamedyes.block.wood.*;
 import goocraft4evr.nonamedyes.client.render.block.model.*;
 import goocraft4evr.nonamedyes.client.render.colorizer.ModColorizers;

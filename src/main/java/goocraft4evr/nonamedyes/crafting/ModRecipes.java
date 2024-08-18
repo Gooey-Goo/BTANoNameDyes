@@ -1,18 +1,14 @@
 package goocraft4evr.nonamedyes.crafting;
 
 import goocraft4evr.nonamedyes.NoNameDyes;
-import goocraft4evr.nonamedyes.block.BlockCeramicPainted;
 import goocraft4evr.nonamedyes.block.ModBlocks;
-import goocraft4evr.nonamedyes.client.gui.guidebook.bleaching.BleachingSection;
 import goocraft4evr.nonamedyes.crafting.recipe.RecipeEntryCinnamon;
 import goocraft4evr.nonamedyes.crafting.recipe.RecipeEntryLabelModDye;
 import goocraft4evr.nonamedyes.item.ItemModDye;
 import goocraft4evr.nonamedyes.item.ModItems;
-import net.minecraft.client.gui.guidebook.GuidebookSections;
 import net.minecraft.core.WeightedRandomLootObject;
 import net.minecraft.core.block.Block;
 import net.minecraft.core.crafting.LookupFuelFurnace;
-import net.minecraft.core.data.DataLoader;
 import net.minecraft.core.data.registry.Registries;
 import net.minecraft.core.data.registry.recipe.*;
 import net.minecraft.core.data.registry.recipe.entry.RecipeEntryBlastFurnace;
@@ -103,11 +99,9 @@ public class ModRecipes implements RecipeEntrypoint {
 
 		Registries.ITEM_GROUPS.getItem("minecraft:logs").add(ModBlocks.logCinnamon.getDefaultStack());
 		Registries.ITEM_GROUPS.getItem("minecraft:logs").add(ModBlocks.logEbony.getDefaultStack());
-		Registries.ITEM_GROUPS.getItem("minecraft:logs").add(ModBlocks.logPalm.getDefaultStack());
 
 		Registries.ITEM_GROUPS.getItem("minecraft:leaves").add(ModBlocks.leavesCinnamon.getDefaultStack());
 		Registries.ITEM_GROUPS.getItem("minecraft:leaves").add(ModBlocks.leavesEbony.getDefaultStack());
-		Registries.ITEM_GROUPS.getItem("minecraft:leaves").add(ModBlocks.leavesPalm.getDefaultStack());
 
 		Registries.ITEM_GROUPS.getItem("minecraft:chests").add(ModBlocks.chestPlanksOakPainted.getDefaultStack());
 	}
@@ -394,7 +388,7 @@ public class ModRecipes implements RecipeEntrypoint {
 			.create("block_eskolaite",new ItemStack(ModBlocks.blockEskolaite));
 		new RecipeBuilderShapeless(NoNameDyes.MOD_ID)
 			.addInput(ModBlocks.blockEskolaite)
-			.create("malachite_eskolaite",new ItemStack(ModItems.dye,9,13));
+			.create("eskolaite_decompress",new ItemStack(ModItems.dye,9,13));
 		new RecipeBuilderShaped(NoNameDyes.MOD_ID)
 			.setShape("##", "##")
 			.addInput('#',ModItems.dye,13)
@@ -412,6 +406,15 @@ public class ModRecipes implements RecipeEntrypoint {
 			.addInput('S',Item.ammoSnowball)
 			.addInput('P',Item.ammoPebble)
 			.create("slush",new ItemStack(ModBlocks.slush,1));
+		new RecipeBuilderShaped(NoNameDyes.MOD_ID)
+			.setShape("PI","IP")
+			.addInput('I',ModItems.ammoIcecube)
+			.addInput('P',Item.ammoPebble)
+			.create("permafrost",new ItemStack(Block.permafrost,2));
+		new RecipeBuilderShaped(NoNameDyes.MOD_ID)
+			.setShape("III","III","III")
+			.addInput('I',ModItems.ammoIcecube)
+			.create("ice",new ItemStack(Block.ice,1));
 
 		//the dyes
 		new RecipeBuilderShapeless(NoNameDyes.MOD_ID)
@@ -496,7 +499,7 @@ public class ModRecipes implements RecipeEntrypoint {
 			.addEntry(new WeightedRandomLootObject(new ItemStack(Item.ammoSnowball), 1,2), 25.0)
 			.addEntry(new WeightedRandomLootObject(new ItemStack(Item.ammoPebble), 1,4), 25.0)
 			.addEntry(new WeightedRandomLootObject(new ItemStack(Item.flint), 1,2), 20.0)
-			.addEntry(new WeightedRandomLootObject(new ItemStack(Block.ice), 1,4), 20.0)
+			.addEntry(new WeightedRandomLootObject(new ItemStack(ModItems.ammoIcecube), 1,4), 20.0)
 			.addEntry(new WeightedRandomLootObject(new ItemStack(Item.coal,1,1), 1,3), 15.0)
 			.addEntry(new WeightedRandomLootObject(new ItemStack(Item.oreRawGold), 1,2), 3.0)
 			.addEntry(new WeightedRandomLootObject(new ItemStack(ModItems.dye,1,13), 2,6), 3.0)
