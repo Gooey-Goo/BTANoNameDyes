@@ -35,6 +35,8 @@ item.nonamedyes.tool.paintscraper.name = Paint Scraper
 item.nonamedyes.tool.paintscraper.desc = Scrapes plaster off of blocks.
 tile.nonamedyes.slush.name = Slush
 tile.nonamedyes.slush.desc = A cold slurry.
+item.nonamedyes.ammo.icecube.name = Ice Cube
+item.nonamedyes.ammo.icecube.desc = A chunk of ice found buried in the soil.
 
 tile.nonamedyes.log.ebony.name = Ebony Log
 tile.nonamedyes.log.ebony.desc = A log from an ebony tree.
