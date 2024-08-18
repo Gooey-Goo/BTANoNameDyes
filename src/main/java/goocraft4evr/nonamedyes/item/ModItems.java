@@ -62,6 +62,10 @@ public class ModItems {
 		.build(new ItemModDoorPainted("door.oak.painted",UtilIdRegistrar.nextId(), ModBlocks.doorPlanksOakBottom,ModBlocks.doorPlanksOakTop))
 		.withTags(ItemTags.NOT_IN_CREATIVE_MENU);
 
+	public static Item ammoIcecube = new ItemBuilder(NoNameDyes.MOD_ID)
+		.setIcon(String.format("%s:item/ammo_icecube",NoNameDyes.MOD_ID))
+		.build(new ItemIcecube("ammo.icecube",UtilIdRegistrar.nextId()));
+
     public static void register() {
 
     }

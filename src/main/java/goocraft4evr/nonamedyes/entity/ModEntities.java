@@ -5,6 +5,9 @@ import goocraft4evr.nonamedyes.client.render.entity.SeaSnailRenderer;
 import goocraft4evr.nonamedyes.entity.animal.EntitySeaSnail;
 import goocraft4evr.nonamedyes.item.ModItems;
 import net.minecraft.client.gui.guidebook.mobs.MobInfoRegistry;
+import net.minecraft.client.render.entity.ItemEntityRenderer;
+import net.minecraft.client.render.entity.SnowballRenderer;
+import net.minecraft.core.item.Item;
 import net.minecraft.core.item.ItemStack;
 import turniplabs.halplibe.helper.EntityHelper;
 
@@ -19,5 +22,6 @@ public class ModEntities {
 
 	public static void register() {
 		EntityHelper.createEntity(EntitySeaSnail.class, UtilIdRegistrar.nextId(), "Seasnail", SeaSnailRenderer::new);
+		EntityHelper.createEntity(EntityIcecube.class, UtilIdRegistrar.nextId(), "Icecube",() -> new SnowballRenderer(ModItems.ammoIcecube));
 	}
 }
