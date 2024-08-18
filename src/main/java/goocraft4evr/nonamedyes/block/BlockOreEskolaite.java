@@ -15,10 +15,6 @@ public class BlockOreEskolaite extends Block {
         super(key, id, Material.stone);
     }
 
-	public void onBlockAdded(World world, int x, int y, int z) {
-		LOGGER.info(String.format("Ore at %d %d %d in biome %s",x,y,z,world.getBlockBiome(x,y,z)));
-	}
-
     @Override
     public ItemStack[] getBreakResult(World world, EnumDropCause dropCause, int x, int y, int z, int meta, TileEntity tileEntity) {
         switch (dropCause) {
