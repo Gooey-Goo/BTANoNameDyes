@@ -494,6 +494,34 @@ public abstract class ModBlocks {
 		.setTextures(NoNameDyes.MOD_ID+":block/ore_eskolaite_granite")
 		.build(new BlockOreEskolaite("ore.eskolaite.granite",UtilIdRegistrar.nextId()));
 
+	public static final Block blockEskolaite = eskolaiteBuilder
+		.setTextures(NoNameDyes.MOD_ID+":block/eskolaite_block")
+		.build(new Block("block.eskolaite",UtilIdRegistrar.nextId(),Material.stone));
+
+	public static final Block brickEskolaite = eskolaiteBuilder
+		.setResistance(10.0f)
+		.setTextures(NoNameDyes.MOD_ID+":block/brick_eskolaite")
+		.build(new Block("brick.eskolaite", UtilIdRegistrar.nextId(), Material.stone))
+		.withTags(BlockTags.MINEABLE_BY_PICKAXE);
+
+	public static final Block slabBrickEskolaite = new BlockBuilder(NoNameDyes.MOD_ID)
+		.setBlockSound(BlockSounds.STONE)
+		.setItemBlock(ItemBlockSlab::new)
+		.setVisualUpdateOnMetadata()
+		.setUseInternalLight()
+		.setBlockModel(b -> new BlockModelSlab<>(b)
+			.withTextures(NoNameDyes.MOD_ID+":block/brick_eskolaite"))
+		.build(new BlockSlab(brickEskolaite, UtilIdRegistrar.nextId()))
+		.withTags(BlockTags.MINEABLE_BY_PICKAXE);
+
+	public static final Block stairsBrickEskolaite = new BlockBuilder(NoNameDyes.MOD_ID)
+		.setBlockSound(BlockSounds.STONE)
+		.setBlockModel(BlockModelStairs::new)
+		.setVisualUpdateOnMetadata()
+		.setUseInternalLight()
+		.build(new BlockStairs(brickEskolaite, UtilIdRegistrar.nextId()))
+		.withTags(BlockTags.MINEABLE_BY_PICKAXE);
+
 
 	public static void register() {
 		Item.itemsList[plaster.id] = new ItemBlockDeprecated(plaster,plasterMud);
