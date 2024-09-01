@@ -22,7 +22,7 @@ This (hopefully) documents all features of NoName Dyes.
   + Drops 4+9 malachite.
 + Block of Malachite
   + Crafted using 9 malachite.
-  + Would craft 9 malachite if I didn't forget to implement that recipe.
+  + Crafts into 9 malachite.
 + Indigo Flower
   + Spawns naturally in seasonal forests, rainforests and cinnamon forests.
   + Crafts 2 indigo dye.
@@ -32,7 +32,7 @@ This (hopefully) documents all features of NoName Dyes.
   + Can be used to craft slabs and stairs.
 + Bleaching Basin
   + Crafted from 2 cobblestone and 5 polished stone.
-  + Bleaches blocks in its gui when placed above water and given bleaching powder.
+  + Bleaches blocks in its gui when given bleaching powder and water (must right click with water bucket to add water)
 + Vile Netherrack
   + Generates in clumps in the nether.
   + Can be smelted to produce vile shards.
@@ -83,19 +83,20 @@ This (hopefully) documents all features of NoName Dyes.
 + Tiled Ceramic
   + 2 ceramic blocks crafts 2 tiled ceramic blocks. (also works for painted ceramic)
   + Undyed tiled ceramic deprecated, turns into white tiled ceramic
-+ Palm Log
-  + Generates as part of palm trees.
-  + Crafts into buff wooden planks.
-  + Functions like other logs.
-+ Palm Leaves
-  + Generates as part of cinnamon trees.
-  + Drops palm saplings.
-  + Functions like other leaves.
-+ Palm Sapling
-  + Grows palm trees.
-  + Functions like other saplings.
 + Ochre Bricks
   + 4 ochre bricks crafts 4 bricks.
+  + Can be used to craft slabs and stairs.
++ Eskolaite Ore
+  + Somewhat rare ore that only generates in cold biomes (being the glacier, tundra, taiga and boreal forest biomes).
+  + Drops 4+9 Eskolaite. 
++ Slush
+  + 4 snowballs and 5 pebbles yields 1 slush.
+  + Can be trommelled.
++ Block of Eskolaite
+  + Crafted using 9 eskolaite.
+  + Crafts into 9 eskolaite.
++ Eskolaite Bricks
+  + 4 eskolaite bricks crafts 4 bricks.
   + Can be used to craft slabs and stairs.
 
 # Items
@@ -123,6 +124,10 @@ This (hopefully) documents all features of NoName Dyes.
 + Ochre Bricks
   + Obtained from smelting ochre.
   + Used to craft ochre bricks.
++ Ice Cube
+  + Obtained from tromelling slush.
+  + Can be thrown like a pebble.
+  + Used to craft ice and permafrost.
 
 # Entities
 + Sea Snails
@@ -137,9 +142,6 @@ This (hopefully) documents all features of NoName Dyes.
 + Ebony Forest
   + Biome that spawns oak trees and ebony trees
   + Typically found around seasonal forests
-+ Palm Beach
-  + Biome that exclusively spawns palm trees
-  + Found around deserts and other hot biomes
 
 # Obtaining/renewing dyes
 + Crimson
@@ -176,3 +178,6 @@ This (hopefully) documents all features of NoName Dyes.
 + Royal Purple
   - OBTAINING: From snail slime, which is dropped by sea snails but also produced periodically by them.
   - RENEWING: Due to infrequent spawns, it's better to farm sea snails than to kill them.
++ Viridian
+  - OBTAINING: From eskolaite, which is obtained from mining eskolaite ore or as loot from tromelling slush.
+  - RENEWING: Effectively renewable through tromelling.
