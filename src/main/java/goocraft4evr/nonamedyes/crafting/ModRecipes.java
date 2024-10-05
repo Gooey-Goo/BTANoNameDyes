@@ -28,6 +28,7 @@ public class ModRecipes implements RecipeEntrypoint {
 	public static RecipeGroup<RecipeEntryCrafting<?, ?>> WORKBENCH;
 	public static RecipeGroup<RecipeEntryFurnace> FURNACE;
 	public static RecipeGroup<RecipeEntryBlastFurnace> BLAST_FURNACE;
+	public static RecipeGroup<RecipeEntryTrommel> TROMMEL;
 	public static RecipeGroup<RecipeEntryBleacher> BLEACHER;
 
 	@Override
@@ -51,12 +52,14 @@ public class ModRecipes implements RecipeEntrypoint {
 		FURNACE = new RecipeGroup<>(new RecipeSymbol(new ItemStack(Block.furnaceStoneActive)));
 		BLAST_FURNACE = new RecipeGroup<>(new RecipeSymbol(new ItemStack(Block.furnaceBlastActive)));
 		BLEACHER = new RecipeGroup<>(new RecipeSymbol(new ItemStack(ModBlocks.bleacher)));
+		TROMMEL = new RecipeGroup<>(new RecipeSymbol(new ItemStack(Block.trommelActive)));
 
 		Registries.RECIPES.register(NoNameDyes.MOD_ID, RN);
 		RN.register("furnace", FURNACE);
 		RN.register("blast_furnace", BLAST_FURNACE);
 		RN.register("workbench", WORKBENCH);
 		RN.register("bleacher", BLEACHER);
+		RN.register("trommel", TROMMEL);
 		RECIPE_TYPES.register("nonamedyes:bleaching",RecipeEntryBleacher.class);
 
 		Registries.ITEM_GROUPS.register("minecraft:fences", Registries.stackListOf());

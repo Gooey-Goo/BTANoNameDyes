@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "nonamedyes",
-  "version": "1.3",
+  "version": "1.3.1",
 
   "name": "NoName Dyes",
   "description": "Adds new dyes to the game.",

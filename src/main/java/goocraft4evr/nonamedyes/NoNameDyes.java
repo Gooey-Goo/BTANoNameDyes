@@ -66,7 +66,6 @@ public class NoNameDyes implements ModInitializer, ClientStartEntrypoint, GameSt
 	@Override
 	public void afterGameStart() {
 		ModEntities.registerPost();
-		ModColorizers.register();
 	}
 
 	@Override
@@ -76,6 +75,6 @@ public class NoNameDyes implements ModInitializer, ClientStartEntrypoint, GameSt
 
 	@Override
 	public void afterClientStart() {
-
+		ModColorizers.register();
 	}
 }
