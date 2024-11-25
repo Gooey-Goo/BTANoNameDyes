@@ -31,6 +31,7 @@ public class TileEntityVileReactor extends TileEntity {
 
     @Override
     public void tick() {
+        if (this.tileEntityInvalid) return;
         if (!worldObj.isClientSide&&
             worldObj.dimension == Dimension.nether) {
             List<Entity> list = worldObj.getEntitiesWithinAABB(Entity.class,AABB.getBoundingBoxFromPool(x-range, y-range, z-range, x+range, y+range, z+range));
@@ -41,14 +42,16 @@ public class TileEntityVileReactor extends TileEntity {
                     //hacky way to determine if entity just died
                     if (entity.deathTime==1) {
                         ++killCount;
-                        onEntityKilled();
+                        if (onEntityKilled()) {
+                            return;
+                        }
                     }
                 }
             }
         }
     }
 
-    private void onEntityKilled() {
+    private boolean onEntityKilled() {
         if (killCount>=killLimit) {
             worldObj.setBlockWithNotify(x,y,z,0);
             generateNetherrack(worldObj,worldObj.rand,x,y-1,z);
@@ -56,7 +59,7 @@ public class TileEntityVileReactor extends TileEntity {
             worldObj.playSoundEffect(null,SoundCategory.WORLD_SOUNDS,x,y,z,"random.explode",1.0f,1.0f);
 			doBusrtFx(worldObj,worldObj.rand,x,y,z);
             worldObj.removeBlockTileEntity(x,y,z);
-            return;
+            return true;
         } else if (killCount==killMark*2) {
             BlockVileReactor.updateReactorBlockState(worldObj,x,y,z);
         } else if (killCount==killMark) {
@@ -64,6 +67,7 @@ public class TileEntityVileReactor extends TileEntity {
         }
         worldObj.playSoundEffect(null,SoundCategory.WORLD_SOUNDS,x,y,z,"random.fizz",1.0f,0.2f);
         doSmokeFx(worldObj,worldObj.rand,x,y,z);
+        return false;
     }
 
     private  void doBusrtFx(World world, Random rand, int x, int y, int z) {

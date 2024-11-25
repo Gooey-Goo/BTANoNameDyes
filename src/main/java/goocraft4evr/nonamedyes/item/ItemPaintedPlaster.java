@@ -49,7 +49,7 @@ public class ItemPaintedPlaster extends Item {
 	@Override
 	public String getLanguageKey(ItemStack itemstack) {
 		int meta = itemstack.getMetadata();
-		return super.getKey() + "." + (meta>15?ItemModDye.dyeColors[meta-16]: ItemDye.dyeColors[15-meta]);
+		return super.getKey() + "." + (meta > 15 ? ItemModDye.dyeColors[meta-16] : ItemDye.dyeColors[15-meta]);
 	}
 
 	/*

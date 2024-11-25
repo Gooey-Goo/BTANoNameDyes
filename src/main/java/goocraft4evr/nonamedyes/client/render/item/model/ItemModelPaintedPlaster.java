@@ -11,6 +11,6 @@ public class ItemModelPaintedPlaster extends ItemModelStandard {
 	}
 
 	public int getColorFromMeta(int meta) {
-		return ModColors.allPlasterColors[meta].value;
+		return ModColors.allPlasterColors[meta % ModColors.allPlasterColors.length].value;
 	}
 }
