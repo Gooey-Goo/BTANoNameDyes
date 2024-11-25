@@ -173,6 +173,7 @@ public abstract class ModBlocks {
 		.setHardness(2.0f)
 		.setVisualUpdateOnMetadata()
 		.setTickOnLoad()
+		.setItemBlock(b -> new ItemBlockDeprecated(b, Block.logPalm))
 		.setFlammability(5,5)
 		.setBlockModel(BlockModelAxisAligned::new)
 		.build(new BlockDeprecated("log.palm", UtilIdRegistrar.nextId(), Material.wood,Block.logPalm.id))
@@ -194,6 +195,7 @@ public abstract class ModBlocks {
 		.setVisualUpdateOnMetadata()
 		.setTickOnLoad()
 		.setFlammability(30,60)
+		.setItemBlock(b -> new ItemBlockDeprecated(b, Block.leavesPalm))
 		.build(new BlockDeprecated("leaves.palm", UtilIdRegistrar.nextId(), Material.leaves,Block.leavesPalm.id))
 		.withDisabledStats()
 		.withTags(BlockTags.SHEARS_DO_SILK_TOUCH, BlockTags.MINEABLE_BY_AXE, BlockTags.MINEABLE_BY_HOE, BlockTags.MINEABLE_BY_SWORD, BlockTags.MINEABLE_BY_SHEARS,BlockTags.NOT_IN_CREATIVE_MENU);
@@ -205,6 +207,7 @@ public abstract class ModBlocks {
 		.setBlockModel(BlockModelCrossedSquares::new)
 		.setHardness(0.0f)
 		.setTickOnLoad()
+		.setItemBlock(b -> new ItemBlockDeprecated(b, Block.saplingPalm))
 		.setVisualUpdateOnMetadata()
 		.build(new BlockDeprecated("sapling.palm", UtilIdRegistrar.nextId(), Material.plant,Block.saplingPalm.id))
 		.withTags(BlockTags.BROKEN_BY_FLUIDS,BlockTags.PLANTABLE_IN_JAR, BlockTags.NOT_IN_CREATIVE_MENU);
@@ -335,15 +338,6 @@ public abstract class ModBlocks {
             .build(new BlockSaplingEbony("sapling.ebony", UtilIdRegistrar.nextId()))
 			.withTags(BlockTags.BROKEN_BY_FLUIDS,BlockTags.PLANTABLE_IN_JAR);
 
-	//TODO: change
-	@Deprecated
-    public static final Block plaster = new BlockBuilder(NoNameDyes.MOD_ID)
-            .setBlockSound(BlockSounds.STONE)
-            .setHardness(0.3f)
-            .setTextures(NoNameDyes.MOD_ID+":block/plaster/plaster")
-            .build(new BlockDeprecated("plaster", UtilIdRegistrar.nextId(),Material.stone,UtilIdRegistrar.curr_id))
-            .withTags(BlockTags.MINEABLE_BY_PICKAXE,BlockTags.NOT_IN_CREATIVE_MENU);
-
     public static final Block plasterMud = new BlockBuilder(NoNameDyes.MOD_ID)
             .setItemBlock(ItemBlockPlasterPainted::new)
             .setBlockSound(BlockSounds.STONE)
@@ -354,22 +348,12 @@ public abstract class ModBlocks {
 
 	//TODO: change
 	@Deprecated
-    public static final Block blockCeramic = new BlockBuilder(NoNameDyes.MOD_ID)
-
+    public static final Block plaster = new BlockBuilder(NoNameDyes.MOD_ID)
             .setBlockSound(BlockSounds.STONE)
-            .setHardness(1.0f)
-            .setTextures(NoNameDyes.MOD_ID+":block/ceramic/ceramic_block")
-            .build(new BlockDeprecated("block.ceramic", UtilIdRegistrar.nextId(),Material.stone,UtilIdRegistrar.curr_id+1))
-            .withTags(BlockTags.MINEABLE_BY_PICKAXE,BlockTags.NOT_IN_CREATIVE_MENU);
-
-	//TODO: change
-	@Deprecated
-    public static final Block tileCeramic = new BlockBuilder(NoNameDyes.MOD_ID)
-
-            .setBlockSound(BlockSounds.STONE)
-            .setHardness(1.0f)
-            .setTextures(NoNameDyes.MOD_ID+":block/ceramic/ceramic_tile")
-            .build(new BlockDeprecated("tile.ceramic", UtilIdRegistrar.nextId(),Material.stone,UtilIdRegistrar.curr_id+1))
+            .setHardness(0.3f)
+            .setTextures(NoNameDyes.MOD_ID+":block/plaster/plaster")
+            .setItemBlock(b -> new ItemBlockDeprecated(b, plasterMud))
+            .build(new BlockDeprecated("plaster", UtilIdRegistrar.nextId(),Material.stone,UtilIdRegistrar.curr_id))
             .withTags(BlockTags.MINEABLE_BY_PICKAXE,BlockTags.NOT_IN_CREATIVE_MENU);
 
     public static final Block blockCeramicPainted = new BlockBuilder(NoNameDyes.MOD_ID)
@@ -381,6 +365,16 @@ public abstract class ModBlocks {
             .build(new BlockCeramicPainted("block.ceramic.painted", UtilIdRegistrar.nextId(),Material.stone))
             .withTags(BlockTags.MINEABLE_BY_PICKAXE,BlockTags.NOT_IN_CREATIVE_MENU);
 
+	//TODO: change
+	@Deprecated
+    public static final Block blockCeramic = new BlockBuilder(NoNameDyes.MOD_ID)
+            .setBlockSound(BlockSounds.STONE)
+            .setHardness(1.0f)
+            .setItemBlock(b -> new ItemBlockDeprecated(b, blockCeramicPainted))
+            .setTextures(NoNameDyes.MOD_ID+":block/ceramic/ceramic_block")
+            .build(new BlockDeprecated("block.ceramic", UtilIdRegistrar.nextId(),Material.stone,UtilIdRegistrar.curr_id+1))
+            .withTags(BlockTags.MINEABLE_BY_PICKAXE,BlockTags.NOT_IN_CREATIVE_MENU);
+
     public static final Block tileCeramicPainted = new BlockBuilder(NoNameDyes.MOD_ID)
 		.setItemBlock(ItemBlockPlasterPainted::new)
 		.setBlockSound(BlockSounds.STONE)
@@ -388,6 +382,16 @@ public abstract class ModBlocks {
 		.setBlockModel(b -> new BlockModelModDyed<>(b,NoNameDyes.MOD_ID+":block/ceramic/ceramic_tile_%s",true))
 		.build(new BlockCeramicPainted("tile.ceramic.painted", UtilIdRegistrar.nextId(),Material.stone))
 		.withTags(BlockTags.MINEABLE_BY_PICKAXE,BlockTags.NOT_IN_CREATIVE_MENU);
+
+	//TODO: change
+	@Deprecated
+    public static final Block tileCeramic = new BlockBuilder(NoNameDyes.MOD_ID)
+            .setBlockSound(BlockSounds.STONE)
+            .setHardness(1.0f)
+            .setItemBlock(b -> new ItemBlockDeprecated(b, tileCeramicPainted))
+            .setTextures(NoNameDyes.MOD_ID+":block/ceramic/ceramic_tile")
+            .build(new BlockDeprecated("tile.ceramic", UtilIdRegistrar.nextId(),Material.stone,UtilIdRegistrar.curr_id+1))
+            .withTags(BlockTags.MINEABLE_BY_PICKAXE,BlockTags.NOT_IN_CREATIVE_MENU);
 
 	public static final Block plasterLime = new BlockBuilder(NoNameDyes.MOD_ID)
 		.setItemBlock(ItemBlockPlasterPainted::new)
@@ -516,11 +520,5 @@ public abstract class ModBlocks {
 		.withTags(BlockTags.MINEABLE_BY_PICKAXE);
 
 	public static void register() {
-		Item.itemsList[plaster.id] = new ItemBlockDeprecated(plaster,plasterMud);
-		Item.itemsList[blockCeramic.id] = new ItemBlockDeprecated(blockCeramic,blockCeramicPainted);
-		Item.itemsList[tileCeramic.id] = new ItemBlockDeprecated(tileCeramic,tileCeramicPainted);
-		Item.itemsList[logPalm.id] = new ItemBlockDeprecated(logPalm,Block.logPalm);
-		Item.itemsList[leavesPalm.id] = new ItemBlockDeprecated(leavesPalm,Block.leavesPalm);
-		Item.itemsList[saplingPalm.id] = new ItemBlockDeprecated(saplingPalm,Block.saplingPalm);
     }
 }

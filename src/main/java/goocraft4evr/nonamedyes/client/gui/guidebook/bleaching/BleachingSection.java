@@ -30,7 +30,7 @@ public class BleachingSection extends SearchableGuidebookSection {
 			ArrayList<RecipeEntryBleacher> filteredRecipes = new ArrayList<>();
 			ArrayList<RecipeEntryBleacher> allRecipes = new ArrayList<>(ModRecipes.BLEACHER.getAllRecipes());
 			allRecipes.removeIf(Objects::isNull);
-			NoNameDyes.LOGGER.info(allRecipes.toString());
+			//NoNameDyes.LOGGER.info(allRecipes.toString());
 			for (RecipeEntryBleacher recipe : allRecipes) {
 				if (!recipe.matchesQueryIgnoreExceptions(query)) continue;
 				filteredRecipes.add(recipe);
@@ -53,7 +53,7 @@ public class BleachingSection extends SearchableGuidebookSection {
 	public void reloadRecipes() {
 		this.pages.clear();
 		ArrayList<RecipeEntryBleacher> allRecipes = new ArrayList<>(ModRecipes.BLEACHER.getAllRecipes());
-		NoNameDyes.LOGGER.info(allRecipes.toString());
+		//NoNameDyes.LOGGER.info(allRecipes.toString());
 		allRecipes.removeIf(Objects::isNull);
 		int totalRecipes = allRecipes.size();
 		int totalPages = MathHelper.ceilInt(totalRecipes, 6);
